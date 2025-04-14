@@ -1,9 +1,9 @@
-import MangaPulse from '@/components/Home'
+import AnimeMangaNewsPage from '@/components/Article'
 import React from 'react'
 
 const page = () => {
   return (
-    <MangaPulse/>
+    <AnimeMangaNewsPage/>
   )
 }
 
