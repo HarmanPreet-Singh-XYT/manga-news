@@ -5,7 +5,7 @@ const AnimeHeroSection = ({isDarkMode}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [featured, setFeatured] = useState({
     title: "Demon Slayer: Infinity Train",
-    image: "/api/placeholder/400/500",
+    image: "https://i.ytimg.com/vi/ATJYac_dORw/maxresdefault.jpg",
     rating: "9.2",
     genre: "Action/Fantasy",
     episodes: "26",
@@ -38,7 +38,7 @@ const AnimeHeroSection = ({isDarkMode}) => {
         <div 
           className="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center justify-between relative"
           style={{
-            backgroundImage: "url('/api/placeholder/1600/600')",
+            backgroundImage: "url('https://m.media-amazon.com/images/I/91ApUtYEyDL.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundBlendMode: "overlay"

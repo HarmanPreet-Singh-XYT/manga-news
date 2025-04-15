@@ -86,9 +86,11 @@ const Featured = ({ darkMode = false }) => {
                 <Zap size={16} className="mr-1" /> ANIME FILM
               </span>
             </div>
-            <h2 className={`text-3xl md:text-5xl font-black text-white mt-4 transition-all duration-300 group-hover:translate-x-2`} style={{ textShadow: "3px 3px 0 #000" }}>
-              "{featuredStory.title}"
-            </h2>
+            <a href='/article/21'>
+              <h2 className={`text-3xl md:text-5xl font-black text-white mt-4 transition-all duration-300 group-hover:translate-x-2`} style={{ textShadow: "3px 3px 0 #000" }}>
+                "{featuredStory.title}"
+              </h2>
+            </a>
             <p className="text-cyan-300 mt-4 text-lg font-bold max-w-4xl">
               Eiichiro Oda's legendary series continues its dominance with a film that surpasses expectations and reshapes the anime film industry landscape worldwide.
             </p>

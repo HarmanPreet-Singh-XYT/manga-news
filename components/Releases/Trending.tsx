@@ -58,7 +58,7 @@ const FeaturedAnime = ({ anime, accentColor, accentBg, darkMode }) => {
       <img 
         src={anime.image || "/api/placeholder/400/250"}
         alt={anime.title} 
-        className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110" 
+        className="w-full h-64 object-cover transition-transform duration-700 scale-115 group-hover:scale-125" 
       />
       <div className="absolute top-3 left-3">
         <div className={`${accentBg} text-white px-3 py-1 text-sm font-bold rounded-tr-md rounded-bl-md transform -rotate-2 shadow-md`}>
@@ -110,7 +110,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 1,
       title: "Jujutsu Kaisen: Shibuya Incident",
-      image: "/api/placeholder/120/120",
+      image: "https://m.media-amazon.com/images/I/91ZXOZjKeWL._UF1000,1000_QL80_.jpg",
       rating: "4.9",
       genre: "Action",
       episodes: "24",
@@ -123,7 +123,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 2,
       title: "Attack on Titan: Final Season",
-      image: "/api/placeholder/120/120",
+      image: "https://i.redd.it/z2uyaj1t6pb91.jpg",
       rating: "4.8",
       genre: "Dark Fantasy",
       episodes: "16",
@@ -136,7 +136,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 3,
       title: "My Hero Academia: Heroes Rising",
-      image: "/api/placeholder/120/120",
+      image: "https://w0.peakpx.com/wallpaper/498/585/HD-wallpaper-heroes-rising-anime-heroes-rising-my-hero-academia.jpg",
       rating: "4.7",
       genre: "Superhero",
       episodes: "12",
@@ -149,7 +149,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 4,
       title: "Spy x Family: Second Mission",
-      image: "/api/placeholder/120/120",
+      image: "https://a.storyblok.com/f/178900/1200x1696/48b8663276/spy-x-family-staffel-2-key-visual.jpeg/m/filters:quality(95)format(webp)",
       rating: "4.9",
       genre: "Comedy",
       episodes: "12",
@@ -164,7 +164,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
   const featuredAnime = {
     id: 0,
     title: "Demon Slayer: Hashira Training Arc",
-    image: "/api/placeholder/600/400",
+    image: "https://i.ytimg.com/vi/S6AZBy5bHd4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLASwYmVLMSsgC0uOynTzJWs4lJzRQ",
     badge: "Season Finale",
     rating: "5.0",
     reviewCount: "324",

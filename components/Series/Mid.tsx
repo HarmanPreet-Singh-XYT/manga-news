@@ -1,5 +1,5 @@
 // Enhanced Anime/Manga UI Components
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Search, Filter, Award, Clock, Heart, 
   ChevronRight, Star, Eye, Bookmark, 
@@ -71,13 +71,30 @@ function TabButton({ active, onClick, icon, label, isDarkMode }) {
 function SeriesCard({ series, delay = 0, isDarkMode }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
-useEffect(() => {
-  setIsLoaded(true);
-}, [])
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
 
+  useEffect(() => {
+    setIsLoaded(true);
+    
+    // Set up intersection observer
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setIsVisible(true);
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    
+    if (cardRef.current) {
+      observer.observe(cardRef.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
   return (
     <div 
-      className="transform hover:scale-105 transition duration-300 hover:-rotate-1 animate-on-scroll opacity-0"
+      ref={cardRef}
+      className={`transform hover:scale-105 transition duration-300 hover:-rotate-1 animate-on-scroll ${isVisible ? 'is-visible' : 'opacity-0'}`}
       style={{ 
         animationDelay: `${delay}ms`,
         transitionDelay: `${delay}ms`
@@ -533,6 +550,15 @@ const GlobalStyles = () => (
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+    .animate-on-scroll {
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .animate-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   `}</style>
 );
 
@@ -543,28 +569,28 @@ function AnimeMangaUI({ isDarkMode = false }) {
   
   // Sample data (would be fetched from API in real app)
   const topSeries = [
-    { id: 1, title: "One Piece", rating: 9.8, image: "/api/placeholder/250/350", genre: "Adventure", isNew: false, isTrending: true, episodes: 1074 },
-    { id: 2, title: "Demon Slayer", rating: 9.6, image: "/api/placeholder/250/350", genre: "Action", isNew: true, isTrending: true, episodes: 44 },
-    { id: 3, title: "Jujutsu Kaisen", rating: 9.5, image: "/api/placeholder/250/350", genre: "Supernatural", isNew: false, isTrending: false, episodes: 48 },
-    { id: 4, title: "My Hero Academia", rating: 9.4, image: "/api/placeholder/250/350", genre: "Superhero", isNew: false, isTrending: false, episodes: 138 },
-    { id: 5, title: "Attack on Titan", rating: 9.7, image: "/api/placeholder/250/350", genre: "Dark Fantasy", isNew: false, isTrending: true, episodes: 88 },
-    { id: 6, title: "Chainsaw Man", rating: 9.5, image: "/api/placeholder/250/350", genre: "Horror", isNew: true, isTrending: true, episodes: 12 },
+    { id: 1, title: "One Piece", rating: 9.8, image: "https://m.media-amazon.com/images/I/81rEhhwbubL.jpg", genre: "Adventure", isNew: false, isTrending: true, episodes: 1074 },
+    { id: 2, title: "Demon Slayer", rating: 9.6, image: "https://image.api.playstation.com/vulcan/ap/rnd/202106/1704/2ZfAUG5CTXdM34S1OhmMW1zF.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 44 },
+    { id: 3, title: "Jujutsu Kaisen", rating: 9.5, image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg", genre: "Supernatural", isNew: false, isTrending: false, episodes: 48 },
+    { id: 4, title: "My Hero Academia", rating: 9.4, image: "https://external-preview.redd.it/netflix-my-hero-academia-youre-next-premieres-april-20-v0-JwzZ0n7z9UTm0yjaMDwEcl5p3pr7k-1RJdKSZDH_O0I.jpg?auto=webp&s=6f9b748eb34eccac28fd299e1ac0e8c1e109dc0b", genre: "Superhero", isNew: false, isTrending: false, episodes: 138 },
+    { id: 5, title: "Attack on Titan", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_.jpg", genre: "Dark Fantasy", isNew: false, isTrending: true, episodes: 88 },
+    { id: 6, title: "Chainsaw Man", rating: 9.5, image: "https://a.storyblok.com/f/178900/849x1200/a315230dc9/chainsaw-man-the-movie-reze-arc-csm-visual.jpg/m/filters:quality(95)format(webp)", genre: "Horror", isNew: true, isTrending: true, episodes: 12 },
   ];
 
   const latestShows = [
-    { id: 7, title: "Solo Leveling", rating: 9.3, image: "/api/placeholder/250/350", genre: "Action", isNew: true, isTrending: true, episodes: 12 },
-    { id: 8, title: "Blue Lock", rating: 9.1, image: "/api/placeholder/250/350", genre: "Sports", isNew: true, isTrending: false, episodes: 24 },
-    { id: 9, title: "Frieren", rating: 9.4, image: "/api/placeholder/250/350", genre: "Fantasy", isNew: true, isTrending: true, episodes: 28 },
-    { id: 10, title: "Oshi no Ko", rating: 9.2, image: "/api/placeholder/250/350", genre: "Drama", isNew: true, isTrending: false, episodes: 11 },
+    { id: 7, title: "Solo Leveling", rating: 9.3, image: "https://m.media-amazon.com/images/I/71goH8p2ENL.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 12 },
+    { id: 8, title: "Blue Lock", rating: 9.1, image: "https://m.media-amazon.com/images/M/MV5BNjliYmU5N2EtYmNjNi00NGM0LWEzZWItN2Q0YzM5YTk4Y2Q1XkEyXkFqcGc@._V1_.jpg", genre: "Sports", isNew: true, isTrending: false, episodes: 24 },
+    { id: 9, title: "Frieren", rating: 9.4, image: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: true, isTrending: true, episodes: 28 },
+    { id: 10, title: "Oshi no Ko", rating: 9.2, image: "https://m.media-amazon.com/images/M/MV5BYzM3ZGJkN2YtOTQ5Ny00MzEyLTlkMzQtZDVhYzM3YWFlM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg0", genre: "Drama", isNew: true, isTrending: false, episodes: 11 },
   ];
 
   const fanFavorites = [
-    { id: 11, title: "Hunter X Hunter", rating: 9.7, image: "/api/placeholder/250/350", genre: "Adventure", isNew: false, isTrending: false, episodes: 148 },
-    { id: 12, title: "Fullmetal Alchemist", rating: 9.8, image: "/api/placeholder/250/350", genre: "Fantasy", isNew: false, isTrending: false, episodes: 64 },
-    { id: 13, title: "Death Note", rating: 9.6, image: "/api/placeholder/250/350", genre: "Thriller", isNew: false, isTrending: false, episodes: 37 },
-    { id: 14, title: "Naruto", rating: 9.5, image: "/api/placeholder/250/350", genre: "Action", isNew: false, isTrending: false, episodes: 220 },
-    { id: 15, title: "Cowboy Bebop", rating: 9.7, image: "/api/placeholder/250/350", genre: "Sci-Fi", isNew: false, isTrending: false, episodes: 26 },
-    { id: 16, title: "Vinland Saga", rating: 9.4, image: "/api/placeholder/250/350", genre: "Historical", isNew: false, isTrending: false, episodes: 48 },
+    { id: 11, title: "Hunter X Hunter", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Adventure", isNew: false, isTrending: true, episodes: 148 },
+    { id: 12, title: "Fullmetal Alchemist", rating: 9.8, image: "https://m.media-amazon.com/images/M/MV5BNDczZWMyMjEtZDI0ZS00YThjLWE2MjEtNTIxNmVmZDhkNDg5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: false, isTrending: false, episodes: 64 },
+    { id: 13, title: "Death Note", rating: 9.6, image: "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Thriller", isNew: false, isTrending: false, episodes: 37 },
+    { id: 14, title: "Naruto", rating: 9.5, image: "https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Action", isNew: false, isTrending: false, episodes: 220 },
+    { id: 15, title: "Cowboy Bebop", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BM2VhZjk2MWMtZjc2OC00YzA4LWI0NzAtZGQ1YjVkOTk5YzVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Sci-Fi", isNew: false, isTrending: false, episodes: 26 },
+    { id: 16, title: "Vinland Saga", rating: 9.4, image: "https://m.media-amazon.com/images/M/MV5BNDA3MGNmZTEtMzFiMy00ZmViLThhNmQtMjQ4ZDc5MDEyN2U1XkEyXkFqcGc@._V1_.jpg", genre: "Historical", isNew: false, isTrending: false, episodes: 48 },
   ];
 
   const featured = topSeries[0];
@@ -574,7 +600,32 @@ function AnimeMangaUI({ isDarkMode = false }) {
     latest: latestShows,
     favorites: fanFavorites
   };
-  
+  const collections = [
+    {
+      title: "Isekai Adventures",
+      count: "24 titles",
+      tags: ["Fantasy", "Action"],
+      image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/11/10-best-isekai-anime-for-fans-of-fantasy-adventures.jpg"
+    },
+    {
+      title: "Shonen Legends",
+      count: "32 titles",
+      tags: ["Action", "Battle"],
+      image: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/09/the-greatest-shonen-anime-of-all-time-september-2023.jpg"
+    },
+    {
+      title: "Romance Anthology",
+      count: "18 titles",
+      tags: ["School", "Drama"],
+      image: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/the-greatest-romance-anime-of-all-time-december-2024.jpg"
+    },
+    {
+      title: "Hidden Masterpieces",
+      count: "15 titles",
+      tags: ["Underrated", "Diverse"],
+      image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2025/02/10-best-hidden-gem-anime-you-shouldn-t-miss.jpg?q=70&fit=contain&w=1200&h=628&dpr=1"
+    }
+  ];
 
   return (
     <div className={isDarkMode ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}>
@@ -638,6 +689,9 @@ function AnimeMangaUI({ isDarkMode = false }) {
           {topSeries.filter(s => s.isTrending).map((series, index) => (
             <TrendingCard key={series.id} series={series} delay={index * 150} isDarkMode={isDarkMode} />
           ))}
+          {latestShows.filter(s => s.isTrending).map((series, index) => (
+            <TrendingCard key={series.id} series={series} delay={index * 150} isDarkMode={isDarkMode} />
+          ))}
         </div>
       </section>
       
@@ -653,9 +707,9 @@ function AnimeMangaUI({ isDarkMode = false }) {
         </div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {['Isekai Favorites', 'Shonen Classics', 'Must-Watch Romance', 'Hidden Gems'].map((collection, index) => (
+          {collections.map((collection, index) => (
             <div 
-              key={collection}
+              key={collection.title}
               className={`
                 relative overflow-hidden rounded-lg aspect-video animate-on-scroll opacity-0
                 transform hover:scale-105 transition duration-300
@@ -666,14 +720,14 @@ function AnimeMangaUI({ isDarkMode = false }) {
               }}
             >
               <img 
-                src={`/api/placeholder/${400 + index}/${300 + index}`} 
-                alt={collection} 
+                src={collection.image}
+                alt={collection.title} 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="text-white font-bold text-lg mb-1">{collection}</h3>
-                <p className="text-gray-200 text-sm">20+ titles</p>
+                <h3 className="text-white font-bold text-lg mb-1">{collection.title}</h3>
+                <p className="text-gray-200 text-sm">{collection.count}</p>
               </div>
               <div className={`
                 absolute top-3 right-3 

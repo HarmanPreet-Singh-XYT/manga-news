@@ -41,7 +41,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
     {
       id: 1,
       username: "Makima Fan",
-      avatar: "/api/placeholder/40/40",
+      avatar: "https://staticg.sportskeeda.com/editor/2024/08/ec67a-17243378857426-1920.jpg?w=640",
       content: "I'm cautiously optimistic about the studio change. MAPPA did an amazing job with season 1, but if they're overbooked, I'd rather a fresh team with passion take over than get a rushed production.",
       likes: 24,
       timeAgo: "2 hours ago",
@@ -50,7 +50,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
         {
           id: 101,
           username: "Denji's Chainsaw",
-          avatar: "/api/placeholder/40/40",
+          avatar: "https://images5.alphacoders.com/128/1283698.jpg",
           content: "Totally agree! Quality over scheduling any day. Plus, didn't the original manga artist praise the new studio's test animations?",
           likes: 9,
           timeAgo: "1 hour ago",
@@ -63,7 +63,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
     {
       id: 2,
       username: "PowerBestGirl",
-      avatar: "/api/placeholder/40/40",
+      avatar: "https://play-lh.googleusercontent.com/_qUtBpMVsGY-CLPx2DreAENHAbr4KHwBGn2w_3jhGSzoRVFRKn0SXUaK0wXSU0SJ7A",
       content: "I just hope they keep the same voice actors! The voice acting in the first season was absolutely perfect.",
       likes: 17,
       timeAgo: "3 hours ago",
@@ -75,7 +75,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
     {
       id: 3,
       username: "Aki_Hayakawa",
-      avatar: "/api/placeholder/40/40",
+      avatar: "https://i.pinimg.com/736x/59/63/ec/5963ecf402edc0955ec35960563709f1.jpg",
       content: "Can't wait to see how they animate the International Assassins arc! That's going to require some serious animation talent.",
       likes: 32,
       timeAgo: "5 hours ago",
@@ -84,7 +84,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
         {
           id: 301,
           username: "Kobeni's Car",
-          avatar: "/api/placeholder/40/40",
+          avatar: "https://cdn.rafled.com/anime-icons/images/2a29901bd565065ee32d868fbad86c9f67c41020b9fa5609747595efc4cecbb5.jpg",
           content: "That arc is going to break the internet! So many iconic moments!",
           likes: 21,
           timeAgo: "4 hours ago",
@@ -103,7 +103,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
     const newCommentObj = {
       id: comments.length + 1000, // Just for demo purposes
       username: "You",
-      avatar: "/api/placeholder/40/40",
+      avatar: "https://staticg.sportskeeda.com/editor/2024/05/5dbc5-17159017650761-1920.jpg?w=640",
       content: newComment,
       likes: 0,
       timeAgo: "Just now",
@@ -189,7 +189,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
         const newReply = {
           id: Math.floor(Math.random() * 10000),
           username: "You",
-          avatar: "/api/placeholder/40/40",
+          avatar: "https://staticg.sportskeeda.com/editor/2024/05/5dbc5-17159017650761-1920.jpg?w=640",
           content: comment.replyText,
           likes: 0,
           timeAgo: "Just now",
@@ -223,7 +223,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
       
       {/* Comment Input */}
       <div className="flex items-start mb-8">
-        <img src="/api/placeholder/40/40" alt="User" className={`rounded-full mr-3 border-2 ${darkMode ? 'border-purple-700' : 'border-indigo-300'} shadow-md`} />
+        <img src="https://staticg.sportskeeda.com/editor/2024/05/5dbc5-17159017650761-1920.jpg?w=640" alt="User" className={`rounded-full object-cover overflow-hidden mr-3 w-10 h-10 border-2 ${darkMode ? 'border-purple-700' : 'border-indigo-300'} shadow-md`} />
         <div className="flex-1">
           <div className={`${commentBgClass} rounded-lg shadow-md p-3 border ${inputBorderClass} ${borderHoverClass} transition-all duration-300`}>
             <textarea 
@@ -255,7 +255,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
               <img 
                 src={comment.avatar} 
                 alt="Commenter" 
-                className={`rounded-full mr-3 border-2 ${darkMode ? 'border-pink-700' : 'border-pink-300'} shadow-md`} 
+                className={`rounded-full mr-3 h-10 w-10  object-cover overflow-hidden border-2 ${darkMode ? 'border-pink-700' : 'border-pink-300'} shadow-md`} 
               />
               <div className="flex-1">
                 <div className={`${commentBgClass} rounded-lg shadow-md p-4 border ${comment.isLiked ? (darkMode ? 'border-pink-700' : 'border-pink-300') : (darkMode ? 'border-gray-600' : 'border-indigo-100')} ${borderHoverClass} transition-colors`}>
@@ -319,7 +319,7 @@ export default function AnimeDiscussionComponent({darkMode}:{darkMode:boolean}) 
                     <img 
                       src={reply.avatar} 
                       alt="Replier" 
-                      className={`rounded-full mr-3 border-2 ${darkMode ? 'border-purple-700' : 'border-indigo-300'} h-8 w-8 shadow-sm`} 
+                      className={`rounded-full mr-3  object-cover overflow-hidden border-2 ${darkMode ? 'border-purple-700' : 'border-indigo-300'} h-8 w-8 shadow-sm`} 
                     />
                     <div className="flex-1">
                       <div className={`${replyBgClass} rounded-lg shadow-sm p-3 border ${reply.isLiked ? (darkMode ? 'border-pink-700' : 'border-pink-300') : (darkMode ? 'border-gray-600' : 'border-indigo-100')}`}>

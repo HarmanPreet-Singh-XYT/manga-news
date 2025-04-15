@@ -14,13 +14,13 @@ const CountdownTimer = ({ releaseDate, accentColor }) => {
         <span>Countdown:</span>
       </div>
       <div className="flex gap-2">
-        <div className="bg-black bg-opacity-20 px-2 py-1 rounded font-mono">
+        <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
           {daysLeft}d
         </div>
-        <div className="bg-black bg-opacity-20 px-2 py-1 rounded font-mono">
+        <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
           {hoursLeft}h
         </div>
-        <div className="bg-black bg-opacity-20 px-2 py-1 rounded font-mono">
+        <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
           {minutesLeft}m
         </div>
       </div>
@@ -121,7 +121,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "One Piece",
       title: "The Dawn of the New Era",
       episodeNumber: 1088,
-      image: "/api/placeholder/300/180",
+      image: "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABfjFlp2knrovoWG6xA8-iLLO-4bb86YMqJWGhtNWKCdwcuTkYfrLxLi-Rd83YMp4KpzpBvv3_32kFtMclVF8rKCh2v9CZ9DVLc4S.jpg?r=4d8",
       releaseDate: "Apr 21",
       isNew: true,
       isReleased: false,
@@ -133,7 +133,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "My Hero Academia",
       title: "Heroes Rising",
       episodeNumber: 15,
-      image: "/api/placeholder/300/180",
+      image: "https://i.redd.it/faaz36v3pon41.png",
       releaseDate: "Apr 18",
       isNew: false,
       isReleased: false,
@@ -145,7 +145,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "Jujutsu Kaisen",
       title: "The Culling Game",
       episodeNumber: 3,
-      image: "/api/placeholder/300/180",
+      image: "https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABdPXLFPbfzuRS2NPsXd5HnKXhKTOhpQ8zbyCrN4IbkdEJ2l6BRGHR7eozAepiuVI-JRetwR3lD5Q26D7yfpdMrwjOBzid9bIKIFK.jpg?r=794",
       releaseDate: "Apr 16",
       isNew: true,
       isReleased: true,
@@ -157,7 +157,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "Chainsaw Man",
       title: "The New Season Begins",
       episodeNumber: 1,
-      image: "/api/placeholder/300/180",
+      image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/09/denji-and-power-are-goofy-together-in-chainsaw-man.jpg",
       releaseDate: "Apr 17",
       isNew: true,
       isReleased: false,
@@ -170,7 +170,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "Bleach: Thousand-Year Blood War",
       title: "The Final Battle",
       episodeNumber: 8,
-      image: "/api/placeholder/300/180",
+      image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/08/bleach-thousand-year-blood-war.jpg",
       releaseDate: "Apr 16",
       isNew: false,
       isReleased: true,
@@ -182,7 +182,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       animeTitle: "Attack on Titan",
       title: "The Final Season Special",
       episodeNumber: "Special",
-      image: "/api/placeholder/300/180",
+      image: "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/11/attack-on-titan-finale.jpg",
       releaseDate: "Apr 24",
       isNew: false,
       isReleased: false,

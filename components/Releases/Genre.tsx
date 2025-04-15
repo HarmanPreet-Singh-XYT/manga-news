@@ -102,7 +102,7 @@ const GenreHighlights = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 'action',
       name: 'Action',
-      image: "/api/placeholder/400/300",
+      image: "https://ntvb.tmsimg.com/assets/p16749713_b_h10_as.jpg?w=1280&h=720",
       titles: 245,
       featured: "Demon Slayer",
       rating: 4.9,
@@ -111,7 +111,7 @@ const GenreHighlights = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 'romance',
       name: 'Romance',
-      image: "/api/placeholder/400/300",
+      image: "https://lwlies.com/wp-content/uploads/2016/11/your-name-768x539-c-default.jpg",
       titles: 183,
       featured: "Your Name",
       rating: 4.8,
@@ -120,7 +120,7 @@ const GenreHighlights = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 'fantasy',
       name: 'Fantasy',
-      image: "/api/placeholder/400/300",
+      image: "https://cdn.oneesports.gg/cdn-data/2024/10/Anime_ReZero_Characters_Beatrice_Emilia_Subaru_Liliana.jpg",
       titles: 217,
       featured: "Re:Zero",
       rating: 4.7,
@@ -129,7 +129,7 @@ const GenreHighlights = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
     {
       id: 'scifi',
       name: 'Sci-Fi',
-      image: "/api/placeholder/400/300",
+      image: "https://m.media-amazon.com/images/S/pv-target-images/bd78eabf47823f52eb98d2a89fca34cdb9dacd39cacc9465f2f811e05cc8ac45._BR-6_AC_SX720_FMjpg_.jpg",
       titles: 156,
       featured: "Steins;Gate",
       rating: 4.9,
@@ -140,32 +140,32 @@ const GenreHighlights = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
   // Top anime for each genre
   const topAnimeByGenre = {
     action: [
-      { title: "Attack on Titan", rating: "4.9", year: "2013", episodes: "75", likes: "2.4M", image: "/api/placeholder/60/80" },
-      { title: "Jujutsu Kaisen", rating: "4.8", year: "2020", episodes: "24", likes: "1.8M", image: "/api/placeholder/60/80" },
-      { title: "One Punch Man", rating: "4.7", year: "2015", episodes: "24", likes: "1.5M", image: "/api/placeholder/60/80" },
-      { title: "My Hero Academia", rating: "4.6", year: "2016", episodes: "113", likes: "2.1M", image: "/api/placeholder/60/80" },
-      { title: "Demon Slayer", rating: "4.9", year: "2019", episodes: "44", likes: "3.2M", image: "/api/placeholder/60/80" }
+      { title: "Attack on Titan", rating: "4.9", year: "2013", episodes: "75", likes: "2.4M", image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_.jpg" },
+      { title: "Jujutsu Kaisen", rating: "4.8", year: "2020", episodes: "24", likes: "1.8M", image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg" },
+      { title: "One Punch Man", rating: "4.7", year: "2015", episodes: "24", likes: "1.5M", image: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974742943/one-punch-man-vol-27-9781974742943_hr.jpg" },
+      { title: "My Hero Academia", rating: "4.6", year: "2016", episodes: "113", likes: "2.1M", image: "https://external-preview.redd.it/netflix-my-hero-academia-youre-next-premieres-april-20-v0-JwzZ0n7z9UTm0yjaMDwEcl5p3pr7k-1RJdKSZDH_O0I.jpg?auto=webp&s=6f9b748eb34eccac28fd299e1ac0e8c1e109dc0b" },
+      { title: "Demon Slayer", rating: "4.9", year: "2019", episodes: "44", likes: "3.2M", image: "https://image.api.playstation.com/vulcan/ap/rnd/202106/1704/2ZfAUG5CTXdM34S1OhmMW1zF.jpg" }
     ],
     romance: [
-      { title: "Your Name", rating: "4.9", year: "2016", episodes: "Movie", likes: "1.9M", image: "/api/placeholder/60/80" },
-      { title: "Horimiya", rating: "4.7", year: "2021", episodes: "13", likes: "980K", image: "/api/placeholder/60/80" },
-      { title: "Toradora!", rating: "4.6", year: "2008", episodes: "25", likes: "1.2M", image: "/api/placeholder/60/80" },
-      { title: "Fruits Basket", rating: "4.8", year: "2019", episodes: "63", likes: "1.1M", image: "/api/placeholder/60/80" },
-      { title: "Clannad: After Story", rating: "4.9", year: "2008", episodes: "24", likes: "1.5M", image: "/api/placeholder/60/80" }
+      { title: "Your Name", rating: "4.9", year: "2016", episodes: "Movie", likes: "1.9M", image: "https://upload.wikimedia.org/wikipedia/en/0/0b/Your_Name_poster.png" },
+      { title: "Horimiya", rating: "4.7", year: "2021", episodes: "13", likes: "980K", image: "https://i.redd.it/4hgydz0ohtpa1.jpg" },
+      { title: "Toradora!", rating: "4.6", year: "2008", episodes: "25", likes: "1.2M", image: "https://m.media-amazon.com/images/M/MV5BNjEyZmRmMGYtNGY1Zi00MTFiLWE0ZTMtNzUzMWJmMTgzNWE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "Fruits Basket", rating: "4.8", year: "2019", episodes: "63", likes: "1.1M", image: "https://m.media-amazon.com/images/M/MV5BZjZmNjg3ZjMtZjQ0MS00NDE0LWE0MDctZTBjMDZiMWZhZTk3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "Clannad: After Story", rating: "4.9", year: "2008", episodes: "24", likes: "1.5M", image: "https://images-cdn.ubuy.co.in/64591614bde2384d575f07c8-clannad-after-story-complete-series.jpg" }
     ],
     fantasy: [
-      { title: "Re:Zero", rating: "4.7", year: "2016", episodes: "50", likes: "1.7M", image: "/api/placeholder/60/80" },
-      { title: "Mushoku Tensei", rating: "4.8", year: "2021", episodes: "23", likes: "1.3M", image: "/api/placeholder/60/80" },
-      { title: "That Time I Got Reincarnated as a Slime", rating: "4.6", year: "2018", episodes: "48", likes: "1.2M", image: "/api/placeholder/60/80" },
-      { title: "Overlord", rating: "4.5", year: "2015", episodes: "39", likes: "1.1M", image: "/api/placeholder/60/80" },
-      { title: "Sword Art Online", rating: "4.4", year: "2012", episodes: "96", likes: "2.6M", image: "/api/placeholder/60/80" }
+      { title: "Re:Zero", rating: "4.7", year: "2016", episodes: "50", likes: "1.7M", image: "https://m.media-amazon.com/images/M/MV5BNTY1M2NjMTItOGFhNi00NDU3LWExNzQtZGY2YWJlYzExNmU3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "Mushoku Tensei", rating: "4.8", year: "2021", episodes: "23", likes: "1.3M", image: "https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "That Time I Got Reincarnated as a Slime", rating: "4.6", year: "2018", episodes: "48", likes: "1.2M", image: "https://m.media-amazon.com/images/M/MV5BOTczMjM3MDUtYmZjMC00YzZhLWE4ODQtNjg5YWU4NTJjNzY2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "Overlord", rating: "4.5", year: "2015", episodes: "39", likes: "1.1M", image: "https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/overlord_key_visual.webp" },
+      { title: "Sword Art Online", rating: "4.4", year: "2012", episodes: "96", likes: "2.6M", image: "https://m.media-amazon.com/images/M/MV5BN2NhYzU2NDEtYzI1NS00MjgzLThjZGUtOTYxNGJkZjZmNDdjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" }
     ],
     scifi: [
-      { title: "Steins;Gate", rating: "4.9", year: "2011", episodes: "24", likes: "1.8M", image: "/api/placeholder/60/80" },
-      { title: "Psycho-Pass", rating: "4.7", year: "2012", episodes: "33", likes: "1.2M", image: "/api/placeholder/60/80" },
-      { title: "Ghost in the Shell: SAC", rating: "4.8", year: "2002", episodes: "52", likes: "980K", image: "/api/placeholder/60/80" },
-      { title: "Cowboy Bebop", rating: "4.9", year: "1998", episodes: "26", likes: "1.6M", image: "/api/placeholder/60/80" },
-      { title: "Vivy: Fluorite Eye's Song", rating: "4.7", year: "2021", episodes: "13", likes: "750K", image: "/api/placeholder/60/80" }
+      { title: "Steins;Gate", rating: "4.9", year: "2011", episodes: "24", likes: "1.8M", image: "https://m.media-amazon.com/images/M/MV5BZjI1YjZiMDUtZTI3MC00YTA5LWIzMmMtZmQ0NTZiYWM4NTYwXkEyXkFqcGc@._V1_.jpg" },
+      { title: "Psycho-Pass", rating: "4.7", year: "2012", episodes: "33", likes: "1.2M", image: "https://m.media-amazon.com/images/M/MV5BNjQ1OTNkZGYtODVlMC00NWI0LWJiYjItMzM4M2U4NjY0ZTYwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" },
+      { title: "Ghost in the Shell: SAC", rating: "4.8", year: "2002", episodes: "52", likes: "980K", image: "https://m.media-amazon.com/images/M/MV5BYzllNGRjYTctY2Q2MS00M2Y3LWE5ZTktODc5ZmMwODE5OTVlXkEyXkFqcGc@._V1_.jpg" },
+      { title: "Cowboy Bebop", rating: "4.9", year: "1998", episodes: "26", likes: "1.6M", image: "https://m.media-amazon.com/images/M/MV5BMTU3ZTdiOGQtYmYwYy00OGM5LThmNjMtZGJmNTVlZjk1ZmEyXkEyXkFqcGc@._V1_.jpg" },
+      { title: "Vivy: Fluorite Eye's Song", rating: "4.7", year: "2021", episodes: "13", likes: "750K", image: "https://upload.wikimedia.org/wikipedia/en/a/a9/Vivy_Fluorite_Eye%E2%80%99s_Song_key_visual.jpg" }
     ]
   };
   
