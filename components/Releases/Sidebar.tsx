@@ -64,7 +64,7 @@ const Sidebar = ({
               key={index} 
               className={`pb-3 ${index < popularNews.length - 1 ? `border-b ${borderColor}` : ''} ${hoverBg} p-2 transition-colors rounded group`}
             >
-              <a href="#" className="font-bold group-hover:text-pink-500 transition-colors flex gap-2">
+              <a href={`/article/${news.id}`} className="font-bold group-hover:text-pink-500 transition-colors flex gap-2">
                 <span className={`${accentColor} font-extrabold`}>{index + 1}.</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-200">{news.title}</span>
               </a>

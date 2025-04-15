@@ -1,6 +1,7 @@
 import { Eye, MessageCircle, Heart, Bookmark, Share2, Star, ChevronRight, Bell, TrendingUp as Trending, Award, Clock, Flame as Fire } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import AnimeCategoryTabs from './AnimeCategoryTabs';
+import { Article, Articles } from '@/app/data';
 
 const Main = ({darkMode = false}) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,144 +32,62 @@ const Main = ({darkMode = false}) => {
       setLikedStories([...likedStories, storyId]);
     }
   };
+  function getRandomRating(min = 3.1, max = 5) {
+    return +(Math.random() * (max - min) + min).toFixed(1);
+  }
+  
+  function mapToBreakingNews(article: Article) {
+    return {
+      id: article.id,
+      img: article.mainImage || "/api/placeholder/600/400",
+      authorImage:article.authorImage,
+      category: article.category,
+      title: article.title,
+      excerpt: article.subtitle,
+      author: article.author,
+      time: article.postedAgo,
+      reads: article.viewCount,
+      comments: article.commentCount,
+      isHot: article.isHot
+    };
+  }
+  
+  function mapToLatestChapters(article: Article) {
+    return {
+      id: article.id,
+      img: article.mainImage || "/api/placeholder/300/200",
+      authorImage:article.authorImage,
+      category: article.category,
+      title: article.title,
+      excerpt: article.subtitle,
+      author: article.author,
+      time: article.postedAgo,
+      rating: getRandomRating(), // Optional: assign a fixed or derived rating if available
+      commentCount: article.commentCount
+    };
+  }
+  
+  function mapToTrendingNews(article: Article) {
+    return {
+      id: article.id,
+      img: article.mainImage || "/api/placeholder/600/400",
+      authorImage:article.authorImage,
+      category: article.category,
+      title: article.title,
+      excerpt: article.subtitle,
+      author: article.author,
+      time: article.postedAgo,
+      reads: article.viewCount,
+      comments: article.commentCount,
+      isHot: article.isHot
+    };
+  }
+  
+  const breakingNews = Articles.map(mapToBreakingNews);
 
-  const breakingNews = [
-    {
-      id: 1,
-      img: "/api/placeholder/600/400",
-      category: "Shonen",
-      title: "Jujutsu Kaisen Creator Announces Final Arc Timeline",
-      excerpt: "Gege Akutami reveals the popular dark fantasy series will conclude within the next two years.",
-      author: "Kenji Nakamura",
-      time: "4 hours ago",
-      reads: "3.2k",
-      comments: 42,
-      isHot: true
-    },
-    {
-      id: 2,
-      img: "/api/placeholder/600/400",
-      category: "Industry",
-      title: "Studio MAPPA Takes Bold New Direction With Original Anime Series",
-      excerpt: "The acclaimed studio behind Attack on Titan's final season announces a new cyberpunk project.",
-      author: "Akira Yamamoto",
-      time: "5 hours ago",
-      reads: "2.9k",
-      comments: 38,
-      isHot: false
-    },
-    {
-      id: 3,
-      img: "/api/placeholder/600/400",
-      category: "Movies",
-      title: "Makoto Shinkai's Latest Film Dazzles With Revolutionary Animation",
-      excerpt: "The visionary director pushes technical boundaries again with breathtaking weather effects.",
-      author: "Haruka Kimura",
-      time: "Yesterday",
-      reads: "5.7k",
-      comments: 96,
-      isHot: true
-    },
-    {
-      id: 4,
-      img: "/api/placeholder/600/400",
-      category: "Seinen",
-      title: "Berserk Manga Will Continue Under New Creative Team",
-      excerpt: "After Kentaro Miura's passing, trusted colleagues will complete his dark fantasy masterpiece.",
-      author: "Takeshi Sato",
-      time: "Yesterday",
-      reads: "8.3k",
-      comments: 135,
-      isHot: true
-    }
-  ];
+  const latestChapters = Articles.slice(10, 19).map(mapToLatestChapters);
 
-  const latestChapters = [
-    {
-      id: 5,
-      img: "/api/placeholder/300/200",
-      category: "Shonen",
-      title: "My Hero Academia Chapter 407: Heroes Push Forward in Epic Battle",
-      excerpt: "Deku and the heroes face their greatest challenge yet as the final battle intensifies.",
-      author: "Mei Kobayashi",
-      time: "6 hours ago",
-      rating: 4.8,
-      commentCount: 73
-    },
-    {
-      id: 6,
-      img: "/api/placeholder/300/200",
-      category: "Seinen",
-      title: "Vinland Saga Returns with Stunning Double-Length Chapter",
-      excerpt: "Makoto Yukimura's historical masterpiece continues with breathtaking art and storytelling.",
-      author: "Ryo Tanaka",
-      time: "8 hours ago",
-      rating: 4.9,
-      commentCount: 52
-    },
-    {
-      id: 7,
-      img: "/api/placeholder/300/200",
-      category: "Isekai",
-      title: "Re:Zero Season 3 Reveals New Key Visual and Release Window",
-      excerpt: "Fans rejoice as the popular isekai series announces its return after long hiatus.",
-      author: "Hana Watanabe",
-      time: "10 hours ago",
-      rating: 4.7,
-      commentCount: 89
-    }
-  ];
-
-  const trendingNews = [
-    {
-      id: 8,
-      img: "/api/placeholder/600/400",
-      category: "Shojo",
-      title: "Fruits Basket Creator's New Series Tops Charts Worldwide",
-      excerpt: "The highly anticipated new romance manga has broken sales records in its first week.",
-      author: "Yuki Tanaka",
-      time: "2 days ago",
-      reads: "12.8k",
-      comments: 224,
-      isHot: true
-    },
-    {
-      id: 9,
-      img: "/api/placeholder/600/400",
-      category: "Industry",
-      title: "Crunchyroll and Funimation Complete Merge, Announce Pricing Updates",
-      excerpt: "The anime streaming giants have finally consolidated their platforms and subscription tiers.",
-      author: "Satoshi Kimura",
-      time: "3 days ago",
-      reads: "9.5k",
-      comments: 413,
-      isHot: true
-    },
-    {
-      id: 10,
-      img: "/api/placeholder/600/400",
-      category: "Gaming",
-      title: "Persona 6 Announced with First Teaser Trailer",
-      excerpt: "Atlus reveals the next installment in their popular JRPG series with a stunning visual teaser.",
-      author: "Hiro Nakamura",
-      time: "2 days ago",
-      reads: "15.2k",
-      comments: 528,
-      isHot: true
-    },
-    {
-      id: 11,
-      img: "/api/placeholder/600/400",
-      category: "Merchandise",
-      title: "Chainsaw Man Nendoroids Sell Out Within Minutes of Release",
-      excerpt: "Good Smile Company promises a second wave after unprecedented demand for the popular figures.",
-      author: "Emi Suzuki",
-      time: "4 days ago",
-      reads: "7.1k",
-      comments: 92,
-      isHot: false
-    }
-  ];
+  const trendingNews = Articles.slice(5,9).map(mapToTrendingNews);
 
   // Content to display based on active tab
   const getActiveContent = () => {
@@ -269,45 +188,49 @@ const Main = ({darkMode = false}) => {
             // Skeleton loaders while content loads
             [...Array(4)].map((_, i) => <CardSkeleton key={i} />)
           ) : (
-            getActiveContent().map((story) => (
+            getActiveContent().slice(0, 4).map((story) => (
               <div 
                 key={story.id} 
                 className={`${darkMode ? 'bg-gray-800 border-gray-700 hover:border-violet-600' : 'bg-white border-gray-200 hover:border-violet-500'} rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:-translate-y-1 group`}
               >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={story.img} 
-                    alt={story.title} 
-                    className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <span className={`absolute top-0 right-0 ${
-                    story.category === 'Shonen' ? 'bg-blue-500' :
-                    story.category === 'Seinen' ? 'bg-red-500' :
-                    story.category === 'Shojo' ? 'bg-pink-500' :
-                    story.category === 'Industry' ? 'bg-purple-500' :
-                    story.category === 'Movies' ? 'bg-green-500' :
-                    story.category === 'Gaming' ? 'bg-yellow-500' :
-                    story.category === 'Merchandise' ? 'bg-orange-500' : 'bg-gray-500'
-                  } text-white px-3 py-1 font-bold`}>{story.category}</span>
-                  {story.isHot && (
-                    <span className="absolute top-0 left-0 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 font-bold flex items-center">
-                      <Fire size={14} className="mr-1" />
-                      HOT
-                    </span>
-                  )}
-                  <div className="absolute bottom-0 left-0 bg-gradient-to-r from-violet-900 to-purple-800 text-white px-3 py-1 font-bold flex items-center">
-                    <Eye size={14} className="mr-1" />
-                    {story.reads} readers
+                <a href={`/article/${story.id}`}>
+                  <div className="relative overflow-hidden">
+                    <img 
+                      src={story.img} 
+                      alt={story.title} 
+                      className="w-full h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <span className={`absolute top-0 right-0 ${
+                      story.category === 'Shonen' ? 'bg-blue-500' :
+                      story.category === 'Seinen' ? 'bg-red-500' :
+                      story.category === 'Shojo' ? 'bg-pink-500' :
+                      story.category === 'Industry' ? 'bg-purple-500' :
+                      story.category === 'Movies' ? 'bg-green-500' :
+                      story.category === 'Gaming' ? 'bg-yellow-500' :
+                      story.category === 'Merchandise' ? 'bg-orange-500' : 'bg-gray-500'
+                    } text-white px-3 py-1 font-bold`}>{story.category}</span>
+                    {story.isHot && (
+                      <span className="absolute top-0 left-0 bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 py-1 font-bold flex items-center">
+                        <Fire size={14} className="mr-1" />
+                        HOT
+                      </span>
+                    )}
+                    <div className="absolute bottom-0 left-0 bg-gradient-to-r from-violet-900 to-purple-800 text-white px-3 py-1 font-bold flex items-center">
+                      <Eye size={14} className="mr-1" />
+                      {story.reads} readers
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="p-6">
-                  <h4 className={`text-xl font-black mt-2 ${darkMode ? 'text-violet-300' : 'text-violet-900'} group-hover:text-pink-500 transition-colors line-clamp-2`}>
-                    {story.title.toUpperCase()}
-                  </h4>
+                  <a href={`/article/${story.id}`}>
+                    <h4 className={`text-xl font-black mt-2 ${darkMode ? 'text-violet-300' : 'text-violet-900'} group-hover:text-pink-500 transition-colors line-clamp-2`}>
+                      {story.title.toUpperCase()}
+                    </h4>
+                  </a>
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mt-3 line-clamp-2`}>{story.excerpt}</p>
                   <div className={`flex items-center mt-4 ${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>
                     <div className="relative">
-                      <img src="/api/placeholder/30/30" alt="Author" className="h-6 w-6 rounded-full border border-pink-400" />
+                      <img src={story.authorImage} alt="Author" className="h-6 w-6 rounded-full border border-pink-400" />
                       <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border border-white"></div>
                     </div>
                     <span className="font-bold ml-2 truncate max-w-24">{story.author}</span>
@@ -378,30 +301,34 @@ const Main = ({darkMode = false}) => {
           ) : (
             latestChapters.map((story) => (
               <div key={story.id} className={`flex flex-col md:flex-row gap-6 ${darkMode ? 'bg-gray-800 border-gray-700 hover:border-violet-600' : 'bg-white border-gray-200 hover:border-violet-500'} p-4 rounded-lg border-2 hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}>
-                <div className="relative w-full md:w-48 flex-shrink-0">
-                  <img 
-                    src={story.img} 
-                    alt={story.title} 
-                    className="w-full md:w-48 h-48 md:h-36 object-cover rounded-lg"
-                  />
-                  <span className={`absolute top-2 right-2 ${
-                    story.category === 'Shonen' ? 'bg-blue-500' :
-                    story.category === 'Seinen' ? 'bg-red-500' :
-                    story.category === 'Isekai' ? 'bg-green-500' : 'bg-pink-500'
-                  } text-white px-2 py-1 text-sm font-bold rounded`}>{story.category}</span>
-                  <div className="absolute bottom-2 left-2 bg-black bg-opacity-70 text-cyan-300 px-2 py-1 text-sm font-bold rounded flex items-center">
-                    <Star size={12} className="mr-1 text-yellow-400" />
-                    {story.rating}
+                <a href={`/article/${story.id}`}>
+                  <div className="relative w-full md:w-48 flex-shrink-0">
+                    <img 
+                      src={story.img} 
+                      alt={story.title} 
+                      className="w-full md:w-48 h-48 md:h-36 object-cover rounded-lg"
+                    />
+                    <span className={`absolute top-2 right-2 ${
+                      story.category === 'Shonen' ? 'bg-blue-500' :
+                      story.category === 'Seinen' ? 'bg-red-500' :
+                      story.category === 'Isekai' ? 'bg-green-500' : 'bg-pink-500'
+                    } text-white px-2 py-1 text-sm font-bold rounded`}>{story.category}</span>
+                    <div className="absolute bottom-2 left-2 bg-black bg-opacity-70 text-cyan-300 px-2 py-1 text-sm font-bold rounded flex items-center">
+                      <Star size={12} className="mr-1 text-yellow-400" />
+                      {story.rating}
+                    </div>
                   </div>
-                </div>
+                </a>
                 <div className="flex-1">
-                  <h4 className={`text-xl font-black mt-2 ${darkMode ? 'text-violet-300' : 'text-violet-900'} hover:text-pink-500 transition-colors`}>
-                    {story.title}
-                  </h4>
+                  <a href={`/article/${story.id}`}>
+                    <h4 className={`text-xl font-black mt-2 ${darkMode ? 'text-violet-300' : 'text-violet-900'} hover:text-pink-500 transition-colors`}>
+                      {story.title}
+                    </h4>
+                  </a>
                   <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mt-2`}>{story.excerpt}</p>
                   <div className="flex items-center mt-4 flex-wrap gap-y-2">
                     <div className={`flex items-center ${darkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>
-                      <img src="/api/placeholder/30/30" alt="Author" className="h-6 w-6 rounded-full border border-pink-400" />
+                      <img src={story.authorImage} alt="Author" className="h-6 w-6 rounded-full border border-pink-400" />
                       <span className="font-bold ml-2">{story.author}</span>
                       <span className="mx-2">•</span>
                       <span>{story.time}</span>
@@ -423,10 +350,12 @@ const Main = ({darkMode = false}) => {
                         <Bookmark size={14} className={`mr-1 ${bookmarkedStories.includes(story.id) ? 'fill-current' : ''}`} />
                         Save
                       </button>
-                      <button className={`${darkMode ? 'bg-pink-800 text-pink-200 hover:bg-pink-700' : 'bg-pink-100 text-pink-800 hover:bg-pink-200'} px-3 py-1 rounded-full text-sm font-bold transition-colors flex items-center`}>
-                        <Eye size={14} className="mr-1" />
-                        Read
-                      </button>
+                      <a href={`/article/${story.id}`}>
+                        <button className={`${darkMode ? 'bg-pink-800 text-pink-200 hover:bg-pink-700' : 'bg-pink-100 text-pink-800 hover:bg-pink-200'} px-3 py-1 rounded-full text-sm font-bold transition-colors flex items-center`}>
+                          <Eye size={14} className="mr-1" />
+                          Read
+                        </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -434,7 +363,7 @@ const Main = ({darkMode = false}) => {
             ))
           )}
         </div>
-        <div className="mt-8 flex justify-center">
+        {/* <div className="mt-8 flex justify-center">
           <button className={`${
             darkMode 
               ? 'bg-gradient-to-r from-pink-600 to-violet-800 hover:from-pink-700 hover:to-violet-900' 
@@ -443,7 +372,7 @@ const Main = ({darkMode = false}) => {
             LOAD MORE CONTENT
             <ChevronRight size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
+        </div> */}
       </section>
     </div>
   )

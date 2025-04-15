@@ -1,7 +1,7 @@
 import { Star, Bell, Flame, TrendingUp, Heart, Search, ChevronRight } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({darkMode}:{darkMode:boolean}) => {
   const [animatedIndex, setAnimatedIndex] = useState(null);
   const [isHovering, setIsHovering] = useState(false);
   const [currentCategory, setCurrentCategory] = useState('All');
@@ -22,41 +22,42 @@ const Sidebar = () => {
   // Enhanced trending topics with more variety and current anime references
   const trendingTopics = {
     'All': [
-      { title: "Jujutsu Kaisen Final Season Announcement", category: "Anime", trend: "hot" },
-      { title: "Haikyuu!! Final Movie Global Release", category: "Movie", trend: "up" },
-      { title: "Bleach: Thousand-Year Blood War Part 3", category: "Anime", trend: "hot" },
-      { title: "One Piece Live Action Season 2 Cast Reveal", category: "Live Action", trend: "up" },
-      { title: "New Jump Series 'Sakamoto Days' Adaptation", category: "Manga", trend: "up" }
+      { id: 22, title: "Jujutsu Kaisen Final Season Announcement", category: "Anime", trend: "hot" },
+      { id: 23, title: "Haikyuu!! Final Movie Global Release", category: "Movie", trend: "up" },
+      { id: 24, title: "Bleach: Thousand-Year Blood War Part 3", category: "Anime", trend: "hot" },
+      { id: 25, title: "One Piece Live Action Season 2 Cast Reveal", category: "Live Action", trend: "up" },
+      { id: 26, title: "New Jump Series 'Sakamoto Days' Adaptation", category: "Manga", trend: "up" }
     ],
     'Anime': [
-      { title: "Jujutsu Kaisen Final Season Announcement", category: "Anime", trend: "hot" },
-      { title: "Bleach: Thousand-Year Blood War Part 3", category: "Anime", trend: "hot" },
-      { title: "Undead Unluck Sequel Confirmation", category: "Anime", trend: "up" },
-      { title: "Studio MAPPA's New Original Series", category: "Anime", trend: "up" },
-      { title: "Dragon Ball Daima Global Reception", category: "Anime", trend: "up" }
+      { id: 22, title: "Jujutsu Kaisen Final Season Announcement", category: "Anime", trend: "hot" },
+      { id: 24, title: "Bleach: Thousand-Year Blood War Part 3", category: "Anime", trend: "hot" },
+      { id: 27, title: "Undead Unluck Sequel Confirmation", category: "Anime", trend: "up" },
+      { id: 28, title: "Studio MAPPA's New Original Series", category: "Anime", trend: "up" },
+      { id: 29, title: "Dragon Ball Daima Global Reception", category: "Anime", trend: "up" }
     ],
     'Manga': [
-      { title: "Sakamoto Days Breaking Sales Records", category: "Manga", trend: "hot" },
-      { title: "One Piece Final Saga Latest Chapter", category: "Manga", trend: "hot" },
-      { title: "My Hero Academia Manga Conclusion", category: "Manga", trend: "up" },
-      { title: "Chainsaw Man Part 2 Latest Arc", category: "Manga", trend: "up" },
-      { title: "New Shueisha Digital Platform Launch", category: "Manga", trend: "up" }
+      { id: 30, title: "Sakamoto Days Breaking Sales Records", category: "Manga", trend: "hot" },
+      { id: 32, title: "One Piece Final Saga Latest Chapter", category: "Manga", trend: "hot" },
+      { id: 31, title: "My Hero Academia Manga Conclusion", category: "Manga", trend: "up" },
+      { id: 33, title: "Chainsaw Man Part 2 Latest Arc", category: "Manga", trend: "up" },
+      { id: 34, title: "New Shueisha Digital Platform Launch", category: "Manga", trend: "up" }
     ],
     'Movies': [
-      { title: "Haikyuu!! Final Movie Global Release", category: "Movie", trend: "hot" },
-      { title: "Demon Slayer: Infinity Castle Announcement", category: "Movie", trend: "hot" },
-      { title: "Jujutsu Kaisen 0 Director's New Project", category: "Movie", trend: "up" },
-      { title: "Studio Ghibli's Next Feature Film", category: "Movie", trend: "up" },
-      { title: "Your Name Creator's Latest Work", category: "Movie", trend: "up" }
+      { id: 23, title: "Haikyuu!! Final Movie Global Release", category: "Movie", trend: "hot" },
+      { id: 35, title: "Demon Slayer: Infinity Castle Announcement", category: "Movie", trend: "hot" },
+      { id: 36, title: "Jujutsu Kaisen 0 Director's New Project", category: "Movie", trend: "up" },
+      { id: 37, title: "Studio Ghibli's Next Feature Film", category: "Movie", trend: "up" },
+      { id: 38, title: "Your Name Creator's Latest Work", category: "Movie", trend: "up" }
     ],
     'Live Action': [
-      { title: "One Piece Live Action Season 2 Cast Reveal", category: "Live Action", trend: "hot" },
-      { title: "Yu Yu Hakusho Netflix Season 2", category: "Live Action", trend: "up" },
-      { title: "My Hero Academia Hollywood Adaptation", category: "Live Action", trend: "up" },
-      { title: "Attack on Titan Final Film Production", category: "Live Action", trend: "up" },
-      { title: "Death Note New Series Announcement", category: "Live Action", trend: "hot" }
+      { id: 25, title: "One Piece Live Action Season 2 Cast Reveal", category: "Live Action", trend: "hot" },
+      { id: 39, title: "Yu Yu Hakusho Netflix Season 2", category: "Live Action", trend: "up" },
+      { id: 40, title: "My Hero Academia Hollywood Adaptation", category: "Live Action", trend: "up" },
+      { id: 41, title: "Attack on Titan Final Film Production", category: "Live Action", trend: "up" },
+      { id: 42, title: "Death Note New Series Announcement", category: "Live Action", trend: "hot" }
     ]
   };
+  
 
   // Get current topics based on selected category
   const currentTopics = trendingTopics[currentCategory] || trendingTopics['All'];
@@ -100,7 +101,7 @@ const Sidebar = () => {
                   onMouseEnter={() => setAnimatedIndex(i)}
                   onMouseLeave={() => setAnimatedIndex(null)}
                 >
-                  <a href="#" className="flex items-center text-white hover:text-cyan-300 transition-colors group">
+                  <a href={`/article/${topic.id}`} className="flex items-center text-white hover:text-cyan-300 transition-colors group">
                     <span className="font-black text-pink-400 mr-3 text-xl">{i + 1}</span>
                     <div className="flex-1">
                       <div className="flex items-center">
@@ -133,7 +134,7 @@ const Sidebar = () => {
         </div>
         
         {/* Editor's Picks - Enhanced with hover effects */}
-        <div className="bg-white rounded-lg p-6 mb-8 border-2 border-gray-200 hover:border-violet-300 transition-colors shadow-lg">
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 mb-8 border-2 ${darkMode ? 'border-gray-700' : 'border-gray-200'} ${darkMode ? 'hover:border-pink-700' : 'hover:border-violet-300'} transition-colors shadow-lg`}>
           <div className="flex items-center mb-6">
             <h3 className="text-xl font-black bg-gradient-to-r from-pink-500 to-violet-600 text-white inline-block px-3 py-1 rounded">EDITOR'S PICKS</h3>
             <div className="ml-2">
@@ -143,33 +144,36 @@ const Sidebar = () => {
           <div className="space-y-4">
             {[
               {
+                id:47,
                 title: "Why Chainsaw Man and Jujutsu Kaisen Are Redefining Modern Shonen",
                 category: "Analysis",
-                img: "/api/placeholder/80/80"
+                img: "https://m.media-amazon.com/images/I/71WYpi-EtgL._AC_UF1000,1000_QL80_.jpg"
               },
               {
+                id:48,
                 title: "The Art Evolution in One Piece: From East Blue to Egghead Island",
                 category: "Deep Dive",
-                img: "/api/placeholder/80/80"
+                img: "https://upload.wikimedia.org/wikipedia/en/2/21/One_Piece_DVD_21.png"
               },
               {
+                id:49,
                 title: "Top 10 Most Anticipated Anime of Summer 2025",
                 category: "Seasonal",
-                img: "/api/placeholder/80/80"
+                img: "https://m.media-amazon.com/images/M/MV5BNjhmN2RmYjgtN2ZlNC00YTdkLWFlMTYtMTdkNzkxMDA0ZjJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
               }
             ].map((article, i) => (
-              <div 
-                key={i} 
-                className="pb-4 border-b border-gray-200 last:border-0 hover:bg-violet-50 p-2 -mx-2 rounded transition-colors group"
+              <div
+                key={i}
+                className={`pb-4 border-b ${darkMode ? 'border-gray-700' : 'border-gray-200'} last:border-0 ${darkMode ? 'hover:bg-gray-700' : 'hover:bg-violet-50'} p-2 -mx-2 rounded transition-colors group`}
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
               >
                 <div className="flex">
                   <div className="w-20 h-20 overflow-hidden rounded mr-3 relative">
-                    <img 
-                      src={article.img} 
-                      alt={article.title} 
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110" 
+                    <img
+                      src={article.img}
+                      alt={article.title}
+                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-violet-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity flex items-end justify-center pb-1">
                       <Heart size={16} className="text-white" />
@@ -178,14 +182,14 @@ const Sidebar = () => {
                   <div>
                     <span className="text-sm font-bold text-pink-500">{article.category.toUpperCase()}</span>
                     <h4 className="font-bold mt-1">
-                      <a href="#" className="hover:text-violet-700 transition-colors">{article.title}</a>
+                      <a href={`/article/${article.id}`} className={`${darkMode ? 'text-gray-100 hover:text-pink-400' : 'text-gray-900 hover:text-violet-700'} transition-colors`}>{article.title}</a>
                     </h4>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <button className="w-full mt-4 border-2 border-violet-500 text-violet-600 font-bold py-2 rounded-lg hover:bg-violet-50 transition-colors flex items-center justify-center">
+          <button className={`w-full mt-4 border-2 ${darkMode ? 'border-pink-700 text-pink-500 hover:bg-gray-700' : 'border-violet-500 text-violet-600 hover:bg-violet-50'} font-bold py-2 rounded-lg transition-colors flex items-center justify-center`}>
             MORE ARTICLES
             <ChevronRight size={18} className="ml-1" />
           </button>
@@ -257,15 +261,15 @@ const Sidebar = () => {
         </div> */}
         
         {/* Popular Tags - Enhanced with count badges */}
-        <div className="bg-white rounded-lg p-6 border-2 border-gray-200 mb-8 shadow-lg">
-          <h3 className="text-xl font-black mb-4 text-violet-900 flex items-center">
+        <div className={`${darkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg p-6 border-2 ${darkMode ? 'border-gray-700' : 'border-gray-200'} mb-8 shadow-lg`}>
+          <h3 className={`text-xl font-black mb-4 ${darkMode ? 'text-pink-500' : 'text-violet-900'} flex items-center`}>
             POPULAR TAGS
-            <span className="ml-2 text-xs bg-violet-100 text-violet-800 px-2 py-0.5 rounded">14 TAGS</span>
+            <span className={`ml-2 text-xs ${darkMode ? 'bg-gray-700 text-pink-400' : 'bg-violet-100 text-violet-800'} px-2 py-0.5 rounded`}>14 TAGS</span>
           </h3>
           <div className="flex flex-wrap gap-2">
             {[
               {name: "One Piece", count: 235},
-              {name: "Jujutsu Kaisen", count: 187}, 
+              {name: "Jujutsu Kaisen", count: 187},
               {name: "Demon Slayer", count: 156},
               {name: "Bleach", count: 143},
               {name: "Chainsaw Man", count: 122},
@@ -279,13 +283,13 @@ const Sidebar = () => {
               {name: "Reviews", count: 32},
               {name: "Live Action", count: 21}
             ].map((tag) => (
-              <a 
-                key={tag.name} 
-                href="#" 
-                className="bg-gray-100 hover:bg-violet-100 text-violet-800 px-3 py-1 rounded-full text-sm transition-colors flex items-center group"
+              <a
+                key={tag.name}
+                href="#"
+                className={`${darkMode ? 'bg-gray-700 hover:bg-purple-900 text-pink-400' : 'bg-gray-100 hover:bg-violet-100 text-violet-800'} px-3 py-1 rounded-full text-sm transition-colors flex items-center group`}
               >
                 <span>#{tag.name.replace(/\s+/g, '')}</span>
-                <span className="ml-1 bg-white text-violet-600 text-xs px-1.5 rounded-full opacity-60 group-hover:opacity-100 transition-opacity">
+                <span className={`ml-1 ${darkMode ? 'bg-gray-800 text-pink-300' : 'bg-white text-violet-600'} text-xs px-1.5 rounded-full opacity-60 group-hover:opacity-100 transition-opacity`}>
                   {tag.count}
                 </span>
               </a>

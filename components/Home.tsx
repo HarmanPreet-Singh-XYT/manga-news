@@ -90,7 +90,7 @@ const cardHoverClass = 'transition-all duration-300 hover:shadow-lg';
           <Main darkMode={darkMode}/>
           
           {/* Sidebar */}
-          <Sidebar/>
+          <Sidebar darkMode={darkMode}/>
         </div>
         {/* <AnimeReleaseSchedule darkMode={darkMode}/> */}
         {/* <UpcomingReleases darkMode={darkMode} accentColor={accentColor} accentBg={accentBg} secondaryBg={secondaryBg}/> */}

@@ -1,3 +1,4 @@
+import { Articles } from '@/app/data';
 import { Zap, Clock, Share2, Bookmark, Eye, Flame, MessageCircle, ThumbsUp } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
@@ -27,7 +28,7 @@ const Featured = ({ darkMode = false }) => {
     }
     return count;
   };
-  
+  const featuredStory = Articles[20];
   return (
     <section className="mb-16 relative">
       {showTooltip && (
@@ -39,7 +40,7 @@ const Featured = ({ darkMode = false }) => {
       <div className={`relative rounded-lg overflow-hidden shadow-2xl border-4 ${darkMode ? 'border-violet-950' : 'border-violet-900'} group`}>
         <div className="aspect-w-16 aspect-h-9 bg-gray-900">
           <img 
-            src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/09/the-mystery-demon-slayer-s-anime-answered.jpg"  
+            src={featuredStory.mainImage}  
             alt="Featured anime story" 
             className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
           />
@@ -66,15 +67,15 @@ const Featured = ({ darkMode = false }) => {
           <div className="absolute top-20 left-6 bg-black bg-opacity-50 rounded-full px-4 py-1 flex items-center space-x-4">
             <div className="flex items-center">
               <Eye size={14} className="text-cyan-300 mr-1" />
-              <span className="text-white text-sm">{formatViewCount(viewCount)}</span>
+              <span className="text-white text-sm">{featuredStory.viewCount}</span>
             </div>
             <div className="flex items-center">
               <MessageCircle size={14} className="text-cyan-300 mr-1" />
-              <span className="text-white text-sm">284</span>
+              <span className="text-white text-sm">{featuredStory.commentCount}</span>
             </div>
             <div className="flex items-center">
               <ThumbsUp size={14} className="text-cyan-300 mr-1" />
-              <span className="text-white text-sm">1.2K</span>
+              <span className="text-white text-sm">{featuredStory.likeCount}</span>
             </div>
           </div>
           
@@ -86,7 +87,7 @@ const Featured = ({ darkMode = false }) => {
               </span>
             </div>
             <h2 className={`text-3xl md:text-5xl font-black text-white mt-4 transition-all duration-300 group-hover:translate-x-2`} style={{ textShadow: "3px 3px 0 #000" }}>
-              "ONE PIECE FILM RED" BREAKS ALL-TIME ANIME BOX OFFICE RECORDS!
+              "{featuredStory.title}"
             </h2>
             <p className="text-cyan-300 mt-4 text-lg font-bold max-w-4xl">
               Eiichiro Oda's legendary series continues its dominance with a film that surpasses expectations and reshapes the anime film industry landscape worldwide.
@@ -103,14 +104,14 @@ const Featured = ({ darkMode = false }) => {
             
             <div className="flex items-center mt-6 text-white">
               <div className="relative">
-                <img src="/api/placeholder/40/40" alt="Author" className="h-10 w-10 rounded-full border-2 border-pink-400" />
+                <img src={featuredStory.authorImage} alt="Author" className="h-10 w-10 rounded-full border-2 border-pink-400" />
                 <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
               </div>
-              <span className="font-bold ml-2">By Yuki Tanaka</span>
+              <span className="font-bold ml-2">By {featuredStory.author}</span>
               <span className="mx-2">•</span>
               <span className="flex items-center">
                 <Clock size={16} className="mr-1 text-cyan-300" />
-                2 hours ago
+                {featuredStory.postedAgo}
               </span>
               <div className="ml-auto flex space-x-3">
                 <button className={`p-2 rounded-full ${darkMode ? 'hover:bg-violet-950' : 'hover:bg-violet-800'} transition-colors relative group`}>
@@ -126,10 +127,12 @@ const Featured = ({ darkMode = false }) => {
                     {isBookmarked ? 'Saved' : 'Save'}
                   </span>
                 </button>
-                <button className="flex items-center space-x-1 bg-pink-500 text-white px-4 py-1 rounded-full hover:bg-pink-400 transition-colors group">
-                  <Eye size={16} />
-                  <span className="font-bold group-hover:ml-1 transition-all">Read More</span>
-                </button>
+                <a href={`/article/${featuredStory.id}`} >
+                  <button className="flex items-center space-x-1 bg-pink-500 text-white px-4 py-1 rounded-full hover:bg-pink-400 transition-colors group">
+                    <Eye size={16} />
+                    <span className="font-bold group-hover:ml-1 transition-all">Read More</span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

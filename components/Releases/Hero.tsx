@@ -83,7 +83,7 @@ const Hero = ({darkMode,secondaryBg,accentBg,themeClass,accentColor}) => {
               </div>
               
               <div className="flex flex-wrap gap-4 items-center">
-                <a href="#" className={`${accentBg} text-white font-bold uppercase py-3 px-6 flex items-center gap-2 group`}
+                <a href="/article/21" className={`${accentBg} text-white font-bold uppercase py-3 px-6 flex items-center gap-2 group`}
                   style={{
                     clipPath: "polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%)"
                   }}>

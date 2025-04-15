@@ -57,7 +57,7 @@ export default function MangaNewsPage() {
     {
       title: "Jujutsu Kaisen",
       chapter: "Chapter 256",
-      image: "/api/placeholder/240/360",
+      image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg",
       hot: true,
       description: "Yuji Itadori and the sorcerers face off against the cursed spirits.",
       date: "Apr 15"
@@ -65,21 +65,21 @@ export default function MangaNewsPage() {
     {
       title: "My Hero Academia",
       chapter: "Chapter 402",
-      image: "/api/placeholder/240/360",
+      image: "https://external-preview.redd.it/netflix-my-hero-academia-youre-next-premieres-april-20-v0-JwzZ0n7z9UTm0yjaMDwEcl5p3pr7k-1RJdKSZDH_O0I.jpg?auto=webp&s=6f9b748eb34eccac28fd299e1ac0e8c1e109dc0b",
       description: "The final arc continues as heroes make their last stand.",
       date: "Apr 14"
     },
     {
       title: "Chainsaw Man",
       chapter: "Chapter 153",
-      image: "/api/placeholder/240/360",
+      image: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg",
       description: "Denji's new adventures unfold in this action-packed chapter.",
       date: "Apr 13"
     },
     {
       title: "Kagurabachi",
       chapter: "Chapter 34",
-      image: "/api/placeholder/240/360",
+      image: "https://www.nerdation.in/cdn/shop/files/kagurabachi-volume-3-cover-revealer-releases-july-4th-v0-WXty6Ps0n5ve_aNB-DF2LFGSE1v6UHugFzZzPiOwQ6Q.png?v=1723663745",
       new: true,
       description: "The rising star manga continues its epic sword saga.",
       date: "Apr 15"
@@ -109,24 +109,28 @@ export default function MangaNewsPage() {
   // Popular news data
   const popularNews = [
     {
+      id:43,
       title: "Hunter x Hunter Creator Returns from Hiatus",
       date: "Apr 15",
       comments: 42,
       excerpt: "Togashi announces return with 10 new chapters planned for 2025."
     },
     {
+      id:44,
       title: "Crunchyroll Announces Spring 2025 Lineup",
       date: "Apr 14",
       comments: 35,
       excerpt: "20+ new shows including highly anticipated sequels and originals."
     },
     {
+      id:45,
       title: "Spy x Family Movie Confirmed for Summer Release",
       date: "Apr 13",
       comments: 28,
       excerpt: "The Forger family heads to the big screen in a new original story."
     },
     {
+      id:46,
       title: "Attack on Titan Author Reveals New Project",
       date: "Apr 12",
       comments: 21,

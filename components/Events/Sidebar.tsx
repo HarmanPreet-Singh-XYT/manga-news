@@ -106,9 +106,9 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
               </div>
             </div> 
           {/* Categories list */}
-          <div className={`my-6 border-4 border-violet-500 p-4 ${
+          <div className={`my-6 border-4 p-4 ${
             darkMode ? 'bg-gray-800' : 'bg-white'
-          }`}
+          } ${darkMode ? 'border-pink-600' : 'border-violet-600'}`}
           style={{
             clipPath: 'polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%)'
           }}>

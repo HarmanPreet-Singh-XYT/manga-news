@@ -616,7 +616,7 @@ export default function EventsPage() {
               </div>
             </div>
           </div> */}
-          <AnimeEventsList/>
+          <AnimeEventsList darkMode={darkMode}/>
           
           {/* <div className="lg:w-1/3">
             
