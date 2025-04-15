@@ -162,12 +162,12 @@ const Header = ({darkMode,toggleMenu,isMenuOpen,toggleDarkMode,toggleNotificatio
           <div className="container mx-auto px-4">
             <ul className="space-y-4">
               {categories.map((category) => (
-                <li key={category}>
+                <li key={category.name}>
                   <a 
                     href="#" 
                     className={`block py-3 text-xl border-b ${darkMode ? 'border-purple-800' : 'border-purple-700'} flex justify-between items-center text-white font-bold hover:text-cyan-300 transition-colors`}
                   >
-                    {category.toUpperCase()}
+                    {category.name.toUpperCase()}
                     <ChevronRight size={20} className="text-pink-400" />
                   </a>
                 </li>

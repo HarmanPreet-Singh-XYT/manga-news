@@ -1,5 +1,6 @@
 import { Eye, MessageCircle, Heart, Bookmark, Share2, Star, ChevronRight, Bell, TrendingUp as Trending, Award, Clock, Flame as Fire } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
+import AnimeCategoryTabs from './AnimeCategoryTabs';
 
 const Main = ({darkMode = false}) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -217,7 +218,7 @@ const Main = ({darkMode = false}) => {
       </div>
 
       {/* Content Tab Navigation */}
-      <div className="flex mb-6 border-b border-gray-200 dark:border-gray-700">
+      {/* <div className="flex mb-6 border-b border-gray-200 dark:border-gray-700">
         <button 
           onClick={() => setActiveTab('breaking')}
           className={`flex items-center px-4 py-2 font-bold text-sm ${
@@ -252,8 +253,8 @@ const Main = ({darkMode = false}) => {
           <Clock size={16} className="mr-1" />
           UPCOMING
         </button>
-      </div>
-            
+      </div> */}
+            <AnimeCategoryTabs darkMode={darkMode}/>
       {/* Main News Grid */}
       <section className="mb-12">
         <div className="flex items-center mb-6">
