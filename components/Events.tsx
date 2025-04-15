@@ -161,7 +161,7 @@ export default function EventsPage() {
                  ? 'url("/api/placeholder/400/400")' 
                  : 'url("/api/placeholder/400/400")',
                backgroundSize: '200px',
-               backgroundOpacity: '0.05'
+              //  backgroundOpacity: '0.05'
              }}>
           <div className="flex justify-end p-4">
             <button 
