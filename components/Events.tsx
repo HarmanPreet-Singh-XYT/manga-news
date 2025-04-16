@@ -40,7 +40,7 @@ export default function EventsPage() {
     {
       id: 1,
       title: "AnimeExpo 2025",
-      image: "/api/placeholder/800/500",
+      image: "https://www.anime-expo.org/wp-content/uploads/2024/01/AX_BG_EXTERIOR_FINAL_v3-WEB-2-1-1024x596.png",
       date: "May 15-18, 2025",
       location: "Los Angeles Convention Center",
       category: "Conventions",
@@ -51,7 +51,7 @@ export default function EventsPage() {
     {
       id: 2,
       title: "One Piece: Final Saga Premiere",
-      image: "/api/placeholder/800/500",
+      image: "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/04/one-piece-how-many-arcs-will-the-final-saga-have-featured-1.jpg",
       date: "June 2, 2025",
       location: "Global Streaming Event",
       category: "Releases",

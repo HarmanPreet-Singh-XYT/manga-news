@@ -20,7 +20,7 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
             
             <div className="relative overflow-hidden mb-4">
               <img 
-                src="/api/placeholder/400/200" 
+                src="https://dw9to29mmj727.cloudfront.net/promo/2016/6028-SJsummer_SJsales_2000x800_jpg" 
                 alt="Featured Event" 
                 className="w-full h-32 object-cover"
               />

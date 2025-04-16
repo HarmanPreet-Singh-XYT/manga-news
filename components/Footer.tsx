@@ -37,20 +37,20 @@ const Footer = ({categories}:{categories:any}) => {
             <div>
               <h4 className="font-black mb-4">OUR TEAM</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Join Our Staff</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Advertise</a></li>
+                <li><a href="/about" className="hover:text-cyan-300 transition-colors">About Us</a></li>
+                <li><a href="/events" className="hover:text-cyan-300 transition-colors">Events</a></li>
+                <li><a href="/releases" className="hover:text-cyan-300 transition-colors">Releases</a></li>
+                <li><a href="/about" className="hover:text-cyan-300 transition-colors">Contact</a></li>
+                <li><a href="/series" className="hover:text-cyan-300 transition-colors">Series</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-black mb-4">QUICK LINKS</h4>
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Latest Reviews</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Release Calendar</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Top Series</a></li>
-                <li><a href="#" className="hover:text-cyan-300 transition-colors">Upcoming Events</a></li>
+                <li><a href="/" className="hover:text-cyan-300 transition-colors">Latest Reviews</a></li>
+                <li><a href="/releases" className="hover:text-cyan-300 transition-colors">Release Calendar</a></li>
+                <li><a href="/series" className="hover:text-cyan-300 transition-colors">Top Series</a></li>
+                <li><a href="/events" className="hover:text-cyan-300 transition-colors">Upcoming Events</a></li>
               </ul>
             </div>
           </div>
