@@ -5,7 +5,14 @@ import {
   Flame as Fire, Tag, MessageCircle, Moon, Sun, 
   Image, Ticket, Camera, ChevronRight, Share2,
   Award, Bell, PlayCircle,
-  Sparkles
+  Sparkles,
+  ChevronDown,
+  Flag,
+  HelpCircle,
+  Link,
+  MessageSquare,
+  Smile,
+  Music
 } from 'lucide-react';
 import Newsletter from '@/components/Releases/Newsletter';
 import Footer from '@/components/Footer';
@@ -91,11 +98,11 @@ export default function AnimeExpoEventPage() {
       "https://i.ytimg.com/vi/JUa_z_b_oQg/maxresdefault.jpg"
     ],
     guests: [
-      { name: "Makoto Shinkai", role: "Director", image: "/api/placeholder/80/80" },
-      { name: "LiSA", role: "Musical Artist", image: "/api/placeholder/80/80" },
-      { name: "Yuki Kaji", role: "Voice Actor", image: "/api/placeholder/80/80" },
-      { name: "MAPPA Studio", role: "Special Showcase", image: "/api/placeholder/80/80" },
-      { name: "Chainsaw Man Cast", role: "Panel & Signing", image: "/api/placeholder/80/80" }
+      { name: "Makoto Shinkai", role: "Director", image: "https://cdn.mainichi.jp/vol1/2023/04/14/20230414p2g00m0et037000p/8.jpg?1" },
+      { name: "LiSA", role: "Musical Artist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqE-SFLVKBhfhUtApy67KFancl9VWHF1hUIQ&s" },
+      { name: "Yuki Kaji", role: "Voice Actor", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/27th_Tokyo_International_Film_Festival_Y%C5%ABki_Kaji.jpg/1200px-27th_Tokyo_International_Film_Festival_Y%C5%ABki_Kaji.jpg" },
+      { name: "MAPPA Studio", role: "Special Showcase", image: "https://blog.sakugabooru.com/wp-content/uploads/2017/09/mappa_intro-1038x576.png" },
+      { name: "Chainsaw Man Cast", role: "Panel & Signing", image: "https://upload.wikimedia.org/wikipedia/en/3/3a/Chainsaw_Man_characters.png" }
     ],
     highlights: [
       { title: "Exclusive Pre-Release Film Screenings", icon: "film" },
@@ -176,6 +183,16 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
       top: 0,
       behavior: 'smooth'
     });
+  };
+  const getHighlightIcon = (iconName) => {
+    switch(iconName) {
+      case 'film': return <Camera className="w-6 h-6 text-pink-500" />;
+      case 'mic': return <PlayCircle className="w-6 h-6 text-blue-500" />;
+      case 'costume': return <Award className="w-6 h-6 text-yellow-500" />;
+      case 'brush': return <Smile className="w-6 h-6 text-green-500" />;
+      case 'music': return <Music className="w-6 h-6 text-purple-500" />;
+      default: return <Star className="w-6 h-6 text-yellow-500" />;
+    }
   };
   return (
     <div className={`${baseBgClass} min-h-screen ${baseTextClass} font-sans transition-colors duration-300`}>
@@ -497,36 +514,48 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
               {activeTab === 'guests' && (
                 <div className="transform rotate-1">
                   <h2 className={`text-2xl font-bold uppercase mb-4 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>Special Guests</h2>
-                  <ul className="space-y-4">
-                    {eventDetails.guests.map((guest, index) => (
-                      <li key={index} className={`${cardBgAccent} p-4 flex items-center transform hover:scale-102 transition-transform`} 
-                          style={{ clipPath: "polygon(0 0, 100% 0, 98% 100%, 2% 100%)" }}>
-                        <div className={`mr-4 ${isDarkMode ? 'bg-purple-600' : 'bg-violet-500'} w-12 h-12 flex items-center justify-center rounded-full font-bold text-xl text-white`}>
-                          {index + 1}
-                        </div>
-                        <div>
-                          <p className="font-bold text-lg">{guest.name}</p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {eventDetails.guests.map((guest, index) => (
+                  <li key={index} 
+                      className={`${cardBgAccent} p-4 flex items-center transform hover:scale-105 transition-all duration-300 shadow-lg`}
+                      style={{ clipPath: "polygon(0 0, 100% 0, 98% 100%, 2% 100%)" }}>
+                    <div className={`mr-4 overflow-hidden ${isDarkMode ? 'bg-gradient-to-br from-purple-700 to-pink-600' : 'bg-gradient-to-br from-violet-500 to-indigo-600'} w-16 h-16 flex items-center justify-center rounded-full shadow-inner border-2 ${isDarkMode ? 'border-pink-500' : 'border-violet-300'}`}>
+                      <img src={guest.image} alt={guest.name} className="object-cover w-12 h-12 rounded-full" />
+                    </div>
+                    <div>
+                      <p className="font-black text-lg tracking-wide">{guest.name}</p>
+                      <p className={`text-sm ${isDarkMode ? 'text-pink-400' : 'text-violet-600'}`}>{guest.role}</p>
+                    </div>
+                    <div className={`ml-auto ${isDarkMode ? 'text-pink-300' : 'text-violet-400'} opacity-50`}>
+                      <Star className="w-5 h-5" />
+                    </div>
+                  </li>
+                ))}
+              </ul>
                 </div>
               )}
               
               {activeTab === 'highlights' && (
                 <div className="transform rotate-1">
                   <h2 className={`text-2xl font-bold uppercase mb-4 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>Event Highlights</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {eventDetails.highlights.map((highlight, index) => (
-                      <div key={index} className={`${cardBgAccent} p-4 rounded transform -rotate-1 hover:rotate-0 transition-transform`}
-                           style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}>
-                        <div className="flex">
-                          <Star className="w-6 h-6 text-yellow-500 mr-2 flex-shrink-0" />
-                          <p className="font-medium">{highlight.title}</p>
-                        </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {eventDetails.highlights.map((highlight, index) => (
+                  <div key={index} 
+                       className={`${cardBgAccent} p-5 rounded transform -rotate-1 hover:rotate-0 transition-all duration-300 shadow-lg`}
+                       style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}>
+                    <div className="flex items-center">
+                      <div className={`mr-4 p-2 rounded-lg ${isDarkMode ? 'bg-slate-700' : 'bg-violet-100'}`}>
+                        {getHighlightIcon(highlight.icon)}
                       </div>
-                    ))}
+                      <p className="font-bold tracking-wide text-base">{highlight.title}</p>
+                    </div>
                   </div>
+                ))}
+              </div>
+              <div className={`w-full mt-8 p-3 rounded-md ${isDarkMode ? 'bg-slate-800' : 'bg-violet-50'} border-l-4 ${isDarkMode ? 'border-pink-500' : 'border-violet-400'} flex items-center`}>
+                <Star className={`w-6 h-6 mr-3 ${highlightText}`} />
+                <p className="text-sm">Plus many more surprises to be announced closer to the event!</p>
+              </div>
                 </div>
               )}
             </div>
@@ -541,95 +570,322 @@ const [isMenuOpen, setIsMenuOpen] = useState(false);
             </div>
             
             {/* Register Button */}
-            <div className="text-center mb-8">
-              <button 
-                className={`${buttonBg} px-12 py-4 text-xl font-black uppercase tracking-wider transform rotate-1 transition-transform hover:scale-105 shadow-xl text-white`}
-                style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
-              >
-                Register Now!
-              </button>
-            </div>
+            <div className="text-center mb-12 mt-10">
+        <div className="relative inline-block">
+          {/* Decorative elements */}
+          <div className="absolute -top-8 -right-8 w-16 h-16 transform rotate-12 opacity-70">
+            <Star className={`w-full h-full ${isDarkMode ? 'text-pink-500' : 'text-violet-400'}`} />
+          </div>
+          <div className="absolute -bottom-6 -left-6 w-12 h-12 transform -rotate-12 opacity-70">
+            <Star className={`w-full h-full ${isDarkMode ? 'text-purple-500' : 'text-indigo-400'}`} />
+          </div>
+          
+          {/* Main button */}
+          <button
+            className={`${buttonBg} px-16 py-5 text-2xl font-black uppercase tracking-wider transform rotate-1 transition-all duration-300 hover:scale-105 hover:rotate-2 shadow-xl text-white relative z-10`}
+            style={{ 
+              clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)",
+              textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+              boxShadow: isDarkMode ? 
+                "0 0 20px rgba(216, 180, 254, 0.5), 0 0 40px rgba(249, 168, 212, 0.2)" : 
+                "0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(167, 139, 250, 0.2)"
+            }}
+          >
+            Register Now!
+          </button>
+        </div>
+        
+        <p className={`mt-4 text-sm ${isDarkMode ? 'text-slate-400' : 'text-violet-600'}`}>
+          Early bird pricing ends May 1st, 2025
+        </p>
+      </div>
           </div>
           
           {/* Sidebar */}
-          <EventSidebar isDarkMode={false} eventDetails={eventDetails}/></div>
-        
-        {/* Discussion Section */}
-        <div className={`mt-8 ${panelBg} p-6 transform rotate-1 rounded-lg`} 
-             style={{ clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)" }}>
-          <div className="transform -rotate-1">
-            <div className="flex items-center mb-4">
-              <MessageCircle className={`w-6 h-6 mr-2 ${highlightText}`} />
-              <h2 className={`text-2xl font-bold uppercase ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>Discussion</h2>
-            </div>
-            <div className={`${subtleBg} p-4 mb-4 rounded-lg`}>
-              <textarea 
-                className={`w-full ${inputBg} ${baseTextClass} p-3 rounded border ${isDarkMode ? 'border-gray-700 focus:border-purple-500' : 'border-gray-300 focus:border-violet-500'} focus:outline-none`}
-                rows={3}
-                placeholder="Share your thoughts about this event..."
-              ></textarea>
-              <div className="flex justify-end mt-2">
+          {/* <div className="lg:col-span-1">
+            
+            <div className={`${panelBg} p-6 mb-6 transform rotate-1 rounded-lg`} 
+                 style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}>
+              <div className="transform -rotate-1">
+                <h2 className={`text-xl font-bold uppercase mb-4 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>Event Stats</h2>
+                
+                
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className={`${subtleText} font-bold`}>Popularity</span>
+                    <span className={`font-bold ${isDarkMode ? 'text-purple-400' : 'text-violet-500'}`}>{eventDetails.popularity}/100</span>
+                  </div>
+                  <div className={`w-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded-full h-3`}>
+                    <div 
+                      className={`bg-gradient-to-r ${isDarkMode ? 'from-purple-600 to-pink-500' : 'from-violet-500 to-fuchsia-500'} h-3 rounded-full`} 
+                      style={{ width: `${eventDetails.popularity}%` }}
+                    ></div>
+                  </div>
+                </div>
+                
+                
+                <div className={`flex items-center justify-between p-3 ${subtleBg} mb-6 rounded transform -rotate-1 hover:rotate-0 transition-transform`}>
+                  <div className="flex items-center">
+                    <Users className={`w-6 h-6 mr-2 ${isDarkMode ? 'text-purple-400' : 'text-violet-500'}`} />
+                    <span className="font-bold">Fans</span>
+                  </div>
+                  <div className="font-bold text-lg">{fansCount.toLocaleString()}</div>
+                </div>
+                
+                
                 <button 
-                  className={`${accentButtonBg} px-4 py-2 font-bold uppercase text-sm transition-colors text-white`}
+                  onClick={handleLike}
+                  className={`w-full py-3 flex items-center justify-center font-bold text-lg transition-colors ${
+                    isLiked 
+                      ? (isDarkMode ? 'bg-pink-600 text-white' : 'bg-violet-600 text-white') 
+                      : (isDarkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-200 text-gray-600')
+                  }`}
                   style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
                 >
-                  Post Comment
+                  <Heart className={`mr-2 ${isLiked ? 'fill-current' : ''}`} />
+                  <span>{isLiked ? 'Liked!' : 'Like Event'}</span>
+                </button>
+
+                
+                <button 
+                  className={`w-full mt-3 py-3 flex items-center justify-center font-bold text-lg transition-colors ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-200 hover:bg-gray-300 text-gray-600'}`}
+                  style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
+                >
+                  <Share2 className="mr-2" />
+                  <span>Share Event</span>
                 </button>
               </div>
             </div>
 
-            {/* Sample comments */}
-            <div className="space-y-4">
-              {[
-                { user: "AniMaster42", comment: "Super excited for the Chainsaw Man panel! Anyone else planning to go?", time: "2 hours ago", likes: 24 },
-                { user: "CosplayQueen", comment: "Working on my costume for the masquerade! Hope to see everyone there!", time: "Yesterday", likes: 47 }
-              ].map((comment, index) => (
-                <div key={index} className={`${subtleBg} p-4 rounded-lg`}>
-                  <div className="flex justify-between items-start">
-                    <div className="flex items-center">
-                      <div className={`w-10 h-10 rounded-full ${isDarkMode ? 'bg-gray-700' : 'bg-violet-200'} flex items-center justify-center font-bold text-lg mr-3`}>
-                        {comment.user.charAt(0)}
-                      </div>
-                      <div>
-                        <h4 className="font-bold">{comment.user}</h4>
-                        <p className={`text-xs ${subtleText}`}>{comment.time}</p>
-                      </div>
-                    </div>
-                    <div className={`text-sm flex items-center ${isDarkMode ? 'text-pink-400' : 'text-violet-500'}`}>
-                      <Heart className="w-4 h-4 mr-1" />
-                      <span>{comment.likes}</span>
-                    </div>
-                  </div>
-                  <p className="mt-2">{comment.comment}</p>
+            
+            <div className={`${panelBg} p-6 mb-6 rounded-lg`}>
+              <h2 className={`text-xl font-bold uppercase mb-4 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>
+                <Award className="inline-block mr-2" />
+                Featured Artist
+              </h2>
+              <div className="text-center">
+                <div className="w-32 h-32 mx-auto rounded-full overflow-hidden mb-4 border-4 border-pink-500">
+                  <img src="https://cdn.mainichi.jp/vol1/2023/04/14/20230414p2g00m0et037000p/8.jpg?1" alt="Featured Artist" className="w-full h-full object-cover" />
                 </div>
-              ))}
+                <h3 className="text-lg font-bold">Makoto Shinkai</h3>
+                <p className={subtleText}>Film Director & Animator</p>
+                <p className="mt-3 text-sm">Join a special screening of Makoto Shinkai's upcoming film, followed by a Q&A session on Day 2!</p>
+                <button className={`mt-4 px-6 py-2 rounded ${accentButtonBg} text-white font-bold`}>
+                  See Schedule
+                </button>
+              </div>
             </div>
+            
+            
+            <div className={`${panelBg} p-6 transform -rotate-1 rounded-lg`} 
+                 style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}>
+              <div className="transform rotate-1">
+                <h2 className={`text-xl font-bold uppercase mb-4 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>Related Events</h2>
+                <div className="space-y-4">
+                  {[
+                    { name: "Manga Creator Conference 2025", date: "Aug 12-14, 2025", img: "https://res-1.cloudinary.com/dbm1qiew0/image/upload/q_auto/v1/blog-images/A-comprehensive-guide-to-Tokyo-s-anime-and-manga-events-in-2025.jpg" },
+                    { name: "J-Pop Summer Festival", date: "July 18-20, 2025", img: "https://i.scdn.co/image/ab67616d0000b27380e51788b1abdfa4aee98858" },
+                    { name: "Cosplay Champions Tournament", date: "July 7, 2025", img: "https://dreamhack.com/india/wp-content/uploads/sites/21/2023/09/dominance.jpg" }
+                  ].map((event, index) => (
+                    <div key={index} className={`flex items-center ${subtleBg} p-3 transform hover:scale-102 transition-transform rounded-lg`}
+                         style={{ clipPath: "polygon(0 0, 100% 0, 98% 100%, 2% 100%)" }}>
+                      <img src={event.img} alt={event.name} className="w-16 h-16 object-cover mr-3 rounded" />
+                      <div>
+                        <h3 className="font-bold">{event.name}</h3>
+                        <p className={`${subtleText} text-sm`}>{event.date}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div> */}
+          <EventSidebar isDarkMode={isDarkMode} eventDetails={eventDetails}/>
+          </div>
+        
+        {/* Discussion Section with Enhanced Anime/Manga Styling */}
+<div className={`mt-8 ${panelBg} p-6 transform rotate-1 rounded-lg shadow-lg`} 
+     style={{ clipPath: "polygon(0 0, 100% 0, 97% 100%, 3% 100%)" }}>
+  <div className="transform -rotate-1">
+    <div className="flex items-center mb-4">
+      <MessageCircle className={`w-6 h-6 mr-2 ${highlightText}`} />
+      <h2 className={`text-2xl font-bold uppercase ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'} tracking-wider`}>
+        Fan Discussion
+      </h2>
+      <div className={`ml-2 px-2 py-1 text-xs font-bold ${isDarkMode ? 'bg-pink-900 text-pink-200' : 'bg-violet-200 text-violet-800'} rounded-full`}>
+        {Math.floor(Math.random() * 50) + 20} ONLINE
+      </div>
+    </div>
+    
+    <div className={`${subtleBg} p-4 mb-4 rounded-lg border-l-4 ${isDarkMode ? 'border-pink-600' : 'border-violet-500'}`}>
+      <textarea 
+        className={`w-full ${inputBg} ${baseTextClass} p-3 rounded border ${isDarkMode ? 'border-gray-700 focus:border-pink-500' : 'border-gray-300 focus:border-violet-500'} focus:outline-none`}
+        rows={3}
+        placeholder="Share your anime thoughts or fan theories..."
+      ></textarea>
+      
+      <div className="flex justify-between items-center mt-3">
+        <div className="flex space-x-2">
+          <button className={`p-2 rounded-full ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'}`}>
+            <Image className="w-5 h-5" />
+          </button>
+          <button className={`p-2 rounded-full ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'}`}>
+            <Smile className="w-5 h-5" />
+          </button>
+          <button className={`p-2 rounded-full ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'}`}>
+            <Link className="w-5 h-5" />
+          </button>
+        </div>
+        
+        <button 
+          className={`${accentButtonBg} px-5 py-2 font-bold uppercase text-sm transition-all duration-300 text-white hover:scale-105`}
+          style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
+        >
+          Post →
+        </button>
+      </div>
+    </div>
 
-            <button className={`w-full mt-4 py-2 ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} text-center rounded-lg font-medium`}>
-              View All Comments
+    {/* Enhanced Comment Section */}
+    <div className="space-y-4">
+      {[
+        { 
+          user: "AniMaster42", 
+          avatar: "👺", 
+          badge: "Otaku Elite", 
+          comment: "Super excited for the Chainsaw Man panel! Anyone else planning to go? I heard they might announce season 2!", 
+          time: "2 hours ago", 
+          likes: 24,
+          replies: 3
+        },
+        { 
+          user: "CosplayQueen", 
+          avatar: "🦋", 
+          badge: "Cosplay Pro", 
+          comment: "Working on my Marin Kitagawa costume for the masquerade! Stop by and say hi if you see me!", 
+          time: "Yesterday", 
+          likes: 47,
+          replies: 6
+        },
+        { 
+          user: "MangaCollector", 
+          avatar: "📚", 
+          badge: "Manga Guru", 
+          comment: "Anyone know if the manga market will have the limited edition Jujutsu Kaisen volumes? Been hunting them for months!", 
+          time: "2 days ago", 
+          likes: 31,
+          replies: 4
+        }
+      ].map((comment, index) => (
+        <div key={index} className={`${subtleBg} p-4 rounded-lg transform transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}>
+          <div className="flex justify-between items-start">
+            <div className="flex items-center">
+              <div className={`w-10 h-10 rounded-full ${isDarkMode ? 'bg-gray-700' : 'bg-violet-200'} flex items-center justify-center font-bold text-lg mr-3`}>
+                {comment.avatar}
+              </div>
+              <div>
+                <div className="flex items-center">
+                  <h4 className="font-bold">{comment.user}</h4>
+                  <span className={`ml-2 px-2 py-0.5 text-xs rounded-full ${isDarkMode ? 'bg-pink-900 text-pink-200' : 'bg-violet-200 text-violet-800'}`}>
+                    {comment.badge}
+                  </span>
+                </div>
+                <p className={`text-xs ${subtleText}`}>{comment.time}</p>
+              </div>
+            </div>
+            <div className={`text-sm flex items-center ${isDarkMode ? 'text-pink-400' : 'text-violet-500'}`}>
+              <Heart className={`w-4 h-4 mr-1 cursor-pointer transition hover:scale-125 ${Math.random() > 0.7 ? (isDarkMode ? 'fill-pink-400' : 'fill-violet-500') : ''}`} />
+              <span>{comment.likes}</span>
+            </div>
+          </div>
+          <p className="mt-2">{comment.comment}</p>
+          <div className="flex mt-3 space-x-4 text-sm">
+            <button className={`flex items-center ${subtleText} hover:${highlightText}`}>
+              <MessageSquare className="w-4 h-4 mr-1" />
+              <span>Reply</span>
+              {comment.replies > 0 && <span className="ml-1">({comment.replies})</span>}
+            </button>
+            <button className={`flex items-center ${subtleText} hover:${highlightText}`}>
+              <Share2 className="w-4 h-4 mr-1" />
+              <span>Share</span>
+            </button>
+            <button className={`flex items-center ${subtleText} hover:${highlightText}`}>
+              <Flag className="w-4 h-4 mr-1" />
+              <span>Report</span>
             </button>
           </div>
         </div>
+      ))}
+    </div>
 
-        {/* FAQ Section */}
-        <div className={`mt-8 ${panelBg} p-6 rounded-lg`}>
-          <h2 className={`text-2xl font-bold uppercase mb-6 ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'}`}>FAQ</h2>
-          <div className="space-y-4">
-            {[
-              { q: "What is the cosplay policy?", 
-                a: "All cosplays are welcome! Please note that prop weapons must be peace-bonded at the security check." },
-              { q: "Is there re-entry allowed?", 
-                a: "Yes, your badge allows for unlimited re-entry during event hours." },
-              { q: "Are there age restrictions?", 
-                a: "The main event is open to all ages. Some special panels and late-night events may be 18+." }
-            ].map((faq, idx) => (
-              <div key={idx} className={`${subtleBg} p-4 rounded-lg`}>
-                <h3 className={`font-bold text-lg mb-2 ${highlightText}`}>{faq.q}</h3>
-                <p>{faq.a}</p>
-              </div>
-            ))}
+    <button className={`w-full mt-4 py-2 ${isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-gray-200 hover:bg-gray-300'} text-center rounded-lg font-medium flex justify-center items-center gap-2 transform transition-all duration-300 hover:scale-105`}>
+      <span>View All Comments</span>
+      <ChevronDown className="w-4 h-4" />
+    </button>
+  </div>
+</div>
+
+{/* Enhanced FAQ Section */}
+<div className={`mt-12 ${panelBg} p-6 rounded-lg border-t-4 ${isDarkMode ? 'border-pink-600' : 'border-violet-500'} shadow-lg`}>
+  <div className="flex items-center mb-6">
+    <HelpCircle className={`w-6 h-6 mr-2 ${highlightText}`} />
+    <h2 className={`text-2xl font-bold uppercase ${isDarkMode ? 'text-shadow-pink' : 'text-shadow-purple'} tracking-wider`}>Anime Con FAQ</h2>
+  </div>
+  
+  <div className="space-y-4">
+    {[
+      { 
+        q: "What is the cosplay policy?", 
+        a: "All cosplays are welcome! Please note that prop weapons must be peace-bonded at the security check. Oversized props may need special approval.",
+        icon: "Wand2"
+      },
+      { 
+        q: "Is there re-entry allowed?", 
+        a: "Yes, your badge allows for unlimited re-entry during event hours. Make sure to get your hand stamped when exiting if you plan to return the same day.",
+        icon: "RepeatIcon"
+      },
+      { 
+        q: "Are there age restrictions?", 
+        a: "The main event is open to all ages. Some special panels and late-night events may be 18+ and will require ID verification. These events will be clearly marked in the program.",
+        icon: "CalendarIcon"
+      },
+      {
+        q: "What's included in the VIP Otaku Package?",
+        a: "The VIP Otaku Package includes: priority panel seating, exclusive meet & greet opportunities, special merchandise bundle, and access to the VIP lounge with complimentary refreshments.",
+        icon: "Star"
+      },
+      {
+        q: "Where can I get food at the convention?",
+        a: "The convention center has multiple food vendors including themed cafes with anime-inspired menus! Look for the 'Maid Cafe', 'Titan Burgers', and 'Spirited Away Snacks' locations on the venue map.",
+        icon: "Utensils"
+      }
+    ].map((faq, idx) => (
+      <div 
+        key={idx} 
+        className={`${subtleBg} p-4 rounded-lg cursor-pointer transform transition-all duration-300 hover:shadow-md group`}
+      >
+        <div className="flex items-start">
+          <div className={`p-2 rounded-full ${isDarkMode ? 'bg-pink-900/50' : 'bg-violet-100'} mr-3 group-hover:scale-110 transition-transform`}>
+            {/* This is a placeholder for the icon reference */}
+            <span className={`w-5 h-5 block ${highlightText}`}>
+              {faq.icon.charAt(0)}
+            </span>
+          </div>
+          <div className="flex-1">
+            <h3 className={`font-bold text-lg mb-2 ${highlightText} group-hover:underline`}>{faq.q}</h3>
+            <p className="leading-relaxed">{faq.a}</p>
           </div>
         </div>
+      </div>
+    ))}
+  </div>
+  
+  <div className="mt-6 p-4 rounded-lg bg-gradient-to-r from-transparent via-gray-700 to-transparent opacity-80">
+    <p className="text-center text-sm">
+      Can't find what you're looking for? Visit the <span className={`font-bold ${highlightText}`}>Information Booth</span> at the convention center or contact <span className={`font-bold ${highlightText}`}>support@animecon.com</span>
+    </p>
+  </div>
+</div>
 
         {/* Newsletter */}
         <Newsletter darkMode={isDarkMode} accentBg={accentBg} accentColor={accentColor} themeClass={themeClass} secondaryBg={secondaryBg}/>

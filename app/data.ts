@@ -1732,7 +1732,7 @@ export const Articles:Article[] = [
     "category": "Industry News",
     "contentType": "Launch Announcement",
     "tags": ["Shueisha", "Manga", "Digital Platform", "Shonen Jump", "Manga Plus", "Simulpub", "Industry", "App", "Website", "Jump Neo"],
-    "mainImage": "https://static.wikia.nocookie.net/bakuman/images/9/9a/Shueisha_Building_%28Anime%29.jpg/revision/latest?cb=20120222103940", // Placeholder
+    "mainImage": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/06/manga-plus.jpg", // Placeholder
     "likeCount": 4200,
     "commentCount": 280,
     "viewCount": "48.1k",
@@ -1881,7 +1881,7 @@ export const Articles:Article[] = [
     "category": "Film",
     "contentType": "Announcement",
     "tags": ["Studio Ghibli", "Gorō Miyazaki", "The Whispering Seed", "Anime Film", "Fantasy", "Nature", "Family", "Animation", "Hayao Miyazaki"],
-    "mainImage": "https://static.wikia.nocookie.net/studio-ghibli/images/d/dd/Mimi_048.jpg/revision/latest/scale-to-width-down/985?cb=20201125015028", // Placeholder
+    "mainImage": "https://kknlive.com/wp-content/uploads/2025/03/ChatGPT_Ghibli_style_images_1743-scaled.jpg?v=1743248281", // Placeholder
     "likeCount": 8200,
     "commentCount": 610,
     "viewCount": "91.5k",

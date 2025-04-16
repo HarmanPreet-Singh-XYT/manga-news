@@ -1,6 +1,9 @@
+import React from "react";
 import { Star, TrendingUp, Calendar, MapPin, Sparkles, Clock } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const FeaturedEventsSection = ({ darkMode, featuredEvents }) => {
+  const router = useRouter();
   return (
     <section className="mb-16">
       {/* Manga-style title with enhanced visual effects */}
@@ -217,26 +220,25 @@ const FeaturedEventsSection = ({ darkMode, featuredEvents }) => {
                       style={{
                         clipPath: 'polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)'
                       }}></div>
-                      
-                      <button className={`relative z-10 px-8 py-3 font-black text-lg text-white transform transition-all duration-300 
-                        ${darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'}`}
-                      style={{
-                        clipPath: 'polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)',
-                        fontFamily: "'Bangers', cursive"
-                      }}>
-                        <span className="relative z-10 tracking-wider">LEARN MORE → </span>
-                        
-                        {/* Action lines behind button (visible on hover) */}
-                        <div className="absolute -left-3 top-1/2 w-3 h-1 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        <div className="absolute -right-3 top-1/2 w-3 h-1 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                        
-                        {/* Speed lines that appear on hover */}
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-300"
-                          style={{
-                            background: 'repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)'
-                          }}>
-                        </div>
-                      </button>
+                        <button className={`relative z-10 px-8 py-3 font-black text-lg text-white transform transition-all duration-300 
+                          ${darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'}`}
+                        style={{
+                          clipPath: 'polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%)',
+                          fontFamily: "'Bangers', cursive"
+                        }}>
+                          <span onClick={()=> router.push(`/events/details`)} className="relative z-10 tracking-wider">LEARN MORE → </span>
+                          
+                          {/* Action lines behind button (visible on hover) */}
+                          <div className="absolute -left-3 top-1/2 w-3 h-1 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          <div className="absolute -right-3 top-1/2 w-3 h-1 bg-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          
+                          {/* Speed lines that appear on hover */}
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-300"
+                            style={{
+                              background: 'repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.5) 2px, rgba(255,255,255,0.5) 4px)'
+                            }}>
+                          </div>
+                        </button>
                     </div>
                   </div>
                 </div>

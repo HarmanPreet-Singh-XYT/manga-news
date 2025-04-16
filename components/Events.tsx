@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FeaturedEventsSection from './Events/FeaturedEvents';
 import AnimeEventsList from './Events/UpcomingEvents';
+import { useRouter } from 'next/navigation';
 
 export default function EventsPage() {
   const [darkMode, setDarkMode] = useState(false); // Default to dark mode for manga aesthetic
@@ -12,6 +13,10 @@ export default function EventsPage() {
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [activeCategory, setActiveCategory] = useState('All');
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
+  const router = useRouter();
+  function pushToDetails(){
+    router.push('/events/details');
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -218,7 +223,7 @@ export default function EventsPage() {
           </div>
         </div>
         
-        {/* Category Pills (Mobile Only) */}
+        
         <div className="md:hidden overflow-x-auto flex space-x-2 py-4 mb-6">
           {categories.map(category => (
             <button 
@@ -244,7 +249,7 @@ export default function EventsPage() {
           ))}
         </div>
         
-        {/* Featured Events Section with Manga Style */}
+        
         <section className="mb-16">
           <div className="relative inline-block mb-8">
             <h2 className={`text-2xl md:text-3xl font-black uppercase px-6 py-2 inline-block ${
@@ -267,11 +272,11 @@ export default function EventsPage() {
                 key={event.id} 
                 className={`relative overflow-hidden transition-all duration-300 transform hover:-rotate-1`}
               >
-                {/* Manga panel style border */}
+                
                 <div className={`absolute inset-0 ${darkMode ? 'bg-gray-800 border-white' : 'bg-white border-black'} border-4 shadow-xl`}></div>
                 
                 <div className="relative">
-                  {/* "Manga page" corner fold */}
+                  
                   <div className="absolute top-0 right-0 w-12 h-12 bg-gradient-to-br from-transparent via-transparent to-gray-300 transform rotate-90"></div>
                   
                   <div className="relative h-64 overflow-hidden border-b-4 border-black">
@@ -281,16 +286,16 @@ export default function EventsPage() {
                       className="w-full h-full object-cover"
                     />
                     
-                    {/* Manga-style overlay patterns */}
+                    
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent mix-blend-multiply"></div>
                     
-                    {/* Speed lines overlay */}
+                    
                     <div className="absolute inset-0 opacity-20" 
                          style={{
                            background: 'repeating-linear-gradient(45deg, transparent, transparent 2px, white 2px, white 3px)'
                          }}></div>
                     
-                    {/* Category tag like manga sound effect */}
+                    
                     <div className="absolute top-4 left-4 transform -rotate-6">
                       <div className={`py-1 px-3 ${
                         darkMode ? 'bg-yellow-400 text-black' : 'bg-yellow-400 text-black'
@@ -303,7 +308,7 @@ export default function EventsPage() {
                       </div>
                     </div>
                     
-                    {/* Trending explosion */}
+                   
                     {event.isTrending && (
                       <div className="absolute top-4 right-4">
                         <div className={`px-3 py-1 ${
@@ -317,7 +322,7 @@ export default function EventsPage() {
                       </div>
                     )}
                     
-                    {/* Title in comic style balloon */}
+                    
                     <div className="absolute bottom-4 left-4 right-4">
                       <div className={`relative ${
                         darkMode ? 'bg-white text-black' : 'bg-white text-black'
@@ -333,7 +338,7 @@ export default function EventsPage() {
                   </div>
                   
                   <div className="relative p-6">
-                    {/* Event details with manga styling */}
+                    
                     <div className="flex flex-col space-y-3">
                       <div className="flex items-center text-sm">
                         <Calendar size={16} className={`mr-2 ${darkMode ? 'text-pink-400' : 'text-violet-600'}`} />
@@ -344,7 +349,7 @@ export default function EventsPage() {
                         <span className="font-bold">{event.location}</span>
                       </div>
                       
-                      {/* Description in manga bubble */}
+                      
                       <div className={`mt-3 p-3 relative ${
                         darkMode ? 'bg-gray-700 text-gray-200' : 'bg-gray-100 text-gray-800'
                       } border-2 ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}
@@ -352,15 +357,15 @@ export default function EventsPage() {
                         borderRadius: '10px'
                       }}>
                         <p>{event.description}</p>
-                        {/* Bubble pointer */}
+                        
                         <div className="absolute -top-2 left-4 w-4 h-4 transform rotate-45 
                           border-l-2 border-t-2 border-gray-600
                           bg-inherit"></div>
                       </div>
                       
-                      {/* Action button with manga style */}
+                      
                       <div className="mt-4 text-center">
-                        <button className={`px-6 py-2 font-black text-white transform transition-all duration-300 hover:scale-105 hover:-rotate-2 ${
+                        <button onClick={pushToDetails} className={`px-6 py-2 font-black text-white transform transition-all duration-300 hover:scale-105 hover:-rotate-2 ${
                           darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
                         }`}
                         style={{

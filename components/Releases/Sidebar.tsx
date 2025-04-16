@@ -1,5 +1,6 @@
 import { MessageCircle,Flame as Fire, Star, TrendingUp, ThumbsUp, ChevronRight, Users } from 'lucide-react'
 import React, { useState } from 'react'
+import AnimePoll from './sidebar/Voting';
 
 const Sidebar = ({ 
   darkMode = false,
@@ -88,7 +89,7 @@ const Sidebar = ({
       </div>
       
       {/* Weekly Poll Section */}
-      <div className={`${secondaryBg} border-2 ${accentBorder} clip-path-polygon-reverse p-4 transform -rotate-1 hover:rotate-0 transition-transform duration-300 shadow-md`}>
+      {/* <div className={`${secondaryBg} border-2 ${accentBorder} clip-path-polygon-reverse p-4 transform -rotate-1 hover:rotate-0 transition-transform duration-300 shadow-md`}>
         <SectionTitle 
           icon={<ThumbsUp size={18} className={accentColor} />} 
           highlight="Weekly" 
@@ -128,7 +129,8 @@ const Sidebar = ({
         <button className={`w-full ${accentBg} text-white font-bold uppercase py-2 clip-path-polygon transform hover:scale-105 transition-all text-center shadow-lg`}>
           Vote Now
         </button>
-      </div>
+      </div> */}
+      <AnimePoll darkMode={darkMode}/>
       
       {/* Hot Discussions Section */}
       <div className={`${secondaryBg} border-2 ${borderColor} clip-path-polygon p-4 transform rotate-1 hover:rotate-0 transition-transform duration-300 shadow-md`}>

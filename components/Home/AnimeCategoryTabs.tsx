@@ -1,16 +1,14 @@
 import { BookOpen, Clock, Flame, Sparkles, Star, TrendingUp } from 'lucide-react'
 import React, { useState } from 'react'
 
-const AnimeCategoryTabs = ({darkMode}:{darkMode:boolean}) => {
+const AnimeCategoryTabs = ({darkMode,setActiveTab,activeTab}:{darkMode:boolean,setActiveTab:any,activeTab:string}) => {
     const categories = [
         { name: "TRENDING", icon: <TrendingUp size={16} className="inline-block mr-1" /> },
         { name: "NEW", icon: <Sparkles size={16} className="inline-block mr-1" /> },
         { name: "POPULAR", icon: <Star size={16} className="inline-block mr-1" /> },
         { name: "CLASSICS", icon: <BookOpen size={16} className="inline-block mr-1" /> },
         { name: "UPCOMING", icon: <Clock size={16} className="inline-block mr-1" /> }
-      ];
-      
-      const [activeTab, setActiveTab] = useState("HOT RIGHT NOW");    
+      ];    
       const [isHovering, setIsHovering] = useState(null);
   return (
     <div className="relative">

@@ -447,7 +447,7 @@ const AnimeEventsList = ({ darkMode = false }) => {
                           darkMode ? 'bg-yellow-400 text-black' : 'bg-yellow-400 text-black'
                         } text-xs font-black flex items-center animate-pulse`}
                         style={{
-                          clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)',
+                          clipPath: 'polygon(0% 15%, 15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%)',
                           transform: 'rotate(12deg)'
                         }}>
                           <TrendingUp size={10} className="mr-1" /> HOT!
@@ -523,15 +523,17 @@ const AnimeEventsList = ({ darkMode = false }) => {
                     
                     {/* Action buttons with manga style */}
                     <div className="mt-6 flex justify-between items-center">
-                      <button className={`px-4 py-2 text-sm font-black text-white transform transition-all duration-300 hover:-rotate-2 ${
-                        darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
-                      }`}
-                      style={{
-                        clipPath: 'polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)',
-                        boxShadow: darkMode ? '2px 2px 0px #EC4899' : '2px 2px 0px #2563EB'
-                      }}>
-                        DETAILS <ChevronRight size={14} className="inline ml-1" />
-                      </button>
+                      <a href='/events/details'>
+                        <button className={`px-4 py-2 text-sm font-black text-white transform transition-all duration-300 hover:-rotate-2 ${
+                          darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
+                        }`}
+                        style={{
+                          clipPath: 'polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)',
+                          boxShadow: darkMode ? '2px 2px 0px #EC4899' : '2px 2px 0px #2563EB'
+                        }}>
+                          DETAILS <ChevronRight size={14} className="inline ml-1" />
+                        </button>
+                      </a>
                       
                       <button className={`px-3 py-1 text-sm font-bold transition-all duration-300 hover:scale-110 ${
                         darkMode 

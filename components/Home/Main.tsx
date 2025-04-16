@@ -5,7 +5,7 @@ import { Article, Articles } from '@/app/data';
 
 const Main = ({darkMode = false}) => {
   const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState('breaking');
+  const [activeTab, setActiveTab] = useState('HOT RIGHT NOW');
   const [bookmarkedStories, setBookmarkedStories] = useState([]);
   const [likedStories, setLikedStories] = useState([]);
 
@@ -89,12 +89,26 @@ const Main = ({darkMode = false}) => {
 
   const trendingNews = Articles.slice(5,9).map(mapToTrendingNews);
 
+  const newNews = Articles.slice(22,26).map(mapToTrendingNews);
+
+  const Popular = Articles.slice(28,32).map(mapToTrendingNews);
+
+  const Classics = Articles.slice(33,38).map(mapToTrendingNews);
+
+  const Upcoming = Articles.slice(39,44).map(mapToTrendingNews);
   // Content to display based on active tab
   const getActiveContent = () => {
     switch(activeTab) {
-      case 'trending':
+      case 'TRENDING':
         return trendingNews;
-      case 'breaking':
+      case 'UPCOMING':
+        return Upcoming;
+      case 'NEW':
+        return newNews;
+      case 'POPULAR':
+        return Popular;
+      case 'CLASSICS':
+        return Classics;
       default:
         return breakingNews;
     }
@@ -129,7 +143,7 @@ const Main = ({darkMode = false}) => {
         <Bell size={18} className={`mr-2 ${darkMode ? 'text-pink-400' : 'text-pink-500'}`} />
         <p className="text-sm flex-grow">
           <span className="font-bold">NEW:</span> Weekly anime release schedule now available! 
-          <button className="underline ml-2 font-semibold">View Schedule</button>
+          <a href='/releases'><button className="underline ml-2 font-semibold">View Schedule</button></a>
         </p>
         <button className={`text-xs font-bold px-2 py-1 rounded ${darkMode ? 'bg-violet-800 text-violet-200' : 'bg-violet-200 text-violet-800'}`}>
           SUBSCRIBE
@@ -173,7 +187,7 @@ const Main = ({darkMode = false}) => {
           UPCOMING
         </button>
       </div> */}
-            <AnimeCategoryTabs darkMode={darkMode}/>
+            <AnimeCategoryTabs darkMode={darkMode} setActiveTab={setActiveTab} activeTab={activeTab}/>
       {/* Main News Grid */}
       <section className="mb-12">
         <div className="flex items-center mb-6">

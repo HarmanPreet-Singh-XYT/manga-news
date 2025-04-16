@@ -87,7 +87,7 @@ const Season = ({isDarkMode,latestShows}) => {
                         </div>
                         
                         {/* Episode count or status */}
-                        <div className="bg-black bg-opacity-50 py-1 px-2 rounded text-xs inline-flex items-center w-auto align-self-start transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-200">
+                        <div className="bg-black text-white bg-opacity-50 py-1 px-2 rounded text-xs inline-flex items-center w-auto align-self-start transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-200">
                             <Play size={12} className="mr-1" />
                             {series.episodes ? `${series.episodes} Episodes` : 'Coming Soon'}
                         </div>
