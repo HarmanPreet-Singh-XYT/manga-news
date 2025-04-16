@@ -485,6 +485,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
                 </div>
                 
                 <div className="flex gap-3 mt-6">
+                  <a href={`https://www.crunchyroll.com/`}>
                   <button 
                     className={`${accentBg} text-white px-6 py-2 font-bold flex items-center gap-2 ${buttonHoverEffect} shadow-lg ${accentShadow}`}
                     style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
@@ -492,6 +493,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
                     <Play size={16} />
                     WATCH NOW
                   </button>
+                  </a>
                   <button 
                     className={`${secondaryBg} border-2 ${darkMode ? 'border-pink-600' : 'border-violet-600'} px-4 py-2 font-bold flex items-center gap-2 ${buttonHoverEffect}`}
                     style={{ clipPath: "polygon(5% 0, 100% 0, 95% 100%, 0% 100%)" }}

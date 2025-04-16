@@ -126,10 +126,12 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
                 </li>
               ))}
             </ul>
-            <button className="w-full mt-6 bg-cyan-400 text-violet-900 font-bold py-2 rounded hover:bg-cyan-300 transition-colors flex items-center justify-center">
-              VIEW ALL TRENDS
-              <ChevronRight size={18} className="ml-1" />
-            </button>
+            <a href='/articles'>
+              <button className="w-full mt-6 bg-cyan-400 text-violet-900 font-bold py-2 rounded hover:bg-cyan-300 transition-colors flex items-center justify-center">
+                VIEW ALL TRENDS
+                <ChevronRight size={18} className="ml-1" />
+              </button>
+            </a>
           </div>
         </div>
         
@@ -198,7 +200,7 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
         </div>
         
         {/* Newsletter Signup - Enhanced with better visual feedback */}
-        <div className="bg-gradient-to-br from-violet-600 to-indigo-800 rounded-lg p-6 text-white border-2 border-violet-800 relative overflow-hidden mb-8 shadow-xl hover:shadow-2xl transition-shadow">
+        {/* <div className="bg-gradient-to-br from-violet-600 to-indigo-800 rounded-lg p-6 text-white border-2 border-violet-800 relative overflow-hidden mb-8 shadow-xl hover:shadow-2xl transition-shadow">
           <div className="absolute -top-12 -right-12 w-40 h-40 bg-pink-500 opacity-20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-cyan-400 opacity-20 rounded-full blur-3xl"></div>
           <div className="relative z-10">
@@ -243,7 +245,8 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
               We respect your privacy. Unsubscribe at any time.
             </p>
           </div>
-        </div>
+        </div> */}
+        <NewsletterSignup/>
         
         {/* Search Bar - New Addition */}
         {/* <div className="bg-white rounded-lg p-6 border-2 border-gray-200 mb-8 shadow-lg">
@@ -323,6 +326,145 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
         </div>
       </div>
   )
+}
+
+function NewsletterSignup() {
+  const [email, setEmail] = useState('');
+  const [consent, setConsent] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formState, setFormState] = useState('idle'); // idle, success, error
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Reset states
+    setIsSubmitting(true);
+    setErrorMessage('');
+    
+    // Validate form
+    if (!email) {
+      setErrorMessage('Email address is required');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    if (!validateEmail(email)) {
+      setErrorMessage('Please enter a valid email address');
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setFormState('success');
+      // Reset form after successful submission
+      setEmail('');
+      setConsent(false);
+    }, 1500);
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-violet-600 to-indigo-800 rounded-lg p-6 text-white border-2 border-violet-800 relative overflow-hidden mb-8 shadow-xl hover:shadow-2xl transition-shadow">
+      <div className="absolute -top-12 -right-12 w-40 h-40 bg-pink-500 opacity-20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute -bottom-12 -left-12 w-40 h-40 bg-cyan-400 opacity-20 rounded-full blur-3xl"></div>
+      <div className="relative z-10">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-black flex items-center">
+            <Bell size={20} className="mr-2 text-cyan-300" />
+            JOIN OUR CREW!
+          </h3>
+          <span className="bg-cyan-300 text-violet-900 px-3 py-1 text-xs font-bold transform rotate-12 rounded">FREE!</span>
+        </div>
+        
+        <p className="text-violet-200 mb-4">Get weekly manga updates, exclusive content, and early access to features!</p>
+        
+        {formState === 'success' ? (
+          <div className="bg-green-500 bg-opacity-20 border border-green-400 text-white p-4 rounded-lg mb-4">
+            <div className="flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <p>Thank you for subscribing! Check your email for confirmation.</p>
+            </div>
+            <button 
+              onClick={() => setFormState('idle')} 
+              className="mt-3 text-sm underline text-green-300 hover:text-white"
+            >
+              Subscribe another email
+            </button>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <div className="relative">
+              <input 
+                type="email" 
+                placeholder="Your email address" 
+                className="w-full p-3 pl-10 rounded-lg bg-violet-700 text-white placeholder-violet-300 border-2 border-violet-500 focus:ring-2 focus:ring-cyan-300 focus:border-cyan-300"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={isSubmitting}
+              />
+              <div className="absolute left-3 top-3.5 text-violet-400">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <path d="M22 6l-10 7L2 6" />
+                </svg>
+              </div>
+            </div>
+            
+            {errorMessage && (
+              <p className="text-red-300 text-sm">{errorMessage}</p>
+            )}
+            
+            <div>
+              <div className="flex items-center space-x-2 mb-3">
+                <input 
+                  type="checkbox" 
+                  id="consent" 
+                  className="rounded text-cyan-400 focus:ring-cyan-300"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                  disabled={isSubmitting}
+                />
+                <label htmlFor="consent" className="text-sm text-violet-300">I want to receive promotional emails</label>
+              </div>
+            </div>
+            
+            <button 
+              type="submit"
+              className={`w-full bg-gradient-to-r from-cyan-400 to-cyan-300 text-violet-900 font-black py-3 rounded-lg hover:from-cyan-300 hover:to-cyan-200 transition-colors shadow-lg flex items-center justify-center ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-violet-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  SUBSCRIBING...
+                </>
+              ) : (
+                <>
+                  SUBSCRIBE NOW!
+                  <Bell size={16} className="ml-2" />
+                </>
+              )}
+            </button>
+          </form>
+        )}
+        
+        <p className="text-xs text-center mt-3 text-violet-300">
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+      </div>
+    </div>
+  );
 }
 
 export default Sidebar
