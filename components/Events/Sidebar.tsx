@@ -94,6 +94,7 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
               </div>
               
               <div className="mt-6 text-center">
+                <a href='/calendar'>
                 <button className={`w-full py-2 font-black text-white ${
                   darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
                 } transition-colors duration-300`}
@@ -103,6 +104,7 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
                 }}>
                   FULL CALENDAR
                 </button>
+                </a>
               </div>
             </div> 
           {/* Categories list */}

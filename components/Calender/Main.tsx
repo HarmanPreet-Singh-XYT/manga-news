@@ -2,10 +2,9 @@
 import { useState, useEffect } from 'react';
 import { CalendarDays, ChevronLeft, ChevronRight, Star, Flame, Clock, Filter, BookOpen, Film, Calendar, Monitor, Search, Plus, X, Heart } from 'lucide-react';
 
-export default function AnimeCalendar() {
+export default function AnimeCalendar({ darkMode }) {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [activeView, setActiveView] = useState('month'); // 'month' or 'week'
-  const [darkMode, setDarkMode] = useState(true);
   const [selectedDate, setSelectedDate] = useState(null);
   const [showEventModal, setShowEventModal] = useState(false); 
   const [filteredTypes, setFilteredTypes] = useState([]);
@@ -79,10 +78,6 @@ export default function AnimeCalendar() {
     setCurrentDate(newDate);
   };
 
-  // Toggle dark/light mode
-  const toggleTheme = () => {
-    setDarkMode(!darkMode);
-  };
 
   // Get theme classes
   const getThemeClasses = () => {
@@ -613,7 +608,7 @@ export default function AnimeCalendar() {
         backgroundSize: "20px 20px" 
       }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-8xl mx-auto">
         {/* Calendar Header */}
         <div className="mb-6">
           <div className="flex justify-between items-center">
@@ -622,13 +617,6 @@ export default function AnimeCalendar() {
               ANIME RELEASE CALENDAR
             </h1>
             
-            <button 
-              onClick={toggleTheme}
-              className={`px-4 py-2 font-bold uppercase ${darkMode ? 'bg-pink-600 hover:bg-pink-700' : 'bg-purple-600 hover:bg-purple-700'} text-white transform -rotate-1 hover:rotate-0 transition-transform`}
-              style={{ clipPath: 'polygon(0 0, 100% 0, 90% 100%, 10% 100%)' }}
-            >
-              {darkMode ? 'LIGHT MODE' : 'DARK MODE'}
-            </button>
           </div>
 
           {/* Search and Filter */}

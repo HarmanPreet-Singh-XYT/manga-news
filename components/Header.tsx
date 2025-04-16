@@ -1,7 +1,8 @@
 import { 
   X, Menu, Bell, Sun, Moon, Search, Bookmark, BookOpen, 
   ChevronRight, Heart, Zap, User, Globe, ChevronUp, Star, 
-  Newspaper
+  Newspaper,
+  Calendar
 } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 import getTheme,{setTheme} from '@/app/api/cookie';
@@ -57,6 +58,11 @@ const Header = ({
       name: 'Events',
       href: '/events',
       icon: <Bell size={16} />
+    },
+    {
+      name: 'Calendar',
+      href: '/calendar',
+      icon: <Calendar size={16} />
     },
     {
       name: 'About',
