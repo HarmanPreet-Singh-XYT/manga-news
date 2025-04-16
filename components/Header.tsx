@@ -4,7 +4,7 @@ import {
   Newspaper
 } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
-
+import getTheme,{setTheme} from '@/app/api/cookie';
 const Header = ({
   darkMode,
   toggleMenu,
@@ -18,9 +18,17 @@ const Header = ({
   const [searchFocused, setSearchFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState('/');
-  
+  async function performThemeCheck(){
+    const theme = await getTheme();
+    if(!darkMode && theme==='dark'){
+      toggleDarkMode();
+    }else if(darkMode && theme==='light'){
+      toggleDarkMode();
+    }
+  }
   // Detect current page for active state in navigation
   useEffect(() => {
+    performThemeCheck();
     setCurrentPage(window.location.pathname);
   }, []);
   
@@ -56,7 +64,10 @@ const Header = ({
       icon: <User size={16} />
     },
   ]
-  
+  const changeTheme = async ()=>{
+    toggleDarkMode();
+    !darkMode ? await setTheme('dark') : await setTheme('light');
+  }
   // Language options
   const languages = ['English', 'Japanese', 'Spanish', 'French'];
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
@@ -206,7 +217,7 @@ const Header = ({
               className={`p-2 rounded-full ${
                 darkMode ? 'hover:bg-violet-950' : 'hover:bg-violet-800'
               } text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-300`}
-              onClick={toggleDarkMode}
+              onClick={changeTheme}
               aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
             >
               {darkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -233,7 +244,7 @@ const Header = ({
               />
               <button 
                 className={`p-2 rounded-full hidden md:block
-                  absolute right-0.5 top-0.5 md:mr-1 md:mt-1 
+                  absolute top-0 right-0 md:mr-1 md:mt-1 
                   transition-colors duration-300 ${
                     searchQuery 
                       ? 'bg-pink-500 hover:bg-pink-600' 
