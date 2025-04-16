@@ -155,7 +155,7 @@ const Footer = ({ categories = [] }) => {
                 </a>
               </li>
               <li className="transform hover:translate-x-1 transition-transform">
-                <a href="/releases" className="hover:text-cyan-300 transition-colors flex items-center">
+                <a href="/calendar" className="hover:text-cyan-300 transition-colors flex items-center">
                   <ChevronRight size={14} className="mr-1 text-pink-400" /> Release Calendar
                 </a>
               </li>
