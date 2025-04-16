@@ -72,6 +72,13 @@ const Header = ({
   const languages = ['English', 'Japanese', 'Spanish', 'French'];
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('English');
+  const menuItems = [
+    { name: 'Profile', href: '/profile' },
+    { name: 'My Library', href: '/library' },
+    { name: 'Reading History', href: '/history' },
+    { name: 'Settings', href: '/settings' },
+    { name: 'Logout', href: '/' },
+  ];
   
   const toggleLanguageMenu = () => {
     setLanguageMenuOpen(!languageMenuOpen);
@@ -286,15 +293,15 @@ const Header = ({
                     </p>
                   </div>
                   
-                  {['Profile', 'My Library', 'Reading History', 'Settings', 'Logout'].map((item, i) => (
+                  {menuItems.map((item, i) => (
                     <a 
-                      key={item} 
-                      href="#" 
+                      key={item.name} 
+                      href={`/profile/${item.href}`}
                       className={`block px-4 py-2 ${
                         darkMode ? 'text-white hover:bg-gray-700' : 'text-gray-800 hover:bg-gray-50'
                       } transition-colors`}
                     >
-                      {item}
+                      {item.name}
                     </a>
                   ))}
                 </div>

@@ -159,7 +159,7 @@ export default function EventsPage() {
       />
       
       {/* Mobile Menu */}
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div className={`fixed inset-0 z-50 ${darkMode ? 'bg-gray-900/98' : 'bg-violet-50/98'} backdrop-blur-sm flex flex-col md:hidden`}
              style={{ 
                backgroundImage: darkMode 
@@ -202,7 +202,7 @@ export default function EventsPage() {
             ))}
           </div>
         </div>
-      )}
+      )} */}
       
       <main className="container mx-auto px-4 py-8 relative">
         {/* Page Title with Manga Style */}

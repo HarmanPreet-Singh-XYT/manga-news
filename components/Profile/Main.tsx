@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { 
   User, 
   BookOpen, 
@@ -16,10 +16,26 @@ import MyLibrary from '@/components/Profile/MyLibrary';
 import ReadingHistory from '@/components/Profile/ReadingHistory';
 import Settings from '@/components/Profile/Settings';
 import Sidebar from '@/components/Profile/Sidebar';
-
-export default function SettingsPage() {
+import { useParams } from 'next/navigation'
+export default function SettingsPage({darkMode,setDarkMode}) {
   const [activeTab, setActiveTab] = useState('profile');
-  const [darkMode, setDarkMode] = useState(false);
+  const params = useParams<{ section:string}>();
+  useEffect(() => {
+    switch (params.section) {
+        case 'library':
+            setActiveTab('library');
+            break;
+        case 'history':
+            setActiveTab('history');
+            break;
+        case 'settings':
+            setActiveTab('settings');
+            break;
+        default:
+            setActiveTab('profile');
+            break;
+    }
+  }, [params.section]);
   
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -40,15 +56,6 @@ export default function SettingsPage() {
       
       {/* Main content */}
       <div className="flex-1 p-8">
-        <div className="flex justify-end mb-6">
-          <button 
-            onClick={toggleDarkMode} 
-            className={`p-2 rounded-full ${darkMode ? 'bg-gray-800 text-yellow-500' : 'bg-white text-violet-600'} transform rotate-2`}
-            style={{ boxShadow: '2px 2px 0px rgba(245, 158, 11, 0.5)' }}
-          >
-            {darkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
-          </button>
-        </div>
         
         {/* Content for each tab */}
         <div className="mt-6">

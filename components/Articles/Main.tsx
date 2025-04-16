@@ -472,11 +472,13 @@ const ArticlesPage = ({
 
         <div className={`rounded-lg overflow-hidden ${darkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg border-2 border-pink-500 grid md:grid-cols-2`}>
           <div className="relative">
+          <a href={`/article/13`}>
             <img 
               src="https://a.storyblok.com/f/178900/1920x1080/33d68393d5/blue-lock-the-movie-episode-nagi.jpg" 
               alt="Weekly Spotlight" 
               className="w-full h-86 object-cover overflow-hidden" 
             />
+            </a>
             <div className="absolute top-0 left-0 bg-gradient-to-r from-pink-600 to-pink-500 text-white px-3 py-1 font-bold flex items-center">
               <Flame size={16} className="mr-1" />
               EXCLUSIVE
@@ -488,7 +490,9 @@ const ArticlesPage = ({
                 <Tag size={16} className="mr-1 text-pink-500" />
                 <span className="text-sm font-bold bg-pink-100 dark:bg-pink-900 dark:bg-opacity-30 text-pink-700 dark:text-pink-300 px-2 py-1 rounded">FEATURED</span>
               </div>
-              <h3 className="text-2xl font-black mb-3 text-pink-600 dark:text-pink-400">Blue Lock Movie -Episode Nagi- Release Date Confirmed!</h3>
+              <a href={`/article/13`}>
+                <h3 className="text-2xl font-black mb-3 text-pink-600 dark:text-pink-400">Blue Lock Movie -Episode Nagi- Release Date Confirmed!</h3>
+              </a>
               <p className={`${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-4`}>
               It's time for the genius to take center stage! The official release date for the highly anticipated anime film "Blue Lock The Movie -Episode Nagi-" has been locked in. Prepare to witness Seishiro Nagi's story unfold in theaters soon!
               </p>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Star, Heart, Calendar, Clock, Globe, Users, Play, Bookmark, Share2, ChevronRight, Award, X, ThumbsUp, Menu, Bell } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import { animeData } from '@/app/data';
+import AnimePoll from './Poll';
 
 export default function AnimeMangaDetailsPage({ darkMode = false }) {
   const [isTrailerPlaying, setIsTrailerPlaying] = useState(false);
@@ -350,7 +351,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
   return (
     <div className={`${themeClass} min-h-screen font-sans transition-colors duration-300`}>
       {/* Mobile Navigation */}
-      <div className={`md:hidden fixed top-0 left-0 right-0 z-50 ${secondaryBg} border-b ${borderColor} px-4 py-3 flex justify-between items-center`}>
+      <div className={`md:hidden fixed top-16 left-0 right-0 z-50 ${secondaryBg} border-b ${borderColor} px-4 py-3 flex justify-between items-center`}>
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <Menu size={24} className={accentColor} />
         </button>
@@ -358,7 +359,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
           <h2 className="font-bold text-lg truncate max-w-xs">{anime.title}</h2>
         </div>
         <div>
-          <Bell size={20} className={subtleTextColor} />
+          {/* <Bell size={20} className={subtleTextColor} /> */}
         </div>
       </div>
       
@@ -418,7 +419,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
       )}
       
       {/* Hero Section with Manga-style Panel */}
-      <div className="relative overflow-hidden pt-16 md:pt-0" style={{ clipPath: "polygon(0 0, 100% 0, 100% 96%, 97% 100%, 0 100%)" }}>
+      <div className="relative overflow-hidden pt-16 mt-8 md:mt-0 md:pt-0" style={{ clipPath: "polygon(0 0, 100% 0, 100% 96%, 97% 100%, 0 100%)" }}>
         <div className={`absolute inset-0 ${darkMode ? 'bg-gradient-to-r from-purple-900/70 to-pink-900/70' : 'bg-gradient-to-r from-violet-900/60 to-indigo-900/60'} z-10`}></div>
         <img 
           src={anime.coverImage || "/api/placeholder/1920/600"} 
@@ -676,40 +677,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
             </div>
             
             {/* Weekly Poll */}
-            <div className={`relative ${secondaryBg} p-6 mb-8 shadow-lg ${cardHoverClass}`} style={{ clipPath: "polygon(0 0, 100% 0, 100% 97%, 3% 100%)" }}>
-              <div className={`absolute -top-3 -right-3 w-16 h-16 ${accentBg} flex items-center justify-center transform rotate-12 font-black text-white`} style={{ clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)" }}>
-                NEW!
-              </div>
-              
-              <h3 className={`text-xl font-black uppercase mb-4 border-b ${borderColor} pb-2`} 
-                  style={{ textShadow: darkMode ? "1px 1px 0px #7C3AED" : "1px 1px 0px #8B5CF6" }}>
-                WEEKLY POLL
-              </h3>
-              
-              <div className="mb-4">
-                <p className="font-bold mb-2">Which character should get more screen time?</p>
-                <div className="space-y-2">
-                  {anime.characters.slice(0, 4).map((character, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <input 
-                        type="radio" 
-                        id={`char-${index}`} 
-                        name="character" 
-                        className="accent-pink-600" 
-                      />
-                      <label htmlFor={`char-${index}`}>{character.name}</label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <button 
-                className={`w-full ${darkMode ? 'bg-purple-700' : 'bg-violet-600'} text-white py-2 font-bold ${buttonHoverEffect} shadow-md`}
-                style={{ clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)" }}
-              >
-                VOTE NOW
-              </button>
-            </div>
+            <AnimePoll anime={anime} darkMode={darkMode} secondaryBg={secondaryBg} accentBg={accentBg} borderColor={borderColor} cardHoverClass={cardHoverClass} buttonHoverEffect={buttonHoverEffect} />
             
             {/* Community Stats */}
             <div className={`${secondaryBg} p-6 shadow-md mb-8`} style={{ clipPath: "polygon(0 0, 97% 0, 100% 3%, 100% 100%, 3% 100%, 0 97%, 0 0)" }}>
