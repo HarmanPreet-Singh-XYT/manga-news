@@ -35,7 +35,7 @@ const AnimeCard = ({ anime, accentColor, darkMode, accentBg, secondaryBg }) => {
             {anime.description || `Latest release from ${anime.studio}. New episodes weekly.`}
           </p>
           <div className="flex items-center justify-between">
-            <a href="#" className={`text-xs ${accentColor} font-bold flex items-center group`}>
+            <a href={`/series/details/${anime.id}`} className={`text-xs ${accentColor} font-bold flex items-center group`}>
               View Details 
               <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
             </a>
@@ -108,7 +108,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
   // Sample enhanced data
   const trendingAnime = [
     {
-      id: 1,
+      id: 9,
       title: "Jujutsu Kaisen: Shibuya Incident",
       image: "https://m.media-amazon.com/images/I/91ZXOZjKeWL._UF1000,1000_QL80_.jpg",
       rating: "4.9",
@@ -121,7 +121,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       tags: ["Action", "Supernatural", "Horror"]
     },
     {
-      id: 2,
+      id: 8,
       title: "Attack on Titan: Final Season",
       image: "https://i.redd.it/z2uyaj1t6pb91.jpg",
       rating: "4.8",
@@ -134,7 +134,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       tags: ["Action", "Drama", "Fantasy"]
     },
     {
-      id: 3,
+      id: 6,
       title: "My Hero Academia: Heroes Rising",
       image: "https://w0.peakpx.com/wallpaper/498/585/HD-wallpaper-heroes-rising-anime-heroes-rising-my-hero-academia.jpg",
       rating: "4.7",
@@ -147,7 +147,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       tags: ["Action", "School", "Comedy"]
     },
     {
-      id: 4,
+      id: 7,
       title: "Spy x Family: Second Mission",
       image: "https://a.storyblok.com/f/178900/1200x1696/48b8663276/spy-x-family-staffel-2-key-visual.jpeg/m/filters:quality(95)format(webp)",
       rating: "4.9",
@@ -162,7 +162,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
   ];
 
   const featuredAnime = {
-    id: 0,
+    id: 10,
     title: "Demon Slayer: Hashira Training Arc",
     image: "https://i.ytimg.com/vi/S6AZBy5bHd4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLASwYmVLMSsgC0uOynTzJWs4lJzRQ",
     badge: "Season Finale",
@@ -273,7 +273,7 @@ const Trending = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
               </div>
             </div>
             
-            <a href="#" className={`${accentBg} text-white font-bold uppercase py-2 px-4 rounded-lg transform hover:translate-y-1 transition-all inline-flex items-center gap-2 group`}>
+            <a href={`/series/details/${featuredAnime.id}`} className={`${accentBg} text-white font-bold uppercase py-2 px-4 rounded-lg transform hover:translate-y-1 transition-all inline-flex items-center gap-2 group`}>
               <span>Watch Now</span>
               <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>

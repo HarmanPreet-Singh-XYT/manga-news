@@ -1,12 +1,51 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Calendar, Clock, ChevronRight, CalendarDays, Play, Eye, Bell, Info, Star } from 'lucide-react'
 
-const CountdownTimer = ({ releaseDate, accentColor }) => {
-  // Sample countdown display (in a real app, you'd calculate this from the actual date)
-  const daysLeft = 3;
-  const hoursLeft = 14;
-  const minutesLeft = 22;
-  
+const CountdownTimer = ({ accentColor }) => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 3,
+    hours: 14,
+    minutes: 22,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft(prev => {
+        let { days, hours, minutes, seconds } = prev;
+
+        if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+          clearInterval(interval);
+          return prev;
+        }
+
+        if (seconds > 0) {
+          seconds -= 1;
+        } else {
+          if (minutes > 0 || hours > 0 || days > 0) {
+            seconds = 59;
+            if (minutes > 0) {
+              minutes -= 1;
+            } else {
+              if (hours > 0) {
+                minutes = 59;
+                hours -= 1;
+              } else if (days > 0) {
+                minutes = 59;
+                hours = 23;
+                days -= 1;
+              }
+            }
+          }
+        }
+
+        return { days, hours, minutes, seconds };
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex items-center gap-2 text-sm">
       <div className="flex items-center gap-1">
@@ -14,14 +53,17 @@ const CountdownTimer = ({ releaseDate, accentColor }) => {
         <span>Countdown:</span>
       </div>
       <div className="flex gap-2">
+        {/* <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
+          {timeLeft.days}d
+        </div> */}
         <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
-          {daysLeft}d
+          {timeLeft.hours}h
         </div>
         <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
-          {hoursLeft}h
+          {timeLeft.minutes}m
         </div>
         <div className="bg-black text-white bg-opacity-20 px-2 py-1 rounded font-mono">
-          {minutesLeft}m
+          {timeLeft.seconds}s
         </div>
       </div>
     </div>
@@ -68,7 +110,7 @@ const EpisodeCard = ({ episode, accentColor, accentBg, darkMode, secondaryBg }) 
               <span>{episode.views}</span>
             </div>
           ) : (
-            <CountdownTimer releaseDate={episode.releaseDate} accentColor={accentColor} />
+            <CountdownTimer accentColor={accentColor} />
           )}
         </div>
       </div>
@@ -90,7 +132,7 @@ const EpisodeCard = ({ episode, accentColor, accentBg, darkMode, secondaryBg }) 
         
         <div className="flex justify-between items-center">
           {episode.isReleased ? (
-            <a href="#" className={`${accentBg} text-white text-xs font-medium py-1 px-3 rounded-full flex items-center gap-1 hover:opacity-90 transition-opacity`}>
+            <a href="https://www.crunchyroll.com/" className={`${accentBg} text-white text-xs font-medium py-1 px-3 rounded-full flex items-center gap-1 hover:opacity-90 transition-opacity`}>
               <Play size={12} />
               <span>Watch Now</span>
             </a>
@@ -101,7 +143,7 @@ const EpisodeCard = ({ episode, accentColor, accentBg, darkMode, secondaryBg }) 
             </button>
           )}
           
-          <a href="#" className={`text-xs ${accentColor} font-medium flex items-center gap-1 group`}>
+          <a href={`/series/details/${episode.id}`} className={`text-xs ${accentColor} font-medium flex items-center gap-1 group`}>
             <Info size={12} />
             <span>Details</span>
           </a>
@@ -117,7 +159,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
   // Sample data for upcoming episodes
   const upcomingEpisodes = [
     {
-      id: 1,
+      id: 5,
       animeTitle: "One Piece",
       title: "The Dawn of the New Era",
       episodeNumber: 1088,
@@ -130,7 +172,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       link:""
     },
     {
-      id: 2,
+      id: 4,
       animeTitle: "My Hero Academia",
       title: "Heroes Rising",
       episodeNumber: 15,
@@ -156,7 +198,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       link:"https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen"
     },
     {
-      id: 4,
+      id: 2,
       animeTitle: "Chainsaw Man",
       title: "The New Season Begins",
       episodeNumber: 1,
@@ -170,7 +212,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       link:""
     },
     {
-      id: 5,
+      id: 13,
       animeTitle: "Bleach: Thousand-Year Blood War",
       title: "The Final Battle",
       episodeNumber: 8,
@@ -183,7 +225,7 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       link:"https://www.crunchyroll.com/series/G63VGG2NY/bleach"
     },
     {
-      id: 6,
+      id: 1,
       animeTitle: "Attack on Titan",
       title: "The Final Season Special",
       episodeNumber: "Special",

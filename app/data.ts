@@ -2907,8 +2907,8 @@ export const animeData: AnimeData[] = [
     studios: ["MAPPA"],
     description: "Denji, a destitute young man, makes a pact with his pet devil Pochita, becoming the human-devil hybrid 'Chainsaw Man'. He's recruited by the Public Safety Devil Hunters to fight devils threatening humanity.",
     longDescription: "Denji lives a rock-bottom life, burdened by his deceased father's massive debt. His only companion is his pet Chainsaw Devil, Pochita. To survive, Denji hunts devils for the yakuza. Betrayed and killed, Denji makes a contract with Pochita, merging with him to be resurrected as Chainsaw Man. With newfound power manifested as chainsaws erupting from his body, he catches the attention of Makima, a high-ranking official in the Public Safety Devil Hunters. Recruited into the organization, Denji fights dangerous devils alongside eccentric colleagues like Aki Hayakawa and the fiend Power, all while chasing his simple dreams of a better life, food, and maybe even a girlfriend.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://a.storyblok.com/f/178900/849x1200/a315230dc9/chainsaw-man-the-movie-reze-arc-csm-visual.jpg/m/filters:quality(95)format(webp)",
+    coverImage: "https://gizmodo.com/app/uploads/2022/07/23e65bb0e903382915182731fa1dcdc2.jpg",
     trailer: "https://www.youtube.com/embed/d1n552v1ng0?si=njbW7dGQdywsjYlv",
     episodes: [
         { number: 1, title: "Dog and Chainsaw", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -2916,24 +2916,24 @@ export const animeData: AnimeData[] = [
         { number: 12, title: "Katana vs. Chainsaw", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
     ],
     characters: [
-        { name: "Denji", role: "Protagonist", image: "/api/placeholder/150/150", description: "Impoverished youth turned human-devil hybrid, driven by simple desires." },
-        { name: "Makima", role: "Main", image: "/api/placeholder/150/150", description: "Mysterious high-ranking Devil Hunter who takes Denji in." },
-        { name: "Aki Hayakawa", role: "Main", image: "/api/placeholder/150/150", description: "Serious Devil Hunter with contracts with powerful devils." },
-        { name: "Power", role: "Main", image: "/api/placeholder/150/150", description: "The Blood Fiend, chaotic and self-centered but forms a bond with Denji and Aki." },
+        { name: "Denji", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkN5E_85SpEkBqb6gfHztAZyc6rFv81k6GMg&s", description: "Impoverished youth turned human-devil hybrid, driven by simple desires." },
+        { name: "Makima", role: "Main", image: "https://staticg.sportskeeda.com/editor/2024/08/ec67a-17243378857426-1920.jpg?w=640", description: "Mysterious high-ranking Devil Hunter who takes Denji in." },
+        { name: "Aki Hayakawa", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21YbP_sO2GLaC_yFPhqvKibXn77BYFP4gow&s", description: "Serious Devil Hunter with contracts with powerful devils." },
+        { name: "Power", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnqIz-wmlmkwTdpRuD3x_3scnF5u9ZiknPfw&s", description: "The Blood Fiend, chaotic and self-centered but forms a bond with Denji and Aki." },
     ],
      reviews: [
        { user: "PochitaFan", rating: 4.5, comment: "Incredible animation and unique style. Loved the chaos!", avatar: "/api/placeholder/40/40", likes: 305, date: "6 months ago" }
     ],
      relatedWorks: [
-       { title: "Chainsaw Man (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "Chainsaw Man - The Movie: Reze Arc", type: "Movie", image: "/api/placeholder/220/320", status: "Upcoming" }
+       { title: "Chainsaw Man (Manga)", type: "Manga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2p8salE-_kujmjXD_Qkh2A0nS3E9_q42heg&s", status: "Ongoing" },
+       { title: "Chainsaw Man - The Movie: Reze Arc", type: "Movie", image: "https://a.storyblok.com/f/178900/849x1200/a315230dc9/chainsaw-man-the-movie-reze-arc-csm-visual.jpg/m/filters:quality(95)format(webp)", status: "Upcoming" }
     ],
      soundtrack: [
        { title: "KICK BACK", artist: "Kenshi Yonezu", type: "Opening Theme" },
        { title: "CHAINSAW BLOOD", artist: "Vaundy", type: "Ending Theme" }, // Example ED (each ep had a different one)
        { title: "tablet", artist: "Kensuke Ushio", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkugNrTSphFwtQc9efRLkQCOue8MIrw19FKg&s","https://i.ytimg.com/vi/fBsEwGRXxF4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqdCmKQ6lNwGOH2vSRDRJtP9j5tQ","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLt-ZS26SxHnJmISJVTgG5FxZbkmsrClacw&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcpMuNSkIY1oNLqWnJQG3jj42_2omublXdtg&s"]
   },
 
   // 3. Jujutsu Kaisen (Overall Series - Primarily S1 Focus)
@@ -2950,8 +2950,8 @@ export const animeData: AnimeData[] = [
     studios: ["MAPPA"],
     description: "High school student Yuji Itadori swallows a cursed finger, becoming the vessel for the powerful curse Sukuna. He joins Tokyo Jujutsu High to learn how to control his powers and combat malevolent Curses.",
     longDescription: "Yuji Itadori, an unnaturally fit high schooler, lives a mundane life until he encounters a cursed item – a rotting finger belonging to the legendary King of Curses, Ryomen Sukuna. To save his friends from Curses attracted by the finger, Yuji makes a rash decision and swallows it, becoming Sukuna's host. Despite being possessed, Yuji retains control over his body. He is sentenced to death by the Jujutsu world but receives a stay of execution from the powerful sorcerer Satoru Gojo. Yuji enrolls in Tokyo Jujutsu High, an academy for Jujutsu Sorcerers, mentored by Gojo alongside classmates Megumi Fushiguro and Nobara Kugisaki. He must find and consume all of Sukuna's fingers before his execution, all while battling increasingly dangerous Curses and rogue sorcerers.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8BtqOFGOoEpCpA9MrxyWfvJd0l-0wN_xAsQ&s",
+    coverImage: "https://images.augustman.com/wp-content/uploads/sites/2/2023/07/07151915/jujutsu-kaisen-3.jpg",
     trailer: "https://www.youtube.com/embed/pkKu9hLT-t8?si=ZnU5nWxiD19FXKAJ",
      episodes: [
         { number: 1, title: "Ryomen Sukuna", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -2959,25 +2959,25 @@ export const animeData: AnimeData[] = [
         { number: 24, title: "Accomplices", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // End of S1
     ],
      characters: [
-        { name: "Yuji Itadori", role: "Protagonist", image: "/api/placeholder/150/150", description: "Optimistic and strong, host of the King of Curses." },
-        { name: "Megumi Fushiguro", role: "Deuteragonist", image: "/api/placeholder/150/150", description: "Stoic sorcerer using Shikigami Cursed Techniques." },
-        { name: "Nobara Kugisaki", role: "Deuteragonist", image: "/api/placeholder/150/150", description: "Confident sorcerer using straw doll techniques." },
-        { name: "Satoru Gojo", role: "Main", image: "/api/placeholder/150/150", description: "The strongest Jujutsu Sorcerer, teacher at Tokyo Jujutsu High." },
-        { name: "Ryomen Sukuna", role: "Antagonist", image: "/api/placeholder/150/150", description: "The immensely powerful King of Curses residing within Yuji." },
+        { name: "Yuji Itadori", role: "Protagonist", image: "https://lensmate.co.uk/cdn/shop/files/YujiItadori_grande.jpg?v=1712943337", description: "Optimistic and strong, host of the King of Curses." },
+        { name: "Megumi Fushiguro", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbieUmvVr9xNXdxwC6TjZvoKwhtiS12tUvbg&s", description: "Stoic sorcerer using Shikigami Cursed Techniques." },
+        { name: "Nobara Kugisaki", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5IXq9G9KWfNW5cp9Fsv32Rbvxt3s0Jq06Pg&s", description: "Confident sorcerer using straw doll techniques." },
+        { name: "Satoru Gojo", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Gq-5BxlFHHnS65pIInNIB1Z3riVydUTRrQ&s", description: "The strongest Jujutsu Sorcerer, teacher at Tokyo Jujutsu High." },
+        { name: "Ryomen Sukuna", role: "Antagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJW2EPuEJ5RgI0eea6kG0hrKmFhNO1jC2yEg&s", description: "The immensely powerful King of Curses residing within Yuji." },
     ],
     reviews: [
         { user: "CursedEnergyUser", rating: 5, comment: "Peak fiction! Animation, story, characters - all 10/10.", avatar: "/api/placeholder/40/40", likes: 600, date: "Ongoing" }
     ],
     relatedWorks: [
-        { title: "Jujutsu Kaisen (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-        { title: "Jujutsu Kaisen 0", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" }
+        { title: "Jujutsu Kaisen (Manga)", type: "Manga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8BtqOFGOoEpCpA9MrxyWfvJd0l-0wN_xAsQ&s", status: "Ongoing" },
+        { title: "Jujutsu Kaisen 0", type: "Movie", image: "https://upload.wikimedia.org/wikipedia/en/7/77/Gekij%C5%8D-ban_Jujutsu_Kaisen_0.png", status: "Completed" }
     ],
     soundtrack: [
         { title: "Kaikai Kitan", artist: "Eve", type: "Opening Theme" }, // S1 OP1
         { title: "Lost in Paradise", artist: "ALI feat. AKLO", type: "Ending Theme" }, // S1 ED1
         { title: "SPECIALZ", artist: "King Gnu", type: "Opening Theme" } // S2 OP2
     ],
-    gallery:[]
+    gallery:["https://m.media-amazon.com/images/S/pv-target-images/b63ecc03661f00ab90a2cacfc4fdb2ce63eafba9e2d2cab678eff9a863e485e6.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEXcUDMcgFxULkVKnZN4q8PFWTILmacXR5sw&s","https://poggers.com/cdn/shop/articles/0160b0eb77f98a7ac7be2948518bdab3_1920x1080_crop_center.webp?v=1708121470","https://www.impericon.com/cdn/shop/articles/jujutsu-kaisen-4.jpg?v=1725001629"]
   },
 
   // 4. My Hero Academia (Overall Series)
@@ -2994,8 +2994,8 @@ export const animeData: AnimeData[] = [
     studios: ["Bones"],
     description: "In a world where superpowers (Quirks) are commonplace, Izuku Midoriya, a boy born without powers, inherits the Quirk of the legendary hero All Might and enrolls in a prestigious hero academy.",
     longDescription: "In a world where about 80% of the population possesses some superhuman ability known as a 'Quirk', the profession of 'Hero' has become a reality. Izuku Midoriya, nicknamed Deku, is a Quirkless middle schooler who idolizes the number one hero, All Might. Despite lacking powers, Deku dreams of becoming a hero. A chance encounter with All Might changes his life forever when the hero chooses Deku as his successor, transferring his unique, stockpiling Quirk, 'One For All'. Now possessing immense power (that initially wrecks his body), Deku enrolls in U.A. High School, a top-tier institution for training future heroes. Alongside classmates like his explosive rival Katsuki Bakugo and the earnest Ochaco Uraraka, Deku learns to control his power, faces villainous threats, and strives to become the world's greatest hero.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://m.media-amazon.com/images/M/MV5BNzgxMzI3NzgtYzE2Zi00MzlmLThlNWEtNWVmZWEyZjNkZWYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    coverImage: "https://m.media-amazon.com/images/S/pv-target-images/c5b267aeb5b6882024f75db745bb009c8fd7a95dfdd2743105f3ea6132d434d7.jpg",
     trailer: "https://www.youtube.com/embed/T5HMoxJRhRY?si=puyXRJpwf39FF0QE",
      episodes: [
         { number: 1, title: "Izuku Midoriya: Origin", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -3003,26 +3003,26 @@ export const animeData: AnimeData[] = [
         { number: 139, title: "Full Power!!", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // Example from S7 start
     ],
     characters: [
-        { name: "Izuku Midoriya (Deku)", role: "Protagonist", image: "/api/placeholder/150/150", description: "Quirkless boy who inherits One For All, determined and strategic." },
-        { name: "Katsuki Bakugo", role: "Deuteragonist", image: "/api/placeholder/150/150", description: "Deku's explosive rival with powerful Explosion Quirk." },
-        { name: "All Might", role: "Main", image: "/api/placeholder/150/150", description: "Former No. 1 Hero, mentor to Deku, wielder of One For All." },
-        { name: "Shoto Todoroki", role: "Main", image: "/api/placeholder/150/150", description: "Possesses both fire and ice Quirks, initially aloof." },
-        { name: "Tomura Shigaraki", role: "Antagonist", image: "/api/placeholder/150/150", description: "Leader of the League of Villains with a Decay Quirk." },
+        { name: "Izuku Midoriya (Deku)", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSF9X2UdSpvdRBMLePVzNS7DdgnFDl5kTcNw&s", description: "Quirkless boy who inherits One For All, determined and strategic." },
+        { name: "Katsuki Bakugo", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7FkmahGQeOVh-ZbfbbvYezPHpGhartApIg&s", description: "Deku's explosive rival with powerful Explosion Quirk." },
+        { name: "All Might", role: "Main", image: "https://a.storyblok.com/f/178900/640x360/792bfec8b0/f2405a10951beaef64548e49f53d52141678131617_main.jpg/m/filters:quality(95)format(webp)", description: "Former No. 1 Hero, mentor to Deku, wielder of One For All." },
+        { name: "Shoto Todoroki", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI21XDJFa6XzeTu4C7hkgO7EUxs21eGgQcrg&s", description: "Possesses both fire and ice Quirks, initially aloof." },
+        { name: "Tomura Shigaraki", role: "Antagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQAV__KeMOsmCTHIdCVAZQ7aOdX40MYFGyJA&s", description: "Leader of the League of Villains with a Decay Quirk." },
     ],
      reviews: [
        { user: "PlusUltraFan", rating: 4.5, comment: "Always hyped for more MHA! Great fights and character growth.", avatar: "/api/placeholder/40/40", likes: 450, date: "Ongoing" }
     ],
     relatedWorks: [
-       { title: "My Hero Academia (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "My Hero Academia: Two Heroes", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "My Hero Academia: World Heroes' Mission", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" }
+       { title: "My Hero Academia (Manga)", type: "Manga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjTn3hhqIqUTNYr3xF-N1pZ1_niYC7S-_Bdg&s", status: "Ongoing" },
+       { title: "My Hero Academia: Two Heroes", type: "Movie", image: "https://upload.wikimedia.org/wikipedia/en/1/1d/My_Hero_Academia_-_Two_Heroes_poster.jpg", status: "Completed" },
+       { title: "My Hero Academia: World Heroes' Mission", type: "Movie", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCyXvdSZ329mNRYstTTY2hiVxlDMNi0WrGQQ&s", status: "Completed" }
     ],
      soundtrack: [
        { title: "The Day", artist: "Porno Graffitti", type: "Opening Theme" }, // OP1
        { title: "HEROES", artist: "Brian the Sun", type: "Ending Theme" }, // ED1
        { title: "You Say Run", artist: "Yuki Hayashi", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtijl-qU_oRtdIiZ-upHsNLRFW0wOWK-QqQw&s","https://m.media-amazon.com/images/S/pv-target-images/7a0cfa824d36fc7cb73939a3c69077cc9baf0cd75244665b3d901d43789b5bb6._SX1080_FMjpg_.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV3yN7ewzkc835-JYU9QYvpz9NwytXYjqq3A&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSzn5nJ8rQK1A8Yxwb4xVS13rJrSEFdpgHg&s"]
   },
 
   // 5. One Piece
@@ -3039,8 +3039,8 @@ export const animeData: AnimeData[] = [
     studios: ["Toei Animation"],
     description: "Monkey D. Luffy, a boy whose body gained the properties of rubber after eating a Devil Fruit, explores the Grand Line with his pirate crew in search of the ultimate treasure known as the 'One Piece' to become the next Pirate King.",
     longDescription: "Inspired by the legendary Pirate King Gol D. Roger's final words revealing the existence of the ultimate treasure, 'One Piece', Monkey D. Luffy sets out on a grand adventure from the East Blue Sea. Having eaten the Gum-Gum Fruit, Luffy possesses rubber powers but cannot swim. His dream is to find the One Piece and become the King of the Pirates. Along his journey across the perilous seas of the Grand Line and the New World, he recruits a diverse and loyal crew known as the Straw Hat Pirates: swordsman Roronoa Zoro, navigator Nami, sniper Usopp, cook Sanji, doctor Tony Tony Chopper, archaeologist Nico Robin, shipwright Franky, musician Brook, and helmsman Jinbei. Together, they battle rival pirates, Marines, corrupt governments, and powerful entities, exploring fantastical islands and uncovering the world's deepest secrets.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://m.media-amazon.com/images/I/81rEhhwbubL.jpg",
+    coverImage: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/08/one-piece-time-watch.jpg",
     trailer: "https://www.youtube.com/embed/okSWhWr52u8?si=6JVCUTtGM8mEfd80",
     episodes: [ // Example episodes from different eras
         { number: 1, title: "I'm Luffy! The Man Who Will Become the Pirate King!", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -3048,26 +3048,26 @@ export const animeData: AnimeData[] = [
         { number: 1015, title: "Straw Hat Luffy! The Man Who Will Become the Pirate King!", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // Major Wano episode
     ],
     characters: [
-        { name: "Monkey D. Luffy", role: "Protagonist", image: "/api/placeholder/150/150", description: "Captain of the Straw Hat Pirates, user of the Gum-Gum Fruit (now revealed as Hito Hito no Mi, Model: Nika)." },
-        { name: "Roronoa Zoro", role: "Main", image: "/api/placeholder/150/150", description: "Swordsman aiming to be the world's greatest." },
-        { name: "Nami", role: "Main", image: "/api/placeholder/150/150", description: "Navigator dreaming of mapping the world." },
-        { name: "Sanji", role: "Main", image: "/api/placeholder/150/150", description: "Cook searching for the All Blue." },
+        { name: "Monkey D. Luffy", role: "Protagonist", image: "https://c4.wallpaperflare.com/wallpaper/830/266/321/anime-one-piece-monkey-d-luffy-wallpaper-preview.jpg", description: "Captain of the Straw Hat Pirates, user of the Gum-Gum Fruit (now revealed as Hito Hito no Mi, Model: Nika)." },
+        { name: "Roronoa Zoro", role: "Main", image: "https://cdn.oneesports.gg/cdn-data/2024/04/Anime_OnePiece_Zoro_Sword_Attack.jpg", description: "Swordsman aiming to be the world's greatest." },
+        { name: "Nami", role: "Main", image: "https://staticg.sportskeeda.com/editor/2023/03/474e0-16794903651247-1920.jpg?w=640", description: "Navigator dreaming of mapping the world." },
+        { name: "Sanji", role: "Main", image: "https://static.toiimg.com/thumb/msid-120213925,width-1280,height-720,imgsize-49064,resizemode-6,overlay-toi_sw,pt-32,y_pad-40/photo.jpg", description: "Cook searching for the All Blue." },
         // Many more crew members and antagonists...
     ],
      reviews: [
        { user: "StrawHatGrandFleet", rating: 5, comment: "The GOAT! Nothing compares to the world-building and adventure.", avatar: "/api/placeholder/40/40", likes: 10000, date: "Ongoing" }
     ],
     relatedWorks: [
-       { title: "One Piece (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "One Piece Film: Red", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "One Piece (Live Action)", type: "Anime", image: "/api/placeholder/220/320", status: "Ongoing" } // Technically live-action TV
+       { title: "One Piece (Manga)", type: "Manga", image: "https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", status: "Ongoing" },
+       { title: "One Piece Film: Red", type: "Movie", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE4EfvYbM5l8vVPFLkAzCMKNv9lJD5kWRxpg&s", status: "Completed" },
+       { title: "One Piece (Live Action)", type: "Anime", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiZ29hU0r6-TARCvtS9MYVIkzv-ojup2svpg&s", status: "Ongoing" } // Technically live-action TV
     ],
      soundtrack: [
        { title: "We Are!", artist: "Hiroshi Kitadani", type: "Opening Theme" }, // OP1
        { title: "Memories", artist: "Maki Otsuki", type: "Ending Theme" }, // ED1
        { title: "Overtaken", artist: "Kohei Tanaka", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsCjPr5R-ESuPjlPzfMxU-xpe6HbHdrqbWw&s","https://static0.cbrimages.com/wordpress/wp-content/uploads/2023/12/luffy-from-one-piece.jpg","https://storage.googleapis.com/kaggle-datasets-images/1488335/2458867/c6fee8bf26cfbcafa268307690b7a85e/dataset-cover.jpg?t=2021-07-24-17-43-52","https://i.ytimg.com/vi/08p7_yADEPc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDAnavXKEEmv_0tMNW4jnN5o6YE9A","https://gear5world.com/cdn/shop/articles/mugiwara_one_piece_pirate_3ae6890e-e560-4dcf-9b7b-2a5596011953.jpg?v=1739192568"]
   },
 
   // 6. My Hero Academia: Heroes Rising (Movie)
@@ -3084,33 +3084,32 @@ export const animeData: AnimeData[] = [
     studios: ["Bones"],
     description: "Class 1-A visits Nabu Island to gain real hero experience, but their stay is interrupted by Nine, a formidable villain seeking a specific Quirk to create his ideal world.",
     longDescription: "As part of a special hero work recommendation project, the students of U.A. High's Class 1-A are temporarily stationed on the remote and peaceful Nabu Island. Tasked with running their own hero agency and handling minor incidents, they enjoy a brief period of routine hero duties. However, the tranquility is shattered by the arrival of Nine, an incredibly powerful villain capable of wielding multiple Quirks, along with his dangerous accomplices. Nine targets the Quirk of a young island resident named Katsuma Shimano. With pro heroes far away, Class 1-A must band together, pushing their limits beyond anything they've faced before to protect the islanders and stop Nine's devastating plans.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
-    trailer: "https://www.youtube.com/watch?v=iaMLBWj6HjI",
+    image: "https://upload.wikimedia.org/wikipedia/en/6/6a/My_Hero_Academia_-_Heroes_Rising.jpg",
+    coverImage: "https://i.redd.it/faaz36v3pon41.png",
+    trailer: "https://www.youtube.com/embed/iaMLBWj6HjI?si=z3oRvrklXieEi7mP",
     episodes: [
         { number: "Movie", title: "Heroes Rising", duration: "104 min", thumbnail: "/api/placeholder/120/70" }
     ],
     characters: [
-        { name: "Izuku Midoriya (Deku)", role: "Protagonist", image: "/api/placeholder/150/150", description: "Leads the effort to protect the island." },
-        { name: "Katsuki Bakugo", role: "Protagonist", image: "/api/placeholder/150/150", description: "Plays a crucial role in the final confrontation." },
-        { name: "Nine", role: "Antagonist", image: "/api/placeholder/150/150", description: "Villain seeking a specific Quirk to achieve his ideals." },
-        { name: "Katsuma Shimano", role: "Supporting", image: "/api/placeholder/150/150", description: "Young boy targeted by Nine." },
-        { name: "Mahoro Shimano", role: "Supporting", image: "/api/placeholder/150/150", description: "Katsuma's protective older sister." },
-        // Other Class 1-A members have supporting roles
+        { name: "Izuku Midoriya (Deku)", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSF9X2UdSpvdRBMLePVzNS7DdgnFDl5kTcNw&s", description: "Quirkless boy who inherits One For All, determined and strategic." },
+        { name: "Katsuki Bakugo", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC7FkmahGQeOVh-ZbfbbvYezPHpGhartApIg&s", description: "Deku's explosive rival with powerful Explosion Quirk." },
+        { name: "All Might", role: "Main", image: "https://a.storyblok.com/f/178900/640x360/792bfec8b0/f2405a10951beaef64548e49f53d52141678131617_main.jpg/m/filters:quality(95)format(webp)", description: "Former No. 1 Hero, mentor to Deku, wielder of One For All." },
+        { name: "Shoto Todoroki", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI21XDJFa6XzeTu4C7hkgO7EUxs21eGgQcrg&s", description: "Possesses both fire and ice Quirks, initially aloof." },
+        { name: "Tomura Shigaraki", role: "Antagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQAV__KeMOsmCTHIdCVAZQ7aOdX40MYFGyJA&s", description: "Leader of the League of Villains with a Decay Quirk." },
     ],
      reviews: [
        { user: "HeroMovieFan", rating: 4.7, comment: "Amazing fights and emotional moments. Loved the Deku/Bakugo team-up!", avatar: "/api/placeholder/40/40", likes: 280, date: "2 years ago" }
     ],
     relatedWorks: [
-       { title: "My Hero Academia (Anime)", type: "Anime", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "My Hero Academia (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" }
+       { title: "My Hero Academia (Anime)", type: "Anime", image: "https://m.media-amazon.com/images/M/MV5BYmI5OGU1OTYtODkzZS00YzA5LTlmYmEtMDQ1Njc3OGRhMWZjXkEyXkFqcGc@._V1_.jpg", status: "Ongoing" },
+       { title: "My Hero Academia (Manga)", type: "Manga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc_Sf8aZ1bAEieL_jILc2EtIsx7AFQpyV4zg&s", status: "Ongoing" }
     ],
     soundtrack: [
        { title: "Might+U", artist: "Makayla Phillips", type: "Insert Song" },
        { title: "Higher Ground", artist: "sumika", type: "Ending Theme" },
        { title: "Heroes vs Nine", artist: "Yuki Hayashi", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://m.media-amazon.com/images/S/pv-target-images/890b22f4786c3bbc3bbfb33783f482e0739a085fdc5ec75665880ba0481c9b89._SX1080_FMjpg_.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRCdk86WE0E7LvUxr1jqYtBBepJOVKaQnnvg&s","https://m.media-amazon.com/images/M/MV5BYjAyMmNiOGYtNzA0MC00OThmLThlMjktNmY1YjliYzdjYzEwXkEyXkFqcGdeQXZ3ZXNsZXk@._V1_QL75_UX500_CR0,0,500,281_.jpg","https://itswynnesworld.com/wp-content/uploads/2021/06/my-hero-academia-heroes-rising-short-story-1229039-1280x0-1.jpeg?w=1024"]
   },
 
   // 7. Spy x Family Season 2
@@ -3127,35 +3126,35 @@ export const animeData: AnimeData[] = [
     studios: ["Wit Studio", "CloverWorks"],
     description: "The hilarious and heartwarming missions of the Forger family continue! Loid (spy), Yor (assassin), and Anya (telepath) navigate undercover lives, featuring a thrilling cruise adventure and more school antics.",
     longDescription: "The second season of Spy x Family continues the adaptation of Tatsuya Endo's manga, picking up after the events of the first season. Key arcs include the Great Cruise Adventure, where Yor takes on a secret bodyguard mission aboard a luxury liner, unaware that Loid and Anya are also on board for a vacation. This leads to intense action for Yor as she protects her clients from assassins, while Loid tries to enjoy downtime and Anya uses her telepathy to navigate the chaos (and try to help). Other episodes delve deeper into the daily lives of the Forgers, Anya's struggles at Eden Academy (including her attempts to befriend Damian Desmond), Loid's ongoing efforts for Operation Strix, and the introduction of new characters who further complicate their secret lives.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
-    trailer: "https://www.youtube.com/watch?v=ofXigq9aIpo",
+    image: "https://m.media-amazon.com/images/M/MV5BZDkwNjc0NWEtNzJlOC00N2YwLTk4MjktZGFlZDE2Y2QzOWI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+    coverImage: "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/08/spy-x-family-loid-not-allowing-himself-to-be-happy.jpg",
+    trailer: "https://www.youtube.com/embed/ofXigq9aIpo?si=mPTazPh8B1dK70Pr",
     episodes: [
         { number: 1, title: "Follow Mama and Papa", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // Corresponds to Ep 26 overall
         { number: 6, title: "The Fearsome Luxury Cruise Ship", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // Start of Cruise Arc, Ep 31 overall
         { number: 12, title: "Part of the Family", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // End of S2, Ep 37 overall
     ],
     characters: [
-        { name: "Loid Forger (Twilight)", role: "Protagonist", image: "/api/placeholder/150/150", description: "Master spy maintaining his cover family." },
-        { name: "Yor Forger (Thorn Princess)", role: "Protagonist", image: "/api/placeholder/150/150", description: "Secret assassin balancing family life and deadly missions." },
-        { name: "Anya Forger", role: "Protagonist", image: "/api/placeholder/150/150", description: "Telepathic child navigating secrets and school." },
-        { name: "Bond Forger", role: "Supporting", image: "/api/placeholder/150/150", description: "Precognitive family dog." },
-        { name: "Fiona Frost (Nightfall)", role: "Supporting", image: "/api/placeholder/150/150", description: "Loid's spy colleague, poses as his 'wife' briefly." },
+        { name: "Loid Forger (Twilight)", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaxFsPBZO4Sb85sSG7QAxhr0ZpNhLrp1wftw&s", description: "Master spy maintaining his cover family." },
+        { name: "Yor Forger (Thorn Princess)", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjjpZgn9XBIHWYNbuJLvoFxcGaWYcNCJ_Ksw&s", description: "Secret assassin balancing family life and deadly missions." },
+        { name: "Anya Forger", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpBo7qYIINgPzV7sUmxdiFLdsCh4YCSeu-g&s", description: "Telepathic child navigating secrets and school." },
+        { name: "Bond Forger", role: "Supporting", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTeFMT3Lx5oiN2QPOY8nvsAhez05K-tvow3A&s", description: "Precognitive family dog." },
+        { name: "Fiona Frost (Nightfall)", role: "Supporting", image: "https://i.ytimg.com/vi/JKPebcW7AT0/maxresdefault.jpg", description: "Loid's spy colleague, poses as his 'wife' briefly." },
     ],
      reviews: [
        { user: "WakuWakuWatcher", rating: 4.8, comment: "Just as charming and funny as S1! The cruise arc was amazing.", avatar: "/api/placeholder/40/40", likes: 320, date: "3 months ago" }
     ],
     relatedWorks: [
-       { title: "Spy x Family (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "Spy x Family Season 1", type: "Anime", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "Spy x Family Code: White", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" }
+       { title: "Spy x Family (Manga)", type: "Manga", image: "https://m.media-amazon.com/images/M/MV5BZDkwNjc0NWEtNzJlOC00N2YwLTk4MjktZGFlZDE2Y2QzOWI0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", status: "Ongoing" },
+       { title: "Spy x Family Season 1", type: "Anime", image: "https://a.storyblok.com/f/178900/1064x1504/01c4ce6a11/spy-x-family-season-3-forger-family-visual.jpg/m/filters:quality(95)format(webp)", status: "Completed" },
+       { title: "Spy x Family Code: White", type: "Movie", image: "https://upload.wikimedia.org/wikipedia/en/a/ad/Spy_%C3%97_Family_Code_White_movie_poster.png", status: "Completed" }
     ],
      soundtrack: [
        { title: "Kurakura", artist: "Ado", type: "Opening Theme" },
        { title: "Todome no Ichigeki", artist: "Vaundy feat. Cory Wong", type: "Ending Theme" },
        { title: "CRUISE", artist: "[K]NoW_NAME", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pCHAg5KL5nXMil80efouX7_werlKoaBA3A&s","https://comicbook.com/wp-content/uploads/sites/4/2025/04/Spy-x-Family-Season-3-Loid.jpg?resize=2000,1125","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_GaWSsTvvHHBoRpdVrsJy8iGXC0FrjhpOgw&s","https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/9464/1735280299464-i"]
   },
 
   // 8. Attack on Titan Final Season
@@ -3172,8 +3171,8 @@ export const animeData: AnimeData[] = [
     studios: ["MAPPA"],
     description: "The final arc of Attack on Titan. Shifting perspectives reveal the world outside Paradis Island, escalating the conflict between Eldians and Marleyans towards a cataclysmic conclusion orchestrated by Eren Yeager.",
     longDescription: "Picking up years after the Survey Corps reached the sea, The Final Season dramatically shifts perspective, initially focusing on the nation of Marley and Eldian Warriors like Reiner Braun, revealing the global conflict surrounding the Subjects of Ymir (Eldians). As Eren Yeager and the Survey Corps infiltrate Marley, the lines between hero and villain blur irrevocably. Eren inherits the War Hammer Titan and embraces a radical path, ultimately seeking to activate the 'Rumbling' – unleashing the millions of Colossal Titans within the Walls to trample the world outside Paradis. Former comrades are forced to choose between loyalty to Eren and saving humanity, leading to a devastating global conflict and a final, desperate battle against their former friend to stop the apocalypse.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_.jpg",
+    coverImage: "https://i.ytimg.com/vi/NxO-L--OKmw/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGH8gRigjMA8=&rs=AOn4CLBtgd-QwlmrPWgrCay4RkQ4sGBclA",
     trailer: "https://www.youtube.com/embed/sBLsE-NKEoI?si=gp915NM1bYKeAH0i",
      episodes: [ // Key episodes/parts
         { number: "FS P1 E1 (60)", title: "The Other Side of the Sea", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -3182,18 +3181,17 @@ export const animeData: AnimeData[] = [
         { number: "FS Final Ch. 2 (89)", title: "Toward the Tree on That Hill", duration: "85 min", thumbnail: "/api/placeholder/120/70" },
     ],
     characters: [
-        { name: "Eren Yeager", role: "Protagonist", image: "/api/placeholder/150/150", description: "Becomes the central figure driving the final conflict, arguably antagonist." },
-        { name: "Mikasa Ackerman", role: "Main", image: "/api/placeholder/150/150", description: "Grapples with her feelings for Eren and the need to stop him." },
-        { name: "Armin Arlert", role: "Main", image: "/api/placeholder/150/150", description: "Inheritor of the Colossal Titan, seeks diplomatic solutions but forced to fight." },
-        { name: "Reiner Braun", role: "Main", image: "/api/placeholder/150/150", description: "Marleyan Warrior seeking redemption, joins the alliance against Eren." },
-        { name: "Levi Ackerman", role: "Main", image: "/api/placeholder/150/150", description: "Endures heavy losses, determined to fulfill his promise." },
+      { name: "Eren Yeager", role: "Protagonist", image: "https://imgix.ranker.com/list_img_v2/8131/3168131/original/3168131?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720", description: "Driven by vengeance, later discovers complex truths." },
+      { name: "Mikasa Ackerman", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX0X9fDYmRuzskCXY8rCFdw60-6q7PlihhQg&s", description: "Adoptive sister of Eren, exceptionally skilled fighter." },
+      { name: "Armin Arlert", role: "Deuteragonist", image: "https://wallpapers.com/images/hd/armin-arlert-turning-into-titan-2mlan6762fmjtz1r.jpg", description: "Eren's childhood friend, highly intelligent strategist." },
+      { name: "Levi Ackerman", role: "Supporting", image: "https://cdn.staticneo.com/w/attackontitan/Leviackerman.jpg", description: "Captain of the Survey Corps' Special Operations Squad, humanity's strongest soldier." },
     ],
      reviews: [
        { user: "FreedomSeeker13", rating: 5, comment: "A controversial but undeniably epic conclusion. MAPPA delivered.", avatar: "/api/placeholder/40/40", likes: 800, date: "1 year ago" }
     ],
     relatedWorks: [
-       { title: "Attack on Titan (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "Attack on Titan (S1-S3)", type: "Anime", image: "/api/placeholder/220/320", status: "Completed" }
+       { title: "Attack on Titan (Manga)", type: "Manga", image: "https://miro.medium.com/v2/resize:fit:1000/1*0cP-8SCNbB-FT98iti03jw.jpeg", status: "Completed" },
+       { title: "Attack on Titan (S1-S3)", type: "Anime", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCkLIyi_tE_lYd24tnwtxS8VzE8XJJ0-W6fw&s", status: "Completed" }
     ],
      soundtrack: [
        { title: "My War", artist: "Shinsei Kamattechan", type: "Opening Theme" }, // FS P1 OP
@@ -3201,7 +3199,7 @@ export const animeData: AnimeData[] = [
        { title: "Akuma no Ko", artist: "Ai Higuchi", type: "Ending Theme" }, // FS P2 ED
        { title: "ətˈæk 0N tάɪtn <TFSv>", artist: "Hiroyuki Sawano", type: "OST" }
     ],
-    gallery:[]
+    gallery:["https://static.beebom.com/wp-content/uploads/2023/01/Attack-on-Titan-Season-4-Part-3-Everything-You-Need-to-Know.jpg?w=750&quality=75","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWzyi9E_P9Uo0jn-6lSH2dSVHbfXKtlM7ZQQ&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeZKIYG0L7AHD-hJMJH2--V0FxxQUtc1cK7g&s","https://hips.hearstapps.com/hmg-prod/images/attack-on-titan-ending-explained-eren-65476ca1e9947.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS18MaA-Mj8cAF_mR2ZEf-lKXX2RJ-b_uH3Q&s"]
   },
 
   // 9. Jujutsu Kaisen: Shibuya Incident (Season 2)
@@ -3218,8 +3216,8 @@ export const animeData: AnimeData[] = [
     studios: ["MAPPA"],
     description: "Season 2 adapts two major arcs: 'Hidden Inventory/Premature Death,' detailing Gojo and Geto's past, and the devastating 'Shibuya Incident,' where curses launch a massive attack to seal Gojo.",
     longDescription: "The second season of Jujutsu Kaisen is split into two distinct parts. The first, 'Hidden Inventory/Premature Death', is a flashback arc exploring the high school days of Satoru Gojo and Suguru Geto, their mission to protect the Star Plasma Vessel Riko Amanai, and the tragic events that led to Geto's descent into darkness. The second, larger part adapts the infamous 'Shibuya Incident' arc. On Halloween night, Geto (Kenjaku) and a league of powerful Cursed Spirits enact a large-scale plan to trap civilians and lure Gojo into Shibuya Station, aiming to seal him using the Prison Realm. This triggers an all-out war across Shibuya between Jujutsu Sorcerers and Curses, resulting in unprecedented chaos, numerous casualties, intense battles, and world-altering consequences.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://m.media-amazon.com/images/I/815Hq6BC0hL.jpg",
+    coverImage: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/11/sukuna-jujutsu-kaisen.jpg",
     trailer: "https://www.youtube.com/embed/muSr2NVs1oM?si=8GJw3g1cwthrtqir",
      episodes: [ // Key episodes from S2
         { number: "S2 E1 (25)", title: "Hidden Inventory", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
@@ -3229,20 +3227,19 @@ export const animeData: AnimeData[] = [
         { number: "S2 E23 (47)", title: "Shibuya Incident - Gate, Close", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // End of S2
     ],
     characters: [
-        { name: "Satoru Gojo", role: "Main", image: "/api/placeholder/150/150", description: "Central figure in both past and present arcs, target in Shibuya." },
-        { name: "Suguru Geto", role: "Main", image: "/api/placeholder/150/150", description: "Focus of the flashback arc; body used by Kenjaku in Shibuya." },
-        { name: "Yuji Itadori", role: "Protagonist", image: "/api/placeholder/150/150", description: "Faces immense challenges and trauma during Shibuya." },
-        { name: "Megumi Fushiguro", role: "Deuteragonist", image: "/api/placeholder/150/150", description: "Pushed to his limits during the incident." },
-        { name: "Mahito", role: "Antagonist", image: "/api/placeholder/150/150", description: "Major antagonist causing widespread suffering in Shibuya." },
-        { name: "Kento Nanami", role: "Supporting", image: "/api/placeholder/150/150", description: "Grade 1 Sorcerer playing a significant role in Shibuya." },
+        { name: "Yuji Itadori", role: "Protagonist", image: "https://lensmate.co.uk/cdn/shop/files/YujiItadori_grande.jpg?v=1712943337", description: "Optimistic and strong, host of the King of Curses." },
+        { name: "Megumi Fushiguro", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbieUmvVr9xNXdxwC6TjZvoKwhtiS12tUvbg&s", description: "Stoic sorcerer using Shikigami Cursed Techniques." },
+        { name: "Nobara Kugisaki", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5IXq9G9KWfNW5cp9Fsv32Rbvxt3s0Jq06Pg&s", description: "Confident sorcerer using straw doll techniques." },
+        { name: "Satoru Gojo", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Gq-5BxlFHHnS65pIInNIB1Z3riVydUTRrQ&s", description: "The strongest Jujutsu Sorcerer, teacher at Tokyo Jujutsu High." },
+        { name: "Ryomen Sukuna", role: "Antagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJW2EPuEJ5RgI0eea6kG0hrKmFhNO1jC2yEg&s", description: "The immensely powerful King of Curses residing within Yuji." },
     ],
      reviews: [
        { user: "DomainExpansionUser", rating: 5, comment: "MAPPA popped off! Shibuya Incident was peak animation and suffering.", avatar: "/api/placeholder/40/40", likes: 750, date: "4 months ago" }
     ],
      relatedWorks: [
-       { title: "Jujutsu Kaisen (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Ongoing" },
-       { title: "Jujutsu Kaisen Season 1", type: "Anime", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "Jujutsu Kaisen 0", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" }
+       { title: "Jujutsu Kaisen (Manga)", type: "Manga", image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg", status: "Ongoing" },
+       { title: "Jujutsu Kaisen Season 1", type: "Anime", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTUMDLKb8hH0cUykDZal2YK5E4uHrg2MR4mg&s", status: "Completed" },
+       { title: "Jujutsu Kaisen 0", type: "Movie", image: "https://upload.wikimedia.org/wikipedia/en/7/77/Gekij%C5%8D-ban_Jujutsu_Kaisen_0.png", status: "Completed" }
     ],
      soundtrack: [
        { title: "Where Our Blue Is", artist: "Tatsuya Kitani", type: "Opening Theme" }, // S2 OP1
@@ -3250,7 +3247,7 @@ export const animeData: AnimeData[] = [
        { title: "Akari", artist: "Soshi Sakiyama", type: "Ending Theme" }, // S2 ED1
        { title: "more than words", artist: "Hitsujibungaku", type: "Ending Theme" } // S2 ED2
     ],
-    gallery:[]
+    gallery:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZK6PMgYtF18Ivo1StSgSSodJCFtE8xAqMmQ&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA6cnFA2JwVQI4QqSn8Qm1vIXmkFYJQ2oodg&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1-q4jbEr6NGkVssRANYONPymDvL-Yekabmg&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMZMLUfwuVlkE3_JV0prrx53Gn7XkfM_NdTg&s"]
   },
 
   // 10. Demon Slayer: Hashira Training Arc
@@ -3267,8 +3264,8 @@ export const animeData: AnimeData[] = [
     studios: ["ufotable"],
     description: "Following the events at the Swordsmith Village, Tanjiro and the Demon Slayer Corps prepare for the final battle against Muzan Kibutsuji by undergoing rigorous training under the Hashira.",
     longDescription: "With the Upper Rank demons Hantengu and Gyokko defeated, and Nezuko conquering the sun, the final confrontation with the Demon Lord Muzan Kibutsuji looms closer than ever. To bolster the strength of the entire Demon Slayer Corps, the remaining Hashira implement an intense, specialized training program. Tanjiro Kamado, along with his friends Zenitsu Agatsuma and Inosuke Hashibira, participate in these grueling sessions led by different Hashira, each focusing on enhancing specific skills like stamina, flexibility, speed, sword technique, and muscle reinforcement. This arc showcases the Hashira's unique personalities and training methods while building anticipation for the impending ultimate clash against Muzan and his remaining forces.",
-    image: "/api/placeholder/500/700",
-    coverImage: "/api/placeholder/1920/600",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYKYAkuOMTaDKhMy0kmL91-6W-nSbAUkyrTw&s",
+    coverImage: "https://sm.mashable.com/mashable_me/photo/default/new-project-1_uafx.jpg",
     trailer: "https://www.youtube.com/embed/rq1tllAUS1I?si=VOj99p2IG7pq9Jrp",
      episodes: [
         { number: 1, title: "To Defeat Muzan Kibutsuji", duration: "49 min", thumbnail: "/api/placeholder/120/70" }, // Extended first episode
@@ -3276,25 +3273,152 @@ export const animeData: AnimeData[] = [
         { number: 8, title: "Hashira Gathering", duration: "24 min", thumbnail: "/api/placeholder/120/70" }, // Final episode
     ],
     characters: [
-        { name: "Tanjiro Kamado", role: "Protagonist", image: "/api/placeholder/150/150", description: "Undergoes intense training to improve his skills." },
-        { name: "Zenitsu Agatsuma", role: "Main", image: "/api/placeholder/150/150", description: "Participates in the training, facing his fears." },
-        { name: "Inosuke Hashibira", role: "Main", image: "/api/placeholder/150/150", description: "Enthusiastically joins the rigorous training." },
-        { name: "Giyu Tomioka", role: "Supporting", image: "/api/placeholder/150/150", description: "Water Hashira, involved in training." },
-        { name: "Gyomei Himejima", role: "Supporting", image: "/api/placeholder/150/150", description: "Stone Hashira, leads the final, toughest training." },
+        { name: "Tanjiro Kamado", role: "Protagonist", image: "https://rukminim2.flixcart.com/image/850/1000/kyvvtzk0/poster/o/h/q/medium-tanjiro-kamado-demon-slayer-kimetsu-no-yaiba-anime-matte-original-imagbygdj7ghnwyy.jpeg?q=20&crop=false", description: "Undergoes intense training to improve his skills." },
+        { name: "Zenitsu Agatsuma", role: "Main", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5hLY7inNVN1eCcEqk9PVyVIWIVBCdTNTABg&s", description: "Participates in the training, facing his fears." },
+        { name: "Inosuke Hashibira", role: "Main", image: "https://investigativegeek.com/wp-content/uploads/2023/05/inosuke-demon-slayer.jpeg", description: "Enthusiastically joins the rigorous training." },
+        { name: "Giyu Tomioka", role: "Supporting", image: "https://static.animecorner.me/2025/02/1738982280-c764aa915a30b387b73bc45a7607400f.png", description: "Water Hashira, involved in training." },
+        { name: "Gyomei Himejima", role: "Supporting", image: "https://deltiasgaming.com/wp-content/uploads/2024/12/4-1.webp", description: "Stone Hashira, leads the final, toughest training." },
         // Other Hashira (Shinobu, Sanemi, Obanai, Mitsuri, Muichiro) are also featured
     ],
      reviews: [
        { user: "SunBreather", rating: 4.7, comment: "Ufotable's animation is god-tier as always! Great setup for the finale.", avatar: "/api/placeholder/40/40", likes: 400, date: "Approx. completion date (e.g., July 2024)" }
     ],
      relatedWorks: [
-       { title: "Demon Slayer (Manga)", type: "Manga", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "Demon Slayer: Swordsmith Village Arc", type: "Anime", image: "/api/placeholder/220/320", status: "Completed" },
-       { title: "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train", type: "Movie", image: "/api/placeholder/220/320", status: "Completed" }
+       { title: "Demon Slayer (Manga)", type: "Manga", image: "https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", status: "Completed" },
+       { title: "Demon Slayer: Swordsmith Village Arc", type: "Anime", image: "https://m.media-amazon.com/images/M/MV5BNDUyZTJmODQtZmRkMS00YjJiLTgxZmUtMjQ5OGNjNzkyM2Y5XkEyXkFqcGc@._V1_.jpg", status: "Completed" },
+       { title: "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train", type: "Movie", image: "https://upload.wikimedia.org/wikipedia/en/2/21/Kimetsu_no_Yaiba_Mugen_Ressha_Hen_Poster.jpg", status: "Completed" }
     ],
      soundtrack: [
        { title: "Mugen", artist: "MY FIRST STORY x HYDE", type: "Opening Theme" },
        { title: "Tokoshie", artist: "HYDE × MY FIRST STORY", type: "Ending Theme" } // Collaboration likely for ED too, specific title might vary
      ],
-     gallery:[]
+     gallery:["https://i.ytimg.com/vi/fQLMdjYHDVQ/maxresdefault.jpg","https://external-preview.redd.it/demon-slayer-kimetsu-no-yaiba-hashira-training-arc-v0-EvLwrgLKHotNXPpKj9BUdIBSNcY5DccyCmoBnayXvOg.jpg?auto=webp&s=f1a14280873fcf5916beba2f1768aa81b41dfc9e","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpQAY5ks9RDS7ZczJLHLYbh1u_fTKU0gUzSQ&s","https://img.youtube.com/vi_webp/F8CNMLXu9jg/maxresdefault.webp"]
+  },
+  {
+    id:11,
+    title: "Solo Leveling",
+    originalTitle: "나 혼자만 레벨업",
+    rating: 4.9,
+    year: 2024,
+    episodesCount: 12,
+    status: "Completed",
+    airDay: "Sundays",
+    genres: ["Action", "Fantasy", "Adventure", "Supernatural"],
+    studios: ["A-1 Pictures"],
+    description: "In a world where hunters possess magical abilities to combat monsters from invading dimensions, Sung Jinwoo, the weakest hunter of all mankind, is granted a mysterious system that allows him to level up endlessly.",
+    longDescription: "In a world where hunters possess magical abilities to combat monsters from invading dimensions, Sung Jinwoo was known as the weakest hunter of all mankind, barely stronger than an ordinary human. One day, he and other low-rank hunters are trapped in a hidden dungeon with an incredibly powerful and deadly boss. Surviving a near-fatal encounter, Jinwoo awakens to a mysterious system that only he can see, granting him the unique ability to level up his strength, skills, and stats by completing quests and defeating monsters. As he grows exponentially stronger, Jinwoo must navigate the dangers of the hunter world, keep his newfound power a secret, and uncover the secrets behind the system and the dimensional gates.",
+    image: "https://sgimage.netmarble.com/images/netmarble/sololv/20240105/je2f1704430223298.jpg",
+    coverImage: "https://www.superherotoystore.com/cdn/shop/articles/Website_Blog_creatives_29_1600x.jpg?v=1713945144",
+    trailer: "https://www.youtube.com/embed/I6JIwjWOhnQ?si=jHPFSsqCyK5TG1zL",
+    episodes: [
+      { number: 1, title: "I'm Used to It", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 2, title: "If I Had One More Chance", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 3, title: "It's Like a Game", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+    ],
+    characters: [
+      { name: "Sung Jinwoo", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5qrv0yZcwG6S1AQwbD0AIjuf1oVEc3c5T7w&s", description: "The world's weakest hunter who gains the ability to level up." },
+      { name: "Yoo Jinho", role: "Supporting", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd73f9TRcSrFLamjRr-YAJlH02pNXws9mEUA&s", description: "A wealthy and kind-hearted D-rank hunter who becomes Jinwoo's loyal ally." },
+      { name: "Go Gunhee", role: "Supporting", image: "https://static.invenglobal.com/upload/image/2024/08/29/i1724910718261888.webp", description: "The chairman of the Korea Hunter Association." },
+      { name: "Cha Haein", role: "Supporting", image: "https://static.beebom.com/wp-content/uploads/2025/03/cha-hae-in-solo-leveling.jpg?w=1250&quality=75", description: "A powerful S-rank hunter with a keen sense of smell." },
+    ],
+    reviews: [
+      { user: "LevelUpFan", rating: 5, comment: "Amazing adaptation! The action and animation are top-notch.", avatar: "/api/placeholder/40/40", likes: 312, date: "1 week ago" },
+      { user: "WeakestToStrongest", rating: 4.8, comment: "The progression of the main character is so satisfying to watch.", avatar: "/api/placeholder/40/40", likes: 205, date: "2 weeks ago" },
+    ],
+    relatedWorks: [
+      { title: "Solo Leveling (Manhwa)", type: "Manga", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjydKUpH1rz3V2N2oTcKX7O3QIMkH_-xqqw&s", status: "Completed" },
+      { title: "Solo Leveling (Novel)", type: "Light Novel", image: "https://rukminim2.flixcart.com/image/850/1000/xif0q/book/y/k/m/solo-leveling-vol-2-original-imah4hhdzaaftsvp.jpeg?q=20&crop=false", status: "Completed" },
+    ],
+    soundtrack: [
+      { title: "LEveL", artist: "Hiroyuki Sawano", type: "Opening Theme" },
+      { title: "request", artist: "Krage", type: "Ending Theme" },
+    ],
+    gallery:["https://preview.redd.it/solo-leveling-3840-x-2160-v0-uu7iqycoaoma1.png?auto=webp&s=8750e34efa18ca4269bbdc737e3731ffa1b6a1b9","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA8xbd-8VGuqE0VwoYdUhZrzQEbiuMbTO5Ug&s","https://akm-img-a-in.tosshub.com/indiatoday/images/story/202412/solo-leveling-season-2-to-stream-from-january-4-224845397-16x9_0.jpg?VersionId=NdfFmsBZM_VcRVm0.A5PJfce8LBd9zND&size=690:388","https://static1.srcdn.com/wordpress/wp-content/uploads/2025/04/solo-leveling-season-2-ending-sung-jinwoo-statue-of-god-double-dungeon-1.jpg","https://staticg.sportskeeda.com/editor/2023/09/206c3-16941503150298-1920.jpg?w=640"]
+  },
+  {
+    id:12,
+    title: "Frieren: Beyond Journey's End",
+    originalTitle: "葬送のフリーレン",
+    rating: 4.9,
+    year: 2023,
+    episodesCount: 28,
+    status: "Completed",
+    airDay: "Fridays",
+    genres: ["Fantasy", "Adventure", "Slice of Life", "Drama"],
+    studios: ["Madhouse"],
+    description: "The elf Frieren, who was part of the hero's party that defeated the Demon King, returns after a long time to find that her former companions have aged and passed away, leading her to understand the fleeting nature of human life and embark on a new journey.",
+    longDescription: "The elf Frieren was part of the hero's party that defeated the Demon King after a ten-year-long quest. Fifty years later, she returns to the royal capital to see her former comrades, only to find that the human hero Himmel and the others have aged considerably, and Himmel eventually passes away. Through Himmel's death, Frieren begins to understand the concept of human lifespan and the weight of time. Regretting not spending more time with them, she embarks on a new journey to better understand humanity and to fulfill a promise she made to Himmel. Along the way, she takes on a human apprentice named Fern and encounters former allies and new adversaries, all while grappling with her own long lifespan and the memories of her past adventures.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwviVW9uLqTH5gAZ14350ewVRSO7xw-vvqhg&s",
+    coverImage: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_QL75_UX500_CR0,234,500,281_.jpg",
+    trailer: "https://www.youtube.com/embed/Iwr1aLEDpe4?si=Tb32eMNz7BZ8M4CG",
+    episodes: [
+      { number: 1, title: "The End of the Journey", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 2, title: "The Pain of Loss", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 3, title: "A New Journey", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+    ],
+    characters: [
+      { name: "Frieren", role: "Protagonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdWxeTVz6jvOprXZRojItnWw86dGZtQRcjpw&s", description: "A long-lived elf who was part of the hero's party." },
+      { name: "Fern", role: "Deuteragonist", image: "https://i.ytimg.com/vi/Tguq_4wzxkw/maxresdefault.jpg", description: "A human war orphan and Frieren's apprentice." },
+      { name: "Stark", role: "Supporting", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk9xBzNDuzJLMIq8unRggB031YeME0goGY-w&s", description: "A young warrior and apprentice of Eisen." },
+      { name: "Himmel", role: "Deuteragonist", image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/01/untitled-design-500-74.jpg", description: "The human hero of the party." },
+      { name: "Heiter", role: "Deuteragonist", image: "https://static.wikia.nocookie.net/frieren/images/2/28/Heiter%27s_older_appearance_%28anime%29.png/revision/latest?cb=20240314222644", description: "A human priest of the hero's party." },
+      { name: "Eisen", role: "Deuteragonist", image: "https://staticg.sportskeeda.com/editor/2023/10/b03df-16967427088542-1920.jpg", description: "A dwarf warrior of the hero's party." },
+    ],
+    reviews: [
+      { user: "TimeTraveler", rating: 5, comment: "A beautiful and melancholic story about time and memory.", avatar: "/api/placeholder/40/40", likes: 287, date: "3 weeks ago" },
+      { user: "ElfLover", rating: 4.9, comment: "The world-building and character interactions are fantastic.", avatar: "/api/placeholder/40/40", likes: 198, date: "1 month ago" },
+    ],
+    relatedWorks: [
+      { title: "Frieren: Beyond Journey's End (Manga)", type: "Manga", image: "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Frieren_Beyond_Journey%27s_End.jpg/250px-Frieren_Beyond_Journey%27s_End.jpg", status: "Ongoing" },
+    ],
+    soundtrack: [
+      { title: "Yūsha", artist: "Yoasobi", type: "Opening Theme" },
+      { title: "Anytime Anywhere", artist: "milet", type: "Ending Theme" },
+    ],
+    gallery:["https://static.toiimg.com/thumb/msid-108082698,width-1280,height-720,resizemode-4/108082698.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLYoo4Mj5FXQ3cIOFzbwW7yfnxr01KqF9NwA&s","https://www.thepopverse.com/_next/image?url=https%3A%2F%2Fmedia.thepopverse.com%2Fmedia%2Ffrieren-screenshot-rleehyziuevflpg2g41mdpofwq.jpg&w=1280&q=75","https://www.hindustantimes.com/ht-img/img/2023/03/08/1600x900/Frieren_Beyond_Journeys_End_1678284485217_1678284491592_1678284491592.png"]
+  },
+  {
+    id:13,
+    title: "Bleach: Thousand-Year Blood War",
+    originalTitle: "BLEACH 千年血戦篇",
+    rating: 4.8,
+    year: 2022,
+    episodesCount: 52, // Total across all parts
+    status: "Completed",
+    airDay: "Mondays",
+    genres: ["Action", "Supernatural", "Shonen", "Adventure"],
+    studios: ["Pierrot"],
+    description: "The Thousand-Year Blood War arc from the Bleach manga, where the Soul Reapers face their greatest threat in the form of the Quincy army led by Yhwach.",
+    longDescription: "The Thousand-Year Blood War arc depicts the final and most devastating conflict in the Bleach universe. The Quincy, a long-lost tribe of spirit hunters, resurface under the leadership of their emperor, Yhwach, and declare war against the Soul Society. Their overwhelming power and unique abilities push the Soul Reapers to their limits, resulting in numerous casualties and the very foundations of the Soul Society being threatened. Ichigo Kurosaki and his friends must confront this unprecedented threat, unlocking new levels of power and uncovering long-hidden truths about the Soul Reapers, the Quincy, and the very nature of their existence. The fate of the human world and the Soul Society hangs in the balance as the war escalates, revealing shocking betrayals and unimaginable sacrifices.",
+    image: "https://m.media-amazon.com/images/M/MV5BMDYyZDEzNzktNDVhNS00MjJiLWJlZjgtY2IzZDY0OTNjMDU3XkEyXkFqcGc@._V1_.jpg",
+    coverImage: "https://d.newsweek.com/en/full/1956752/bleach.jpg",
+    trailer: "https://www.youtube.com/embed/eA8-t-iyAV4?si=3LU1s2GUnTLLFEil",
+    episodes: [
+      { number: 1, title: "The Blood Warfare", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 2, title: "Foundation Stones", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+      { number: 3, title: "March of the Starcross", duration: "24 min", thumbnail: "/api/placeholder/120/70" },
+    ],
+    characters: [
+      { name: "Ichigo Kurosaki", role: "Protagonist", image: "https://imgix.ranker.com/list_img_v2/1360/2681360/original/the-best-ichigo-quotes?auto=format&q=50&fit=crop&fm=pjpg&dpr=2&crop=faces&h=185.86387434554973&w=355", description: "A Substitute Soul Reaper with vast spiritual power." },
+      { name: "Rukia Kuchiki", role: "Deuteragonist", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqaY0VurgheSx9NNpzKMzlxSmax9G1wle6g&s", description: "A Soul Reaper who gave her powers to Ichigo." },
+      { name: "Yhwach", role: "Antagonist", image: "https://preview.redd.it/why-did-yhwach-abandon-his-cool-ass-shades-v0-yrfgsn9drtvc1.jpeg?auto=webp&s=d5356ed41add1c1e4eabecf66f3897853d08c37a", description: "The emperor of the Quincy and the main antagonist of the arc." },
+      { name: "Byakuya Kuchiki", role: "Supporting", image: "https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/09/Byakuya-Kuchiki-Facts-featured-image.jpg", description: "The captain of the 6th Division in the Gotei 13." },
+      { name: "Renji Abarai", role: "Supporting", image: "https://i.pinimg.com/736x/3c/24/42/3c2442ca339b28308140ef6e790d5aa1.jpg", description: "The lieutenant of the 6th Division." },
+      { name: "Kenpachi Zaraki", role: "Supporting", image: "https://i.pinimg.com/736x/c3/9c/9b/c39c9bad17b8077ac7f3a18f9b35f7a1.jpg", description: "The captain of the 11th Division." },
+    ],
+    reviews: [
+      { user: "BleachFanatic", rating: 5, comment: "Finally! The adaptation this arc deserves. The animation is incredible.", avatar: "/api/placeholder/40/40", likes: 456, date: "6 months ago" },
+      { user: "QuincyHunter", rating: 4.7, comment: "The battles are epic and the story is intense.", avatar: "/api/placeholder/40/40", likes: 290, date: "7 months ago" },
+    ],
+    relatedWorks: [
+      { title: "Bleach (Manga)", type: "Manga", image: "https://m.media-amazon.com/images/M/MV5BMDYyZDEzNzktNDVhNS00MjJiLWJlZjgtY2IzZDY0OTNjMDU3XkEyXkFqcGc@._V1_.jpg", status: "Completed" },
+      { title: "Bleach (Anime)", type: "Anime", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT44eldJR7zg3iOQ8Ei8piAulzZIHSXaBvUdQ&s", status: "Completed" },
+    ],
+    soundtrack: [
+      { title: "Scar", artist: "Tatsuya Kitani", type: "Opening Theme" },
+      { title: "Rapport", artist: "miwa", type: "Ending Theme" },
+      // Add more soundtrack details as needed
+    ],
+    gallery:["https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2022/07/bleach-thousand-year-blood-war-key-visual-e1657860174688.jpg?fit=1199%2C678&amp;ssl=1","https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/02/bleach-thousand-year-blood-war-before-final-battle.jpg","https://comicbook.com/wp-content/uploads/sites/4/2024/07/249816f8-4aeb-457c-9100-39dc640c4728.jpg?w=1024","https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/10/ichigo-bleach-thousand-year-blood-war.png"]
   },
 ];

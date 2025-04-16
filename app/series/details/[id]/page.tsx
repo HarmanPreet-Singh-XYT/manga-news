@@ -1,9 +1,9 @@
-import AnimeMangaDetailsPage from '@/components/Details'
+import Details from '@/components/DetailsMain'
 import React from 'react'
 
 const page = () => {
   return (
-    <AnimeMangaDetailsPage/>
+    <Details/>
   )
 }
 

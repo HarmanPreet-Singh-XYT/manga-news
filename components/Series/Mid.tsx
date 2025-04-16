@@ -311,6 +311,7 @@ function TrendingCard({ series, delay = 0, isDarkMode }) {
             </div>
             
             <div className="flex items-center justify-between">
+              <a href={`/series/details/${series.id}`}>
               <button 
                 className={`
                   ${isDarkMode ? 'text-pink-500 hover:text-pink-400' : 'text-violet-600 hover:text-violet-500'} 
@@ -322,6 +323,7 @@ function TrendingCard({ series, delay = 0, isDarkMode }) {
                 READ MORE 
                 <ChevronRight size={14} className="ml-1 transform group-hover:translate-x-1 transition-transform" />
               </button>
+              </a>
               
               <div className="flex space-x-2">
                 <button 
@@ -567,26 +569,26 @@ function AnimeMangaUI({ isDarkMode = false }) {
   const [activeTab, setActiveTab] = useState('top');
   useAnimationObserver();
   
-  // Sample data (would be fetched from API in real app)
+  // Sample data for different sections
   const topSeries = [
-    { id: 1, title: "One Piece", rating: 9.8, image: "https://m.media-amazon.com/images/I/81rEhhwbubL.jpg", genre: "Adventure", isNew: false, isTrending: true, episodes: 1074 },
-    { id: 2, title: "Demon Slayer", rating: 9.6, image: "https://image.api.playstation.com/vulcan/ap/rnd/202106/1704/2ZfAUG5CTXdM34S1OhmMW1zF.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 44 },
+    { id: 5, title: "One Piece", rating: 9.8, image: "https://m.media-amazon.com/images/I/81rEhhwbubL.jpg", genre: "Adventure", isNew: false, isTrending: true, episodes: 1074 },
+    { id: 10, title: "Demon Slayer", rating: 9.6, image: "https://image.api.playstation.com/vulcan/ap/rnd/202106/1704/2ZfAUG5CTXdM34S1OhmMW1zF.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 44 },
     { id: 3, title: "Jujutsu Kaisen", rating: 9.5, image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg", genre: "Supernatural", isNew: false, isTrending: false, episodes: 48 },
     { id: 4, title: "My Hero Academia", rating: 9.4, image: "https://external-preview.redd.it/netflix-my-hero-academia-youre-next-premieres-april-20-v0-JwzZ0n7z9UTm0yjaMDwEcl5p3pr7k-1RJdKSZDH_O0I.jpg?auto=webp&s=6f9b748eb34eccac28fd299e1ac0e8c1e109dc0b", genre: "Superhero", isNew: false, isTrending: false, episodes: 138 },
-    { id: 5, title: "Attack on Titan", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_.jpg", genre: "Dark Fantasy", isNew: false, isTrending: true, episodes: 88 },
-    { id: 6, title: "Chainsaw Man", rating: 9.5, image: "https://a.storyblok.com/f/178900/849x1200/a315230dc9/chainsaw-man-the-movie-reze-arc-csm-visual.jpg/m/filters:quality(95)format(webp)", genre: "Horror", isNew: true, isTrending: true, episodes: 12 },
+    { id: 1, title: "Attack on Titan", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_.jpg", genre: "Dark Fantasy", isNew: false, isTrending: true, episodes: 88 },
+    { id: 2, title: "Chainsaw Man", rating: 9.5, image: "https://a.storyblok.com/f/178900/849x1200/a315230dc9/chainsaw-man-the-movie-reze-arc-csm-visual.jpg/m/filters:quality(95)format(webp)", genre: "Horror", isNew: true, isTrending: true, episodes: 12 },
   ];
 
   const latestShows = [
-    { id: 7, title: "Solo Leveling", rating: 9.3, image: "https://m.media-amazon.com/images/I/71goH8p2ENL.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 12 },
+    { id: 11, title: "Solo Leveling", rating: 9.3, image: "https://m.media-amazon.com/images/I/71goH8p2ENL.jpg", genre: "Action", isNew: true, isTrending: true, episodes: 12 },
     { id: 8, title: "Blue Lock", rating: 9.1, image: "https://m.media-amazon.com/images/M/MV5BNjliYmU5N2EtYmNjNi00NGM0LWEzZWItN2Q0YzM5YTk4Y2Q1XkEyXkFqcGc@._V1_.jpg", genre: "Sports", isNew: true, isTrending: false, episodes: 24 },
-    { id: 9, title: "Frieren", rating: 9.4, image: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: true, isTrending: true, episodes: 28 },
-    { id: 10, title: "Oshi no Ko", rating: 9.2, image: "https://m.media-amazon.com/images/M/MV5BYzM3ZGJkN2YtOTQ5Ny00MzEyLTlkMzQtZDVhYzM3YWFlM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg0", genre: "Drama", isNew: true, isTrending: false, episodes: 11 },
+    { id: 12, title: "Frieren", rating: 9.4, image: "https://m.media-amazon.com/images/M/MV5BZTI4ZGMxN2UtODlkYS00MTBjLWE1YzctYzc3NDViMGI0ZmJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: true, isTrending: true, episodes: 28 },
+    { id: 19, title: "Oshi no Ko", rating: 9.2, image: "https://m.media-amazon.com/images/M/MV5BYzM3ZGJkN2YtOTQ5Ny00MzEyLTlkMzQtZDVhYzM3YWFlM2QwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg0", genre: "Drama", isNew: true, isTrending: false, episodes: 11 },
   ];
 
   const fanFavorites = [
-    { id: 11, title: "Hunter X Hunter", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Adventure", isNew: false, isTrending: true, episodes: 148 },
-    { id: 12, title: "Fullmetal Alchemist", rating: 9.8, image: "https://m.media-amazon.com/images/M/MV5BNDczZWMyMjEtZDI0ZS00YThjLWE2MjEtNTIxNmVmZDhkNDg5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: false, isTrending: false, episodes: 64 },
+    { id: 112, title: "Hunter X Hunter", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BYzYxOTlkYzctNGY2MC00MjNjLWIxOWMtY2QwYjcxZWIwMmEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Adventure", isNew: false, isTrending: false, episodes: 148 },
+    { id: 122, title: "Fullmetal Alchemist", rating: 9.8, image: "https://m.media-amazon.com/images/M/MV5BNDczZWMyMjEtZDI0ZS00YThjLWE2MjEtNTIxNmVmZDhkNDg5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Fantasy", isNew: false, isTrending: false, episodes: 64 },
     { id: 13, title: "Death Note", rating: 9.6, image: "https://m.media-amazon.com/images/M/MV5BYTgyZDhmMTEtZDFhNi00MTc4LTg3NjUtYWJlNGE5Mzk2NzMxXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Thriller", isNew: false, isTrending: false, episodes: 37 },
     { id: 14, title: "Naruto", rating: 9.5, image: "https://m.media-amazon.com/images/M/MV5BNTk3MDA1ZjAtNTRhYS00YzNiLTgwOGEtYWRmYTQ3NjA0NTAwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Action", isNew: false, isTrending: false, episodes: 220 },
     { id: 15, title: "Cowboy Bebop", rating: 9.7, image: "https://m.media-amazon.com/images/M/MV5BM2VhZjk2MWMtZjc2OC00YzA4LWI0NzAtZGQ1YjVkOTk5YzVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg", genre: "Sci-Fi", isNew: false, isTrending: false, episodes: 26 },
