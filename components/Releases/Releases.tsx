@@ -144,9 +144,11 @@ const Releases = ({mangaReleases, themeClass, accentColor, accentBg, secondaryBg
                       />
                     </button>
                   </div>
-                  <button className={`${accentBg} text-white px-4 py-1.5 text-sm font-bold transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 rounded-full backdrop-blur-md`}>
-                    Read Now
-                  </button>
+                  <a href={manga.link}>
+                    <button className={`${accentBg} text-white px-4 py-1.5 text-sm font-bold transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300 rounded-full backdrop-blur-md`}>
+                      Read Now
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

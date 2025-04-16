@@ -1,6 +1,7 @@
 import { 
   X, Menu, Bell, Sun, Moon, Search, Bookmark, BookOpen, 
-  ChevronRight, Heart, Zap, User, Globe, ChevronUp, Star 
+  ChevronRight, Heart, Zap, User, Globe, ChevronUp, Star, 
+  Newspaper
 } from 'lucide-react'
 import React, { useState, useEffect } from 'react'
 
@@ -43,6 +44,11 @@ const Header = ({
       name: 'Events',
       href: '/events',
       icon: <Bell size={16} />
+    },
+    {
+      name: 'Articles',
+      href: '/articles',
+      icon: <Newspaper size={16} />
     },
     {
       name: 'About',
@@ -226,7 +232,7 @@ const Header = ({
                   }`}
               />
               <button 
-                className={`p-2 rounded-full 
+                className={`p-2 rounded-full hidden md:block
                   absolute right-0.5 top-0.5 md:mr-1 md:mt-1 
                   transition-colors duration-300 ${
                     searchQuery 
@@ -401,12 +407,20 @@ const Header = ({
     {/* Enhanced Mobile Menu with animations */}
     {isMenuOpen && (
       <div 
-        className={`fixed inset-0 z-50 ${
+        className={`fixed overflow-y-auto inset-0 z-50 ${
           darkMode 
             ? 'bg-gradient-to-br from-purple-950 to-indigo-950' 
             : 'bg-gradient-to-br from-purple-900 to-indigo-900'
         } lg:hidden pt-20 animate-fadeIn`}
       >
+        {/* Close Button */}
+        <button 
+          onClick={toggleMenu}
+          className="absolute top-4 right-4 p-2 rounded-full bg-violet-800 hover:bg-violet-700 transition-colors"
+        >
+          <X size={24} className="text-white" />
+        </button>
+        
         <div className="container mx-auto px-4">
           <ul className="space-y-4">
             {categories.map((category) => {

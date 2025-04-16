@@ -60,21 +60,24 @@ export default function MangaNewsPage() {
       image: "https://m.media-amazon.com/images/M/MV5BNmI1MmYxNWQtY2E5NC00ZTlmLWIzZGEtNzM1YmE3NDA5NzhjXkEyXkFqcGc@._V1_.jpg",
       hot: true,
       description: "Yuji Itadori and the sorcerers face off against the cursed spirits.",
-      date: "Apr 15"
+      date: "Apr 15",
+      link:"https://mangareader.to/read/jujutsu-kaisen-168/en/chapter-256"
     },
     {
       title: "My Hero Academia",
       chapter: "Chapter 402",
       image: "https://external-preview.redd.it/netflix-my-hero-academia-youre-next-premieres-april-20-v0-JwzZ0n7z9UTm0yjaMDwEcl5p3pr7k-1RJdKSZDH_O0I.jpg?auto=webp&s=6f9b748eb34eccac28fd299e1ac0e8c1e109dc0b",
       description: "The final arc continues as heroes make their last stand.",
-      date: "Apr 14"
+      date: "Apr 14",
+      link:"https://mangareader.to/read/my-hero-academia-272/en/chapter-402"
     },
     {
       title: "Chainsaw Man",
       chapter: "Chapter 153",
       image: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974709939/chainsaw-man-vol-1-9781974709939_hr.jpg",
       description: "Denji's new adventures unfold in this action-packed chapter.",
-      date: "Apr 13"
+      date: "Apr 13",
+      link:"https://mangareader.to/read/chainsaw-man-96/en/chapter-153"
     },
     {
       title: "Kagurabachi",
@@ -82,7 +85,8 @@ export default function MangaNewsPage() {
       image: "https://www.nerdation.in/cdn/shop/files/kagurabachi-volume-3-cover-revealer-releases-july-4th-v0-WXty6Ps0n5ve_aNB-DF2LFGSE1v6UHugFzZzPiOwQ6Q.png?v=1723663745",
       new: true,
       description: "The rising star manga continues its epic sword saga.",
-      date: "Apr 15"
+      date: "Apr 15",
+      link:"https://mangareader.to/read/kagurabachi-67139/en/chapter-34"
     }
   ];
 

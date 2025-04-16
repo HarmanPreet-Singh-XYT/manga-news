@@ -1,9 +1,13 @@
-import { Bell, Sparkles, Star, X, Zap } from 'lucide-react'
+import { Bell, Check, Sparkles, Star, X, Zap } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 
-const Newsletter = ({darkMode,accentBg,accentColor,themeClass,secondaryBg}) => {
+const Newsletter = ({darkMode = false, accentBg = 'bg-violet-600', accentColor = 'text-violet-600', themeClass = '', secondaryBg = 'bg-white'}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [shakeEffect, setShakeEffect] = useState(false);
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
   // Theme and styling variable
   const borderColor = darkMode ? 'border-pink-500' : 'border-violet-600';
@@ -26,6 +30,44 @@ const Newsletter = ({darkMode,accentBg,accentColor,themeClass,secondaryBg}) => {
   const triggerShake = () => {
     setShakeEffect(true);
     setTimeout(() => setShakeEffect(false), 820);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubscribe = () => {
+    if (!email) {
+      setError('Please enter your email address');
+      return;
+    }
+    
+    if (!validateEmail(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
+    
+    // Clear any previous errors
+    setError('');
+    
+    // Simulate loading state
+    setIsLoading(true);
+    
+    // Simulate API call with timeout
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsSubscribed(true);
+      triggerShake();
+      
+      // Reset form after successful subscription
+      setEmail('');
+      
+      // Reset subscription state after delay to allow user to see the success message
+      setTimeout(() => {
+        setIsSubscribed(false);
+      }, 5000);
+    }, 1500);
   };
 
   return (
@@ -75,23 +117,45 @@ const Newsletter = ({darkMode,accentBg,accentColor,themeClass,secondaryBg}) => {
           
           <p className="mb-6 text-lg">Get the latest manga chapters, anime episodes, and industry news delivered straight to your inbox!</p>
           
-          {/* Form with improved styling */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-4">
-            <input 
-              type="email" 
-              placeholder="Your email address" 
-              className={`flex-1 p-3 ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-100 border-gray-300'} 
-              border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 
-              ${darkMode ? 'focus:ring-pink-500' : 'focus:ring-violet-500'} transition-all`}
-            />
-            <button 
-              onClick={triggerShake}
-              className={`${accentBg} text-white font-bold uppercase py-3 px-6 rounded-md shadow-md
-              transform hover:scale-105 transition-all flex items-center justify-center gap-2`}
-            >
-              Subscribe <Sparkles size={16} className="animate-pulse" />
-            </button>
-          </div>
+          {/* Form with improved styling and functionality */}
+          {!isSubscribed ? (
+            <>
+              <div className="flex flex-col sm:flex-row gap-3 mb-2">
+                <input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (error) setError('');
+                  }}
+                  className={`flex-1 p-3 ${darkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-100 border-gray-300'} 
+                  border rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 
+                  ${darkMode ? 'focus:ring-pink-500' : 'focus:ring-violet-500'} transition-all
+                  ${error ? 'border-red-500' : ''}`}
+                />
+                <button 
+                  onClick={handleSubscribe}
+                  disabled={isLoading}
+                  className={`${accentBg} text-white font-bold uppercase py-3 px-6 rounded-md shadow-md
+                  transform hover:scale-105 transition-all flex items-center justify-center gap-2
+                  ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                >
+                  {isLoading ? (
+                    <>Loading<span className="animate-pulse">...</span></>
+                  ) : (
+                    <>Subscribe <Sparkles size={16} className="animate-pulse" /></>
+                  )}
+                </button>
+              </div>
+              {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
+            </>
+          ) : (
+            <div className={`${accentBg} text-white p-4 rounded-lg mb-4 flex items-center justify-center gap-2`}>
+              <Check size={20} />
+              <span>Thank you for subscribing! Check your inbox soon!</span>
+            </div>
+          )}
           
           <p className="text-xs opacity-70">We respect your privacy. Unsubscribe at any time.</p>
           
@@ -113,6 +177,13 @@ const Newsletter = ({darkMode,accentBg,accentColor,themeClass,secondaryBg}) => {
               <X size={16} className={`${accentColor} mr-2`} />
               <span className="text-sm">No Spam</span>
             </div>
+          </div>
+          
+          {/* Subscription counter - dummy functionality */}
+          <div className="mt-4">
+            <p className="text-sm">
+              <span className="font-bold">{Math.floor(Math.random() * 1000) + 5000}</span> anime fans already subscribed!
+            </p>
           </div>
           
           {/* Anime-inspired decorative elements */}

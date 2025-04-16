@@ -192,7 +192,7 @@ const Main = ({darkMode = false}) => {
       <section className="mb-12">
         <div className="flex items-center mb-6">
           <h3 className={`text-2xl font-black ${darkMode ? 'bg-violet-950' : 'bg-violet-900'} text-white inline-block px-4 py-1 transform -rotate-1 rounded-sm relative`}>
-            {activeTab === 'breaking' ? 'BREAKING NEWS' : 'TRENDING NOW'}
+            {activeTab}
             <span className="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-pink-500 animate-ping"></span>
           </h3>
           <div className={`ml-4 h-1 flex-grow ${darkMode ? 'bg-gradient-to-r from-pink-600 to-violet-900' : 'bg-gradient-to-r from-pink-500 to-violet-900'} rounded-full`}></div>
@@ -377,16 +377,18 @@ const Main = ({darkMode = false}) => {
             ))
           )}
         </div>
-        {/* <div className="mt-8 flex justify-center">
-          <button className={`${
-            darkMode 
-              ? 'bg-gradient-to-r from-pink-600 to-violet-800 hover:from-pink-700 hover:to-violet-900' 
-              : 'bg-gradient-to-r from-pink-500 to-violet-700 hover:from-pink-600 hover:to-violet-800'
-          } text-white px-8 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center group`}>
-            LOAD MORE CONTENT
-            <ChevronRight size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div> */}
+        <div className="mt-8 flex justify-center">
+          <a href='/articles'>
+            <button className={`${
+              darkMode 
+                ? 'bg-gradient-to-r from-pink-600 to-violet-800 hover:from-pink-700 hover:to-violet-900' 
+                : 'bg-gradient-to-r from-pink-500 to-violet-700 hover:from-pink-600 hover:to-violet-800'
+            } text-white px-8 py-3 rounded-full font-bold transition-colors shadow-lg flex items-center group`}>
+              VIEW ARTICLES
+              <ChevronRight size={20} className="ml-1 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </a>
+        </div>
       </section>
     </div>
   )

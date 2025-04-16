@@ -189,7 +189,7 @@ export const Articles:Article[] = [
     title: "Frieren: Beyond Journey's End Season 2 Officially Confirmed!",
     subtitle: "Studio Madhouse returns to continue the beloved elf's timeless journey.",
     author: "Fern",
-    authorImage: "https://static.wikia.nocookie.net/frieren/images/d/d9/Fern%27s_appearance_as_a_child_%28anime%29.png/revision/latest?cb=20240913053252", // Placeholder
+    authorImage: "https://i.ytimg.com/vi/Tguq_4wzxkw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDtP8cRmMK2bI0hGUKPl7B5mCJysQ", // Placeholder
     publishDate: "April 12, 2025",
     postedAgo: "3 days ago",
     readTime: "4 min read",
@@ -1675,7 +1675,7 @@ export const Articles:Article[] = [
     "title": "Chainsaw Man Part 2 Heats Up: The [Fictional Arc Name] Arc Reaches Climax!",
     "subtitle": "Asa Mitaka and Denji face escalating threats as Fujimoto ramps up the chaos.",
     "author": "Pochita",
-    "authorImage": "https://static.wikia.nocookie.net/chainsaw-man/images/1/1b/Pochita.PNG/revision/latest?cb=20220827190948", // Placeholder
+    "authorImage": "https://preview.redd.it/pochita-drawing-finally-finished-v0-m596mzag6msc1.jpg?width=640&crop=smart&auto=webp&s=3ecb38d8283c069900ec97be1d0b9046dfe13082", // Placeholder
     "publishDate": "April 13, 2025", // Assuming recent chapter discussion
     "postedAgo": "2 days ago",
     "readTime": "4 min read",
@@ -1925,14 +1925,14 @@ export const Articles:Article[] = [
     "title": "'Your Name' Creator Makoto Shinkai Announces Next Film: 'Echoes of the Azure Sky'!",
     "subtitle": "The master of emotional sci-fi romance returns with a new tale of connection, distance, and breathtaking visuals.",
     "author": "Mitsuha Miyamizu",
-    "authorImage": "https://static.wikia.nocookie.net/kiminonawa/images/c/c7/Mitsuha_with_short_hair.jpg/revision/latest?cb=20240307224449", // Placeholder
+    "authorImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheyoen9QKZfqxvMB-e1rnYa4YgYLFVSnvLA&s", // Placeholder
     "publishDate": "April 11, 2025",
     "postedAgo": "4 days ago",
     "readTime": "5 min read",
     "category": "Film",
     "contentType": "Announcement",
     "tags": ["Makoto Shinkai", "Echoes of the Azure Sky", "Anime Film", "Your Name", "Weathering With You", "Suzume", "CoMix Wave Films", "Romance", "Sci-Fi", "Animation"],
-    "mainImage": "https://static.wikia.nocookie.net/nanatsu-no-taizai/images/7/7e/Pleiades_of_the_Azure_Sky_%28Anime%29.png/revision/latest?cb=20220721125552", // Placeholder
+    "mainImage": "https://lwlies.com/wp-content/uploads/2016/11/your-name-768x539-c-default.jpg", // Placeholder
     "likeCount": 9500,
     "commentCount": 720,
     "viewCount": "105.1k",
@@ -2371,7 +2371,7 @@ export const Articles:Article[] = [
     "title": "POST-TITAN ERA: Attack on Titan Creator Hajime Isayama Teases NEW PROJECT!",
     "subtitle": "The visionary mind behind AoT hints at his next creative endeavor, sparking global speculation.",
     "author": "Eren Yeager",
-    "authorImage": "https://static.wikia.nocookie.net/shingekinokyojin/images/a/a1/Eren_Jaeger_%28Anime%29_character_image.png/revision/latest?cb=20220123225500", // Placeholder
+    "authorImage": "https://imgix.ranker.com/list_img_v2/8131/3168131/original/3168131?fit=crop&fm=pjpg&q=80&dpr=2&w=1200&h=720", // Placeholder
     "publishDate": "April 16, 2025",
     "postedAgo": "4 hours ago",
     "readTime": "4 min read",
@@ -2481,7 +2481,7 @@ export const Articles:Article[] = [
     "title": "The Art Evolution in One Piece: From East Blue to Egghead Island",
     "subtitle": "Charting Eiichiro Oda's incredible artistic journey over 25+ years.",
     "author": "Nika Notes",
-    "authorImage": "https://static.wikia.nocookie.net/onepiece/images/0/07/Egghead_Infobox.png/revision/latest/scale-to-width-down/1200?cb=20240519023222", // Placeholder
+    "authorImage": "https://i.pinimg.com/736x/19/d4/26/19d426a4ec158169e12675f014f51f5d.jpg", // Placeholder
     "publishDate": "April 10, 2025",
     "postedAgo": "6 days ago",
     "readTime": "9 min read",
@@ -2534,7 +2534,7 @@ export const Articles:Article[] = [
     "title": "Top 10 Most Anticipated Anime of Summer 2025",
     "subtitle": "Get ready for sequels, adaptations, and brand new hits heating up the season!",
     "author": "Senku Predicts",
-    "authorImage": "https://static.wikia.nocookie.net/the-muse-list/images/4/44/Senku.jpg/revision/latest?cb=20200610024023", // Placeholder
+    "authorImage": "https://cdn.oneesports.gg/cdn-data/2024/08/Anime_DrStone_Character_SenkuuIshigami.jpg", // Placeholder
     "publishDate": "April 15, 2025",
     "postedAgo": "1 day ago",
     "readTime": "6 min read",
