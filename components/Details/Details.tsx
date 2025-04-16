@@ -4,6 +4,7 @@ import { Star, Heart, Calendar, Clock, Globe, Users, Play, Bookmark, Share2, Che
 import { useParams } from 'next/navigation';
 import { animeData } from '@/app/data';
 import AnimePoll from './Poll';
+import AnimeDiscussionComponent from '../Article/Comment';
 
 export default function AnimeMangaDetailsPage({ darkMode = false }) {
   const [isTrailerPlaying, setIsTrailerPlaying] = useState(false);
@@ -517,7 +518,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
       </div>
       
       {/* Tab Navigation */}
-      <div className="sticky top-0 z-40 bg-gradient-to-r from-black/80 to-black/80 backdrop-blur-sm shadow-lg hidden md:block">
+      <div className="sticky top-16 z-40 bg-gradient-to-r from-black/80 to-black/80 backdrop-blur-sm shadow-lg hidden md:block">
         <div className="container mx-auto px-4">
           <nav className="flex gap-1 justify-center">
             {['overview', 'characters', 'episodes', 'reviews', 'gallery'].map((tab) => (
@@ -542,6 +543,7 @@ export default function AnimeMangaDetailsPage({ darkMode = false }) {
           {/* Left Content - Tab Content */}
           <div className="lg:col-span-2">
             {renderTabContent()}
+            <AnimeDiscussionComponent darkMode={darkMode}/>
           </div>
           
           {/* Right Sidebar - Details and Related */}
