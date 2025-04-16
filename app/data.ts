@@ -2598,6 +2598,227 @@ export const Articles:Article[] = [
 
       <p class="mt-8  text-shadow-sm">This is just a taste of what Summer 2025 has to offer! What shows are on *your* must-watch list? Let us know in the comments below!</p>
       `
+  },
+  {
+    "id": 50,
+    "subjectName": "Jujutsu Kaisen",
+    "title": "Jujutsu Kaisen Chapter 256: Sukuna's Malevolent Shrine Crushes Hope?!",
+    "subtitle": "The King of Curses reveals another terrifying layer as Yuji and allies face utter despair.",
+    "author": "Kenji Tanaka",
+    "authorImage": "https://i1.rgstatic.net/ii/profile.image/1182712513740800-1658992045010_Q512/Kenji-Tanaka.jpg", // Placeholder
+    "publishDate": "April 18, 2025",
+    "postedAgo": "2 days ago",
+    "readTime": "6 min read",
+    "category": "Manga",
+    "contentType": "Chapter Analysis",
+    "tags": ["Jujutsu Kaisen", "JJK", "Sukuna", "Yuji Itadori", "Manga", "Spoilers", "Shonen", "Action", "Horror", "Chapter 256", "Gege Akutami"],
+    "mainImage": "https://poggers.com/cdn/shop/articles/0160b0eb77f98a7ac7be2948518bdab3_1920x1080_crop_center.webp?v=1708121470", // Placeholder
+    "likeCount": 8900,
+    "commentCount": 750,
+    "viewCount": "95.2k",
+    "isHot": true,
+    "isTrending": true,
+    "isNew": true,
+    "isPopular": true,
+    "isClassic": false,
+    "isUpcoming": false,
+    "subjectReleaseDate": "April 18, 2025",
+    "content": `
+        <p class="mb-4  text-shadow-sm">The Shinjuku Showdown reaches a new peak of terror in <strong>Jujutsu Kaisen Chapter 256</strong>. Picking up from the desperate cliffhanger, the combined forces of the remaining sorcerers throw everything they have at Ryomen Sukuna, only to face an even more insurmountable wall of cursed energy.</p>
+
+        <p class="mb-4  text-shadow-sm">This chapter dives deep into the overwhelming power Sukuna still holds. We witness what seems to be an evolution or adaptation of his Domain Expansion, Malevolent Shrine, potentially bypassing countermeasures previously thought effective. The scale is immense, the destruction palpable, leaving little room for escape.</p>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-pink-500 uppercase tracking-wider" style="transform: rotate(-2deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">YUJI'S UNBREAKABLE SPIRIT</h3>
+
+        <p class="mb-4  text-shadow-sm">Amidst the chaos, <strong>Yuji Itadori</strong> remains the focal point of defiance. The chapter likely showcases his incredible resilience and perhaps another surge of Black Flashes or a desperate, strategic attempt to land a blow using his soul-damaging punches. However, the narrative emphasizes the sheer *gap* in power, making Yuji's struggle feel both heroic and tragic.</p>
+
+        <div class="my-6 p-5 bg-indigo-900 bg-opacity-20 rounded-lg border-l-4 border-cyan-400 shadow-xl backdrop-blur-sm">
+           <h4 class="text-lg font-bold text-cyan-300 mb-2">Chapter Highlights:</h4>
+           <ul class="list-disc list-inside text-white space-y-1 pl-4">
+               <li>Sukuna's potentially enhanced Domain or Cursed Technique application.</li>
+               <li>Intense focus on Yuji's desperate counter-attacks.</li>
+               <li>Possible sacrifices or major injuries among the supporting cast (Maki? Choso?).</li>
+               <li>Deepening sense of dread and the question: How can Sukuna possibly be defeated?</li>
+           </ul>
+        </div>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-pink-500 uppercase tracking-wider" style="transform: rotate(-1deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">THEMATIC RESONANCE</h3>
+
+        <p class="mb-4  text-shadow-sm">Gege Akutami masterfully continues to explore themes of despair, sacrifice, and the nature of curses and power. The chapter reinforces Sukuna as a natural disaster, a force beyond conventional jujutsu understanding. The sorcerers aren't just fighting a person; they're fighting an embodiment of malice.</p>
+
+        <p class="mt-6  text-shadow-sm">The artwork is expected to be brutally effective, conveying the speed and impact of the fight, alongside the emotional turmoil etched on the characters' faces. Chapter 256 is shaping up to be a pivotal, potentially devastating, entry in the final arc.</p>
+      `
+  },
+  {
+    "id": 51,
+    "subjectName": "My Hero Academia",
+    "title": "My Hero Academia Chapter 402: Deku's Final Gambit - One For All's Toll!",
+    "subtitle": "The successor pushes beyond all limits against Shigaraki, but the cost might be everything.",
+    "author": "Aiko Sato",
+    "authorImage": "https://i.ytimg.com/vi/-ZH5k-9u7Ko/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBytpzTCmZzGPmcQ91RoOXl1iTK8g", // Placeholder
+    "publishDate": "April 19, 2025",
+    "postedAgo": "1 day ago",
+    "readTime": "5 min read",
+    "category": "Manga",
+    "contentType": "Chapter Analysis",
+    "tags": ["My Hero Academia", "MHA", "Boku no Hero Academia", "Deku", "Izuku Midoriya", "Shigaraki", "All For One", "Manga", "Spoilers", "Shonen", "Action", "Superheroes", "Chapter 402", "Kohei Horikoshi"],
+    "mainImage": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2024/10/my-hero-academia-deku-and-bakugo.jpg", // Placeholder
+    "likeCount": 7800,
+    "commentCount": 680,
+    "viewCount": "88.5k",
+    "isHot": true,
+    "isTrending": true,
+    "isNew": true,
+    "isPopular": true,
+    "isClassic": false,
+    "isUpcoming": false,
+    "subjectReleaseDate": "April 19, 2025",
+    "content": `
+        <p class="mb-4  text-shadow-sm">The ultimate clash continues its destructive symphony in <strong>My Hero Academia Chapter 402</strong>. With the fate of Japan, and perhaps the world, hanging in the balance, Izuku Midoriya (Deku) digs deeper into the power of One For All than ever before, confronting the merged entity of Tomura Shigaraki and All For One.</p>
+
+        <p class="mb-4  text-shadow-sm">This chapter likely focuses on the immense physical and mental toll this battle is taking on Deku. Horikoshi is expected to illustrate the 'kickback' or consequences of using multiple Quirks at their absolute peak simultaneously. We might see Deku pushing past his breaking point, possibly manifesting a new, desperate combination of abilities drawn from the vestiges within OFA.</p>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-cyan-400 uppercase tracking-wider" style="transform: rotate(-1.5deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">SHIGARAKI'S DETERIORATION VS. AFO'S WILL</h3>
+
+        <p class="mb-4  text-shadow-sm">On the opposing side, the chapter could explore the internal conflict within the villain. Is Shigaraki's consciousness fading? Is All For One fully in control, or is the immense power proving too much for the body to handle? The visuals might depict Shigaraki's form becoming even more grotesque or unstable, a terrifying representation of unchecked power and hatred.</p>
+
+        <div class="my-6 p-5 bg-purple-900 bg-opacity-10 rounded-lg border-t-4 border-b-4 border-pink-500 shadow-xl backdrop-blur-sm">
+           <p class="italic text-pink-300">"This chapter feels like the prelude to a final, devastating move. The tension is unbearable as both hero and villain approach their absolute limits."</p>
+           <p class="text-right mt-2 text-sm text-purple-400">— Early Reader Reaction</p>
+        </div>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-cyan-400 uppercase tracking-wider" style="transform: rotate(-2.5deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">SACRIFICE AND SUPPORT</h3>
+
+        <p class="mb-4  text-shadow-sm">While the focus is on Deku vs. Shigaraki, we might get brief glimpses of the other heroes. Bakugo's recovery, Todoroki's battle, or the efforts of heroes providing support could be touched upon, reinforcing the theme that this victory, if it comes, belongs to everyone.</p>
+
+        <p class="mt-6  text-shadow-sm">Chapter 402 promises high-stakes action, emotional gut-punches, and stunning artwork. It's a crucial step towards the climax, likely leaving readers breathless and speculating wildly about the final outcome and the ultimate cost of peace.</p>
+      `
+  },
+  {
+    "id": 52,
+    "subjectName": "Chainsaw Man",
+    "title": "Chainsaw Man Chapter 153: Asa & Yoru's Deadly Bargain - Control Slips!",
+    "subtitle": "Fujimoto delivers chaos as the War Devil's plans escalate, putting Asa in unimaginable danger.",
+    "author": "Ren Yoshida",
+    "authorImage": "https://staticg.sportskeeda.com/editor/2023/10/697b4-16970621069079-1920.jpg?w=640", // Placeholder
+    "publishDate": "April 20, 2025",
+    "postedAgo": "Few hours ago",
+    "readTime": "4 min read",
+    "category": "Manga",
+    "contentType": "Chapter Analysis",
+    "tags": ["Chainsaw Man", "CSM", "Denji", "Asa Mitaka", "Yoru", "War Devil", "Manga", "Spoilers", "Shonen", "Action", "Dark Fantasy", "Horror", "Chapter 153", "Tatsuki Fujimoto", "Psychological"],
+    "mainImage": "https://listfist.com/wp-content/uploads/chainsaw-man-pochita.jpg?ezimgfmt=rs:1240x698/rscb1/ngcb1/notWebP", // Placeholder
+    "likeCount": 6500,
+    "commentCount": 520,
+    "viewCount": "72.1k",
+    "isHot": true,
+    "isTrending": true,
+    "isNew": true,
+    "isPopular": true,
+    "isClassic": false,
+    "isUpcoming": false,
+    "subjectReleaseDate": "April 20, 2025",
+    "content": `
+        <p class="mb-4  text-shadow-sm">Prepare for more whiplash-inducing twists in <strong>Chainsaw Man Chapter 153</strong>. Following the likely chaotic events of the previous chapter, Tatsuki Fujimoto plunges Asa Mitaka deeper into the terrifying machinations of Yoru, the War Devil residing within her.</p>
+
+        <p class="mb-4  text-shadow-sm">This chapter could heavily feature the escalating conflict between Asa's desire for normalcy (or at least survival) and Yoru's relentless push to create powerful weapons by invoking guilt. We might see Yoru attempting to force Asa into a morally compromising situation to gain control or manifest a particularly potent ability, potentially targeting someone Asa cares about or feels responsible for.</p>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-pink-500 uppercase tracking-wider" style="transform: rotate(-3deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">DENJI'S ROLE AND PUBLIC SAFETY'S SHADOW</h3>
+
+        <p class="mb-4  text-shadow-sm">Where does Denji fit into this? Chapter 153 might show him trying to navigate his 'normal' life, perhaps intersecting with Asa's plight in an awkward, potentially disastrous way. His attempts to suppress Chainsaw Man could be tested. Furthermore, the looming presence of Public Safety, Fami (the Famine Devil), or other factions might make their move, adding layers of external pressure to Asa's internal struggle.</p>
+
+        <div class="my-6 p-5 grid grid-cols-1 md:grid-cols-2 gap-4 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900 bg-opacity-20 rounded-xl border-2 border-cyan-400 shadow-2xl backdrop-blur-sm">
+           <div class="border-r-2 border-cyan-600 pr-4">
+                <h4 class="text-lg font-bold text-cyan-300 mb-2">Potential Developments:</h4>
+                <ul class="list-none text-white space-y-1">
+                    <li><span class="text-cyan-400 mr-2">➤</span> Yoru forces a difficult choice on Asa.</li>
+                    <li><span class="text-cyan-400 mr-2">➤</span> A new Devil or antagonist appears.</li>
+                    <li><span class="text-cyan-400 mr-2">➤</span> Denji makes a typically awkward intervention.</li>
+                </ul>
+           </div>
+           <div>
+                <h4 class="text-lg font-bold text-pink-300 mb-2">Key Themes Explored:</h4>
+                <ul class="list-none text-white space-y-1">
+                    <li><span class="text-pink-400 mr-2">❖</span> Guilt and Control</li>
+                    <li><span class="text-pink-400 mr-2">❖</span> Fear of Intimacy / Relationships</li>
+                    <li><span class="text-pink-400 mr-2">❖</span> Societal Collapse / Prophecy</li>
+                </ul>
+           </div>
+        </div>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-pink-500 uppercase tracking-wider" style="transform: rotate(-1deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">FUJIMOTO'S UNPREDICTABLE MASTERY</h3>
+
+        <p class="mb-4  text-shadow-sm">As always with Chainsaw Man, expect the unexpected. Fujimoto excels at blending mundane high school life with surreal horror and black comedy. The dialogue will likely be sharp, the pacing erratic yet deliberate, and the paneling dynamic and unsettling.</p>
+
+        <p class="mt-6  text-shadow-sm">Chapter 153 is poised to be another chaotic, thought-provoking, and utterly unique installment, further developing the complex relationship between Asa and Yoru while hinting at the larger, apocalyptic stakes.</p>
+      `
+  },
+  {
+    "id": 53,
+    "subjectName": "Kagurabachi",
+    "title": "Kagurabachi Chapter 34: Enchanted Blade Nishiki Awakens! Chihiro's Fury!",
+    "subtitle": "The young swordsman taps deeper into his father's legacy against a formidable sorcerer.",
+    "author": "Yuki Mori",
+    "authorImage": "https://c4.wallpaperflare.com/wallpaper/299/880/864/mori-yuki-space-battleship-yamato-2199-anime-girls-wallpaper-thumb.jpg", // Placeholder
+    "publishDate": "April 21, 2025",
+    "postedAgo": "Just Now",
+    "readTime": "5 min read",
+    "category": "Manga",
+    "contentType": "Chapter Analysis",
+    "tags": ["Kagurabachi", "Chihiro Rokuhira", "Manga", "Spoilers", "Shonen", "Action", "Dark Fantasy", "Revenge", "Sorcery", "Chapter 34", "Takeru Hokazono", "Enchanted Blades"],
+    "mainImage": "https://comicbook.com/wp-content/uploads/sites/4/2024/12/Kagurabachi-Manga-Takeru-Hokazono.jpg", // Placeholder
+    "likeCount": 7200,
+    "commentCount": 610,
+    "viewCount": "81.3k",
+    "isHot": true,
+    "isTrending": true,
+    "isNew": true,
+    "isPopular": true,
+    "isClassic": false,
+    "isUpcoming": false,
+    "subjectReleaseDate": "April 21, 2025",
+    "content": `
+        <p class="mb-4  text-shadow-sm">The relentless quest for vengeance continues in <strong>Kagurabachi Chapter 34</strong>! Takeru Hokazono ramps up the action as Chihiro Rokuhira confronts another obstacle linked to the mysterious Hishaku organization and the stolen Enchanted Blades.</p>
+
+        <p class="mb-4  text-shadow-sm">Building on the momentum of the previous chapter, this installment likely throws Chihiro into the thick of a high-stakes battle. Expect detailed panels showcasing his unique swordsmanship, amplified by the sorcery of his father's katana. A key focus might be the unveiling or deeper exploration of one of the blade's specific abilities – perhaps <strong class="text-pink-400">Nishiki (Color)</strong>, revealing its unique properties in combat.</p>
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-cyan-400 uppercase tracking-wider" style="transform: rotate(-2deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">A NEW SORCERY CHALLENGE</h3>
+
+        <p class="mb-4  text-shadow-sm">Chihiro's opponent is likely a skilled sorcerer with their own dangerous techniques, forcing Chihiro to adapt and push his understanding of his Enchanted Blade. The chapter could delve into the mechanics of their sorcery, expanding the series' power system and world-building. We might see Chihiro pushed into a corner, relying on his intellect and the blade's power in unexpected ways.</p>
+
+        <div class="my-6 p-5 bg-indigo-900 bg-opacity-10 rounded-lg border-y-4 border-pink-500 shadow-xl backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h4 class="text-lg font-bold text-pink-300 mb-3 text-center">Combat Analysis: Chihiro vs ???</h4>
+            <table class="w-full text-left text-white border-collapse">
+              <thead>
+                <tr class="border-b border-pink-700">
+                  <th class="py-2 px-3 uppercase text-sm font-semibold text-pink-400">Aspect</th>
+                  <th class="py-2 px-3 uppercase text-sm font-semibold text-pink-400">Observation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-purple-800 hover:bg-purple-900 bg-opacity-20">
+                  <td class="py-2 px-3 font-medium">Chihiro's Strategy</td>
+                  <td class="py-2 px-3">Likely exploiting Nishiki's properties (camouflage? illusions? elemental?).</td>
+                </tr>
+                <tr class="border-b border-purple-800 hover:bg-purple-900 bg-opacity-20">
+                  <td class="py-2 px-3 font-medium">Opponent's Sorcery</td>
+                  <td class="py-2 px-3">Potentially area-of-effect or defensive, testing Chihiro's offense.</td>
+                </tr>
+                <tr class="hover:bg-purple-900 bg-opacity-20">
+                  <td class="py-2 px-3 font-medium">Key Moment</td>
+                  <td class="py-2 px-3">A desperate maneuver or reveal of the blade's full power.</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+
+
+        <h3 class="text-xl font-black mt-6 mb-3 text-cyan-400 uppercase tracking-wider" style="transform: rotate(-1deg); text-shadow: 1px 1px 2px rgba(76, 29, 149, 0.5);">HINTS OF THE LARGER PLOT</h3>
+
+        <p class="mb-4  text-shadow-sm">Beyond the fight itself, Chapter 34 might drop further hints about the Hishaku's goals, the history of the Enchanted Blades, or the whereabouts of other blade wielders. Shiba's role as Chihiro's support could also be highlighted, perhaps providing crucial backup or intelligence.</p>
+
+        <p class="mt-6  text-shadow-sm">Kagurabachi continues to impress with its stylish action, dark atmosphere, and focused revenge narrative. Chapter 34 is set to deliver another thrilling dose of supernatural swordsmanship and intrigue, solidifying its place as a must-read new-gen title.</p>
+      `
   }
 ];
 

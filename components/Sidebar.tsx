@@ -189,10 +189,12 @@ const Sidebar = ({darkMode}:{darkMode:boolean}) => {
               </div>
             ))}
           </div>
-          <button className={`w-full mt-4 border-2 ${darkMode ? 'border-pink-700 text-pink-500 hover:bg-gray-700' : 'border-violet-500 text-violet-600 hover:bg-violet-50'} font-bold py-2 rounded-lg transition-colors flex items-center justify-center`}>
-            MORE ARTICLES
-            <ChevronRight size={18} className="ml-1" />
-          </button>
+          <a href='/articles'>
+            <button className={`w-full mt-4 border-2 ${darkMode ? 'border-pink-700 text-pink-500 hover:bg-gray-700' : 'border-violet-500 text-violet-600 hover:bg-violet-50'} font-bold py-2 rounded-lg transition-colors flex items-center justify-center`}>
+              MORE ARTICLES
+              <ChevronRight size={18} className="ml-1" />
+            </button>
+          </a>
         </div>
         
         {/* Newsletter Signup - Enhanced with better visual feedback */}
