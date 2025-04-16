@@ -126,7 +126,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isNew: true,
       isReleased: false,
       views: "",
-      rating: ""
+      rating: "",
+      link:""
     },
     {
       id: 2,
@@ -138,7 +139,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isNew: false,
       isReleased: false,
       views: "",
-      rating: ""
+      rating: "",
+      link:""
     },
     {
       id: 3,
@@ -150,7 +152,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isNew: true,
       isReleased: true,
       views: "1.2M",
-      rating: "4.9"
+      rating: "4.9",
+      link:"https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen"
     },
     {
       id: 4,
@@ -163,7 +166,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isReleased: false,
       premium: true,
       views: "",
-      rating: ""
+      rating: "",
+      link:""
     },
     {
       id: 5,
@@ -175,7 +179,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isNew: false,
       isReleased: true,
       views: "982K",
-      rating: "4.8"
+      rating: "4.8",
+      link:"https://www.crunchyroll.com/series/G63VGG2NY/bleach"
     },
     {
       id: 6,
@@ -188,7 +193,8 @@ const UpcomingReleases = ({ accentColor, accentBg, secondaryBg, darkMode }) => {
       isReleased: false,
       premium: true,
       views: "",
-      rating: ""
+      rating: "",
+      link:""
     }
   ];
   

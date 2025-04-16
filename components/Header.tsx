@@ -31,6 +31,11 @@ const Header = ({
       icon: <Star size={16} />
     },
     {
+      name: 'Articles',
+      href: '/articles',
+      icon: <Newspaper size={16} />
+    },
+    {
       name: 'Series',
       href: '/series',
       icon: <BookOpen size={16} />
@@ -44,11 +49,6 @@ const Header = ({
       name: 'Events',
       href: '/events',
       icon: <Bell size={16} />
-    },
-    {
-      name: 'Articles',
-      href: '/articles',
-      icon: <Newspaper size={16} />
     },
     {
       name: 'About',
