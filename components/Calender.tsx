@@ -292,15 +292,17 @@ const featuredEvents = [
                       
                       
                       <div className="mt-4 text-center">
-                        <button className={`px-6 py-2 font-black text-white transform transition-all duration-300 hover:scale-105 hover:-rotate-2 ${
-                          darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
-                        }`}
-                        style={{
-                          clipPath: 'polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)',
-                          boxShadow: darkMode ? '3px 3px 0px #EC4899' : '3px 3px 0px #2563EB'
-                        }}>
-                          LEARN MORE →
-                        </button>
+                        <a href={`/events/details`}>
+                          <button className={`px-6 py-2 font-black text-white transform transition-all duration-300 hover:scale-105 hover:-rotate-2 ${
+                            darkMode ? 'bg-pink-600 hover:bg-pink-500' : 'bg-violet-600 hover:bg-violet-500'
+                          }`}
+                          style={{
+                            clipPath: 'polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%)',
+                            boxShadow: darkMode ? '3px 3px 0px #EC4899' : '3px 3px 0px #2563EB'
+                          }}>
+                            LEARN MORE →
+                          </button>
+                        </a>
                       </div>
                     </div>
                   </div>
