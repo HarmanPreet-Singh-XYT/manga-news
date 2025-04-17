@@ -614,7 +614,7 @@ export default function AnimeCalendar({ darkMode }) {
           <div className="flex justify-between items-center">
             <h1 className="text-4xl font-black uppercase tracking-tight transform -skew-x-6" 
               style={{ textShadow: darkMode ? '3px 3px 0px #EC4899' : '3px 3px 0px #8B5CF6' }}>
-              ANIME RELEASE CALENDAR
+              ANIME/MANGA/EVENT CALENDAR
             </h1>
             
           </div>
