@@ -229,7 +229,7 @@ export default function MangaNewsPage() {
       {/* TRENDING ANIME SECTION */}
       <section className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row gap-6">
-        <div className="w-full md:w-2/3 flex flex-col gap-6">
+        <div className="w-full md:w-2/3 flex flex-col gap-12">
             <Trending accentColor={accentColor} accentBg={accentBg} secondaryBg={secondaryBg} darkMode={darkMode}  />
             <UpcomingReleases accentColor={accentColor} accentBg={accentBg} secondaryBg={secondaryBg} darkMode={darkMode} />
             <GenreHighlights accentColor={accentColor} accentBg={accentBg} secondaryBg={secondaryBg} darkMode={darkMode} />

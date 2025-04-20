@@ -81,11 +81,12 @@ const Sidebar = ({
             </div>
           ))}
         </div>
-        
-        <button className={`w-full mt-4 border ${borderColor} py-2 font-medium text-sm rounded-lg ${hoverBg} flex items-center justify-center gap-1 group`}>
-          <span>More News</span>
-          <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+        <a href='/articles'>
+          <button className={`w-full mt-4 border ${borderColor} py-2 font-medium text-sm rounded-lg ${hoverBg} flex items-center justify-center gap-1 group`}>
+            <span>More News</span>
+            <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </a>
       </div>
       
       {/* Weekly Poll Section */}
